@@ -18,16 +18,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
-public class BlockBaseMulti extends Block {
+public class BlockBaseMulti extends BlockBase {
 
     public static final PropertyDirection FACING = PropertyDirection.func_177714_a("facing");
 
 
 
-    public BlockBaseMulti() {
-        super(Material.field_151576_e);
- //       setUnlocalizedName(esmc.MODID + ".blockbasemulti");
-        setRegistryName("blockbasemulti");
+    public BlockBaseMulti(String name, Material material) {
+        super(name, material);
+        func_149663_c(name);
+       //setUnlocalizedName(esmc.MODID + ".blockbasemulti");
+        setRegistryName(name);
+        //setRegistryName("blockbasemulti");
 
         func_180632_j(field_176227_L.func_177621_b().func_177226_a(FACING, EnumFacing.NORTH));
     }

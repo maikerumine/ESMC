@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "esm:mese_crystal"
+        }
+    ],
+    "result": {
+        "item": "esm:mese_crystal_fragment",
+        "count": 9
+    }
+}
