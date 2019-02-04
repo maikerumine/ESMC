@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "esm:items/aikerum_crystal_pickaxe"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " E ",
+        " E ",
+        " I "
+    ],
+    "key": {
+        "E": {
+            "item": "esm:emerald_crystal",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "esm:emerald_crystal_sword",
+        "data": 0,
+        "count": 1
+    }
+}

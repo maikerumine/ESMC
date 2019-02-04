@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:gunrifle"
+        },
+        "title": {
+            "translate": "advancements.achieverifle.title"
+        },
+        "description": {
+            "translate": "advancements.achieverifle.descr"
+        },
+		"frame": "task"
+    },
+    "criteria": {
+        "achieverifle": {
+            "trigger": "achieverifle"
+        }
+    }
+}

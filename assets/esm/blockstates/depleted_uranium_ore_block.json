@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:depleted_uranium_ore_block"}
+    }
+}

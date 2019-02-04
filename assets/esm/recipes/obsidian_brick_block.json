@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "esm:obsidian_brick_block",
+            "data": 0
+        }
+    ],
+    "result": {
+        "item": "minecraft:obsidian",
+        "count": 4
+    }
+}

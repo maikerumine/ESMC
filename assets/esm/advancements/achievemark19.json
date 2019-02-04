@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:gunmk12"
+        },
+        "title": {
+            "translate": "advancements.achievemark19.title"
+        },
+        "description": {
+            "translate": "advancements.achievemark19.descr"
+        },
+		"frame": "task"
+    },
+    "criteria": {
+        "achievemark19": {
+            "trigger": "achievemark19"
+        }
+    }
+}

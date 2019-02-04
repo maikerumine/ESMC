@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:mese_ore_block"}
+    }
+}

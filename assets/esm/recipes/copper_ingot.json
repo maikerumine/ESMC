@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CCC",
+        "CCC",
+        "CCC"
+    ],
+    "key": {
+        "C": {
+            "item": "esm:copper_ingot"
+        }
+    },
+    "result": {
+        "item": "esm:copper_block",
+        "count": 1
+    }
+}

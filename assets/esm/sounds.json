@@ -1,0 +1,74 @@
+{
+  "stonemonster": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "esmc1122:mobs_stonemonster",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_shoot": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:shotgun_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "barbarian_yell2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:mobs_barbarian_yell2",
+        "stream": false
+      }
+    ]
+  },
+  "death2": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:mob_death2",
+        "stream": false
+      }
+    ]
+  },
+  "die_yell": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:mobs_die_yell",
+        "stream": false
+      }
+    ]
+  },
+  "barbarian_death": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:mobs_barbarian_death",
+        "stream": false
+      }
+    ]
+  },
+  "handgun_shoot": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:handgun_shoot",
+        "stream": false
+      }
+    ]
+  },
+  "rifle_shoot": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "esmc1122:rifle_shoot",
+        "stream": false
+      }
+    ]
+  }
+}

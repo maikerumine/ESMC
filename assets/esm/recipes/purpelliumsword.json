@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " P ",
+        " P ",
+        " I "
+    ],
+    "key": {
+        "P": {
+            "item": "esm:purpellium_ingot",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "esm:purpellium_sword",
+        "data": 0,
+        "count": 1
+    }
+}

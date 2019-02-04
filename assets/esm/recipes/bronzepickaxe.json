@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BBB",
+        " S ",
+        " I "
+    ],
+    "key": {
+        "B": {
+            "item": "esm:bronze_ingot",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        },
+ 
+         "S": {
+            "item": "minecraft:stick",
+            "data": 0
+        }
+               
+        
+    },
+    "result": {
+        "item": "esm:bronze_pickaxe",
+        "data": 0,
+        "count": 1
+    }
+}

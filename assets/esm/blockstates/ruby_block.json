@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:ruby_block"}
+    }
+}

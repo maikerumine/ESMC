@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:infiniumore"
+        },
+        "title": {
+            "translate": "advancements.achieveinfinium.title"
+        },
+        "description": {
+            "translate": "advancements.achieveinfinium.descr"
+        },
+		"frame": "task"
+    },
+    "criteria": {
+        "achieveinfinium": {
+            "trigger": "achieveinfinium"
+        }
+    }
+}

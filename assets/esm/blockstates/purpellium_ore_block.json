@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:purpellium_ore_block"}
+    }
+}

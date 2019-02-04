@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:purpelliumlump"
+        },
+        "title": {
+            "translate": "advancements.achievepurp.title"
+        },
+        "description": {
+            "translate": "advancements.achievepurp.descr"
+        },
+		"frame": "task"
+    },
+    "criteria": {
+        "achievepurp": {
+            "trigger": "achievepurp"
+        }
+    }
+}

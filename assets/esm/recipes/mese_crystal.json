@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "MMM",
+        "MMM",
+        "MMM"
+    ],
+    "key": {
+        "M": {
+            "item": "esm:mese_crystal"
+        }
+    },
+    "result": {
+        "item": "esm:mese_block",
+        "count": 1
+    }
+}

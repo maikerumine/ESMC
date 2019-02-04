@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:depleteduraniumore"
+        },
+        "title": {
+            "translate": "advancements.achieveuranium.title"
+        },
+        "description": {
+            "translate": "advancements.achieveuranium.descr"
+        },
+		"frame": "goal"
+    },
+    "criteria": {
+        "achieveuranium": {
+            "trigger": "achieveuranium"
+        }
+    }
+}

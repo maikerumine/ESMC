@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "esmc1122:aikerumblock"
+        },
+        "title": {
+            "translate": "advancements.aikachievement.title"
+        },
+        "description": {
+            "translate": "advancements.aikachievement.descr"
+        },
+		"frame": "task"
+    },
+"parent": "minecraft:story/root",
+    "criteria": {
+        "aikachievement": {
+            "trigger": "aikachievement"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "esm:ruby_crystal"
+        }
+        
+    },
+    
+    "result":
+    {
+        "item": "esm:ruby_block",
+        "count": 1
+    }
+}

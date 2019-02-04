@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/nyancat_block_front",
+    "down": "esm:blocks/nyancat_block_side",
+    "up": "esm:blocks/nyancat_block_side",
+    "east": "esm:blocks/nyancat_block_side",
+    "west": "esm:blocks/nyancat_block_side",
+    "north": "esm:blocks/nyancat_block_front",
+    "south": "esm:blocks/nyancat_block_back"
+  }
+}

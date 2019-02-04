@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " R ",
+        " R ",
+        " I "
+    ],
+    "key": {
+        "R": {
+            "item": "esm:ruby_crystal",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "esm:ruby_crystal_sword",
+        "data": 0,
+        "count": 1
+    }
+}

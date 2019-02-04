@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " A ",
+        " A ",
+        " I "
+    ],
+    "key": {
+        "A": {
+            "item": "esm:aikerum_crystal",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "esm:aikerum_crystal_sword",
+        "data": 0,
+        "count": 1
+    }
+}

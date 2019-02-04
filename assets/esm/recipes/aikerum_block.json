@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "esm:aikerum_block"
+        }
+    ],
+    "result": {
+        "item": "esm:aikerum_crystal",
+        "count": 9
+    }
+}

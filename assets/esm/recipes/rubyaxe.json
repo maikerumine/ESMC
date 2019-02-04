@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "RR ",
+        "RS ",
+        " I "
+    ],
+    "key": {
+        "R": {
+            "item": "esm:ruby_crystal",
+            "data": 0
+        },
+
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        },
+ 
+         "S": {
+            "item": "minecraft:stick",
+            "data": 0
+        }
+               
+        
+    },
+    "result": {
+        "item": "esm:ruby_crystal_axe",
+        "data": 0,
+        "count": 1
+    }
+}

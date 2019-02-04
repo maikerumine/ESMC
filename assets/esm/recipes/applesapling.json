@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DDD",
+        "DAD",
+        "DDD"
+    ],
+    "key": {
+        "A": {
+            "item": "minecraft:apple",
+            "data": 0
+        },
+
+        "D": {
+            "item": "minecraft:dirt",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "minecraft:sapling",
+        "data": 0,
+        "count": 1
+    }
+}

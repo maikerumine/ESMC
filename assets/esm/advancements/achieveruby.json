@@ -1,0 +1,20 @@
+{
+    "display": {
+"background": "minecraft:textures/blocks/stone.png",
+        "icon": {
+            "item": "esmc1122:rubyore"
+        },
+        "title": {
+            "translate": "advancements.achieveruby.title"
+        },
+        "description": {
+            "translate": "advancements.achieveruby.descr"
+        },
+		"frame": "task"
+    },
+    "criteria": {
+        "achieveruby": {
+            "trigger": "achieveruby"
+        }
+    }
+}
