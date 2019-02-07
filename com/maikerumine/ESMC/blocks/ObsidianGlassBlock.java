@@ -2,8 +2,13 @@ package com.maikerumine.ESMC.blocks;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.BlockRenderLayer;
 
 public class ObsidianGlassBlock extends BlockBase {
+//public class ObsidianGlassBlock extends BlockBaseGlass1 {  //Fucking broken
+
+
 
 	public ObsidianGlassBlock(String name, Material material) {
 		super(name, material);
@@ -13,6 +18,44 @@ public class ObsidianGlassBlock extends BlockBase {
 		setHarvestLevel("pickaxe", 2);
 		func_149715_a(0.0F);
 		func_149713_g(0);
+		
 		//setBlockUnbreakable();
+	
 	}
+	
+    @Override
+    public boolean func_149662_c(IBlockState state)
+    {
+        return false;
+    }
+    
+    //@Override
+    public boolean isVisuallyOpaque(IBlockState state)
+    {
+        return false;
+    }
+    
+    
+	@Override
+	public boolean func_149751_l(IBlockState state) 
+	{
+		return true;
+	}
+	
+	@Override
+
+    public boolean func_149686_d(IBlockState state) 
+	{ 
+    	return false; 
+    }
+	
+	
+	
+	@Override
+	public BlockRenderLayer func_180664_k() 
+	{
+		return BlockRenderLayer.CUTOUT;
+	}
+	
 }
+

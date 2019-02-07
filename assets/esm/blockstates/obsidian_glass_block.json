@@ -1,5 +1,21 @@
+//{
+//    "variants": {
+//        "normal": {"model": "esm:obsidian_glass_block"}
+//    }
+//}
+
 {
+    "forge_marker": 1,
+    "defaults": {
+        "textures": {
+            "all": "esm:items/obsidian_glass_block"
+        },
+        "model": "cube_all",
+        "uvlock": true
+    },
     "variants": {
-        "normal": {"model": "esm:obsidian_glass_block"}
+        "normal": [{
+
+        }]
     }
 }

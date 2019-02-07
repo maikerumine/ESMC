@@ -27,7 +27,11 @@ import com.maikerumine.ESMC.blocks.CopperOreBlock;
 import com.maikerumine.ESMC.blocks.DepletedUraniumOreBlock;
 import com.maikerumine.ESMC.blocks.InfiniumBlock;
 import com.maikerumine.ESMC.blocks.InfiniumOreBlock;
+import com.maikerumine.ESMC.blocks.MeseBlock;
+import com.maikerumine.ESMC.blocks.MeseOreBlock;
 import com.maikerumine.ESMC.blocks.NyancatBlock;
+import com.maikerumine.ESMC.blocks.ObsidianBrickBlock;
+import com.maikerumine.ESMC.blocks.ObsidianGlassBlock;
 import com.maikerumine.ESMC.blocks.PurpelliumBlock;
 import com.maikerumine.ESMC.blocks.PurpelliumOreBlock;
 import com.maikerumine.ESMC.blocks.RainbowBlock;
@@ -54,11 +58,11 @@ public class ModBlocks
 	public static final Block INFINIUM_BLOCK = new InfiniumBlock("infinium_block", Material.field_151574_g);
 	public static final Block INFINIUM_ORE_BLOCK = new InfiniumOreBlock("infinium_ore_block", Material.field_151576_e);
 	
-	public static final Block MESE_BLOCK = new InfiniumBlock("mese_block", Material.field_151574_g);
-	public static final Block MESE_ORE_BLOCK = new InfiniumOreBlock("mese_ore_block", Material.field_151576_e);
+	public static final Block MESE_BLOCK = new MeseBlock("mese_block", Material.field_151574_g);
+	public static final Block MESE_ORE_BLOCK = new MeseOreBlock("mese_ore_block", Material.field_151576_e);
 	
-	public static final Block OBSIDIAN_GLASS_BLOCK = new InfiniumBlock("obsidian_glass_block", Material.field_151592_s);
-	public static final Block OBSIDIAN_BRICK_BLOCK = new InfiniumBlock("obsidian_brick_block", Material.field_151576_e);
+	public static final Block OBSIDIAN_GLASS_BLOCK = new ObsidianGlassBlock("obsidian_glass_block", Material.field_151592_s);
+	public static final Block OBSIDIAN_BRICK_BLOCK = new ObsidianBrickBlock("obsidian_brick_block", Material.field_151576_e);
 	
 	public static final Block RUBY_BLOCK = new RubyBlock("ruby_block", Material.field_151588_w);
 	public static final Block RUBY_ORE_BLOCK = new RubyOreBlock("ruby_ore_block", Material.field_151576_e);
