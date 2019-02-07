@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
 public class BlockBaseGlass1 extends Block implements IHasModel
@@ -50,12 +51,12 @@ public class BlockBaseGlass1 extends Block implements IHasModel
 	{
 		return false;
 	}
-	
-	
 
 	@Override
 	public void registerModels() {
-		// TODO Auto-generated method stub
+		Main.proxy.registerItemRenderer(Item.func_150898_a(this), 0, "inventory");
 		
 	}
+	
+	
 }

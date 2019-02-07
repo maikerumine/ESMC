@@ -5,8 +5,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
 
-public class ObsidianGlassBlock extends BlockBase {
-//public class ObsidianGlassBlock extends BlockBaseGlass1 {  //Fucking broken
+//public class ObsidianGlassBlock extends BlockBase {
+public class ObsidianGlassBlock extends BlockBaseGlass1 {  //Fucking broken
 
 
 
