@@ -1,7 +1,6 @@
 # ESMC
 Extreme Survival Minecraft
-https://minecraft.curseforge.com/projects/extreme-survival-minecraft-esmc
-
+https://minecraft.curseforge.com/projects/esmc
 
 
 
@@ -73,9 +72,6 @@ https://github.com/maikerumine/ESMC/releases/download/ESMC-0.1.1/esmc-0.1.1.jar
 
 Known bugs:
 
-Some armour textures are incomplete.
-
-Nyancat head does not orient wen placed.
 
 Tools and armour are all equal and not balanced yet.
 
