@@ -1,13 +1,20 @@
 package com.maikerumine.ESMC.blocks;
 
+import com.maikerumine.ESMC.Main;
+import com.maikerumine.ESMC.init.ModBlocks;
+import com.maikerumine.ESMC.init.ModItems;
+import com.maikerumine.ESMC.util.IHasModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -18,18 +25,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
-public class BlockBaseMulti extends BlockBase {
-
+public class BlockBaseMulti extends Block implements IHasModel 
+{
     public static final PropertyDirection FACING = PropertyDirection.func_177714_a("facing");
 
-
-
     public BlockBaseMulti(String name, Material material) {
-        super(name, material);
-        func_149663_c(name);
-       //setUnlocalizedName(esmc.MODID + ".blockbasemulti");
-        setRegistryName(name);
-        //setRegistryName("blockbasemulti");
+		super(material);
+		func_149663_c(name);
+		setRegistryName(name);
+		func_149647_a(CreativeTabs.field_78030_b);
+		
+		ModBlocks.BLOCKS.add(this);
+		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 
         func_180632_j(field_176227_L.func_177621_b().func_177226_a(FACING, EnumFacing.NORTH));
     }
@@ -65,4 +72,10 @@ public class BlockBaseMulti extends BlockBase {
     protected BlockStateContainer func_180661_e() {
         return new BlockStateContainer(this, FACING);
     }
+
+	@Override
+	public void registerModels() {
+		Main.proxy.registerItemRenderer(Item.func_150898_a(this), 0, "inventory");
+		
+	}
 }

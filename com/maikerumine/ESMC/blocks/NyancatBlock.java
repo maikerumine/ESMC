@@ -3,7 +3,7 @@ package com.maikerumine.ESMC.blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 
-public class NyancatBlock extends BlockBase {
+public class NyancatBlock extends BlockBaseMulti {
 
 	public NyancatBlock(String name, Material material) {
 		super(name, material);
