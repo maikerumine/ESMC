@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SSS",
+        "SMS",
+        "SSS"
+    ],
+    "key": {
+        "B": {
+            "item": "minecraft:stone",
+            "data": 0
+            }
+        },
+                "S": {
+            "item": "esm:mese_block",
+            "data": 0
+        }
+    },
+        "result": {
+            "item": "esm:protector_block",
+            "data": 0,
+            "count": 1
+        }
+}

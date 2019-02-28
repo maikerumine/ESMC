@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BBB",
+        "BBB",
+        "BBB"
+    ],
+    "key": {
+        "B": {
+            "item": "minecraft:bone",
+            "data": 0
+            }
+        },
+        "result": {
+            "item": "minecraft:dirt",
+            "data": 0,
+            "count": 1
+        }
+}

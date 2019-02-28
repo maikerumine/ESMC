@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "B B",
+        " B ",
+        "B B"
+    ],
+    "key": {
+        "B": {
+            "item": "minecraft:bone",
+            "data": 0
+            }
+        },
+        "result": {
+            "item": "minecraft:sand",
+            "data": 0,
+            "count": 1
+        }
+}

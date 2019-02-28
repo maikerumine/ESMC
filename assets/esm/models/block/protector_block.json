@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/protector_block_side",
+    "down": "esm:blocks/protector_block_top",
+    "up": "esm:blocks/protector_block_top",
+    "east": "esm:blocks/protector_block_side",
+    "west": "esm:blocks/protector_block_side",
+    "north": "esm:blocks/protector_block_side",
+    "south": "esm:blocks/protector_block_side"
+  }
+}

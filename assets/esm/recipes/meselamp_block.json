@@ -1,25 +1,24 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "DDD",
-        "DAD",
-        "DDD"
+        "   ",
+        " M ",
+        " G "
     ],
     "key": {
-        "A": {
-            "item": "minecraft:gold_apple",
+        "M": {
+            "item": "esm:mese_crystal",
             "data": 0
         },
 
-        "D": {
-            "item": "minecraft:dirt",
+        "G": {
+            "item": "minecraft:glass",
             "data": 0
         }
-        
-        
+    
     },
     "result": {
-        "item": "minecraft:sapling",
+        "item": "esm:meselamp_block",
         "data": 0,
         "count": 1
     }

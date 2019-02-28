@@ -1,6 +1,6 @@
 
 //Extreme Survival Minecraft
-// Ver 1.0
+// Ver 0.1.2
 //By: maikerumine
 //20190131 
 
@@ -25,6 +25,7 @@ item.ruby_crystal.name=Ruby Crystal
 //B L O C K S 
 tile.aikerum_block.name=Aikerum Block
 tile.aikerum_ore_block.name=Aikerum Ore
+tile.bone_block.name=Bone Block
 tile.bronze_block.name=Bronze Block
 tile.copper_block.name=Copper Block
 tile.copper_ore_block.name=Copper Ore
@@ -32,15 +33,18 @@ tile.depleted_uranium_ore_block.name=Depleted Uranium Ore
 tile.infinium_block.name=Infinium Block
 tile.infinium_ore_block.name=Infinium Ore
 tile.mese_block.name=Mese Block
+tile.meselamp_block.name=Meselamp Block
 tile.mese_ore_block.name=Mese Ore
 tile.nyancat_block.name=Nyancat Block
 tile.obsidian_brick_block.name=Obsidian Brick Block
 tile.obsidian_glass_block.name=Obsidian Glass Block
+tile.protector_block.name=Protector Block
 tile.purpellium_block.name=Purpellium Block
 tile.purpellium_ore_block.name=Purpellium Ore
 tile.rainbow_block.name=Rainbow Block
 tile.ruby_block.name=Ruby Block
 tile.ruby_ore_block.name=Ruby Ore
+tile.smoothstone_block.name=Smoothstone Block
 
 
 //T O O L S
