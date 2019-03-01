@@ -24,30 +24,30 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ModItems 
 {
-	//MaterialType
-	public static final ToolMaterial MATERIAL_AIKERUM_CRYSTAL = EnumHelper.addToolMaterial("material_aikerum_crystal", 3, 350, 8.5F, 4.0F, 10);
+	//MaterialType																				NAME	  HARVEST LVL  |  USE  |  SPEED  |  DAMAGE  |  ENCHANT
+	public static final ToolMaterial MATERIAL_AIKERUM_CRYSTAL = EnumHelper.addToolMaterial("material_aikerum_crystal", 4, 1420, 9.5F, 4.0F, 18);
 	public static final ArmorMaterial ARMOR_AIKERUM_CRYSTAL = EnumHelper.addArmorMaterial("armor_aikerum_crystal", Reference.MOD_ID + ":aikerum_crystal", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
+			new int [] {3, 9 ,7 ,4}, 10, SoundEvents.field_187716_o, 0.0F);
 
-	public static final ToolMaterial MATERIAL_BRONZE = EnumHelper.addToolMaterial("material_bronze", 3, 350, 8.5F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_BRONZE = EnumHelper.addToolMaterial("material_bronze", 3, 390, 3.5F, 2.6F, 20);
 	public static final ArmorMaterial ARMOR_BRONZE = EnumHelper.addArmorMaterial("armor_bronze", Reference.MOD_ID + ":bronze_ingot", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187722_q, 0.0F);
+			new int [] {3, 6 ,6 ,2}, 10, SoundEvents.field_187722_q, 0.0F);
 	
-	public static final ToolMaterial MATERIAL_EMERALD_CRYSTAL = EnumHelper.addToolMaterial("material_emerald_crystal", 3, 350, 8.5F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD_CRYSTAL = EnumHelper.addToolMaterial("material_emerald_crystal", 3, 780, 7.5F, 2.8F, 7);
 	public static final ArmorMaterial ARMOR_EMERALD_CRYSTAL = EnumHelper.addArmorMaterial("armor_emerald_crystal", Reference.MOD_ID + ":emerald_crystal", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
+			new int [] {3, 7 ,6 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
 			
-	public static final ToolMaterial MATERIAL_INFINIUM = EnumHelper.addToolMaterial("material_infinium_ingot", 3, 350, 8.5F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_INFINIUM = EnumHelper.addToolMaterial("material_infinium_ingot", 4, 1550, 10.5F, 6.0F, 19);
 	public static final ArmorMaterial ARMOR_INFINIUM = EnumHelper.addArmorMaterial("armor_infinium", Reference.MOD_ID + ":infinium_ingot", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187713_n, 0.0F);
+			new int [] {4, 10 ,8 ,5}, 10, SoundEvents.field_187713_n, 0.0F);
 		
-	public static final ToolMaterial MATERIAL_PURPELLIUM = EnumHelper.addToolMaterial("material_purpellium_ingot", 3, 350, 8.5F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_PURPELLIUM = EnumHelper.addToolMaterial("material_purpellium_ingot", 4, 1480, 9.5F, 5.5F, 15);
 	public static final ArmorMaterial ARMOR_PURPELLIUM = EnumHelper.addArmorMaterial("armor_purpellium", Reference.MOD_ID + ":purpellium_ingot", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187728_s, 0.0F);
+			new int [] {4, 9 ,7 ,4}, 10, SoundEvents.field_187728_s, 0.0F);
 		
-	public static final ToolMaterial MATERIAL_RUBY_CRYSTAL = EnumHelper.addToolMaterial("material_ruby_crystal", 3, 350, 8.5F, 4.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY_CRYSTAL = EnumHelper.addToolMaterial("material_ruby_crystal", 3, 980, 7.8F, 2.8F, 9);
 	public static final ArmorMaterial ARMOR_RUBY_CRYSTAL = EnumHelper.addArmorMaterial("armor_ruby_crystal", Reference.MOD_ID + ":ruby_crystal", 15, 
-			new int [] {3, 8 ,6 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
+			new int [] {3, 8 ,5 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
 			
 
 	public static final List<Item> ITEMS = new ArrayList<Item>();

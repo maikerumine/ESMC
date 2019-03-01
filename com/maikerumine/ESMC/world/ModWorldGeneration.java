@@ -24,16 +24,16 @@ public class ModWorldGeneration implements IWorldGenerator {
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{
-		generateOre(ModBlocks.AIKERUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 1, 2);
+		generateOre(ModBlocks.AIKERUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 2);
 		generateOre(ModBlocks.COPPER_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 6);
 		generateOre(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 2);
-		generateOre(ModBlocks.INFINIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.MESE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.MESE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.PURPELLIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 1, 3);
-		generateOre(ModBlocks.RUBY_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 1, 3);
-		generateOre(ModBlocks.NYANCAT_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(1) + 1, 4);
-		generateOre(ModBlocks.RAINBOW_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(1) + 1, 4);
+		generateOre(ModBlocks.INFINIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
+		generateOre(ModBlocks.MESE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
+		generateOre(ModBlocks.MESE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
+		generateOre(ModBlocks.PURPELLIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
+		generateOre(ModBlocks.RUBY_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
+		generateOre(ModBlocks.NYANCAT_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(1) + 1, 4);
+		generateOre(ModBlocks.RAINBOW_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(1) + 1, 4);
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) 

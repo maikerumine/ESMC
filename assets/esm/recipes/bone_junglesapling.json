@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ASA",
+        "SPS",
+        "ASA"
+    ],
+    "key": {
+        "P": {
+            "item": "esm:protector_block",
+            "data": 0
+        },
+
+        "S": {
+            "item": "minecraft:sapling",
+            "data": 0
+        },
+
+
+
+        "A": {
+            "item": "esm:aikerum_crystal",
+            "data": 0
+        }
+
+
+    },
+    "result": {
+        "item": "minecraft:6:3",
+        "data": 0,
+        "count": 1
+    }
+}

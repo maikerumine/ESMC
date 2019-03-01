@@ -1,17 +1,27 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "BBB",
-        "BBB",
-        "BBB"
+        "CBC",
+        "CIC",
+        "CCC"
     ],
     "key": {
+        "C": {
+            "item": "esm:copper_ingot"
+        },
+
+
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+
+
         "B": {
-            "item": "esm:bronze_ingot"
+            "item": "minecraft:coal_block"
         }
     },
     "result": {
-        "item": "esm:bronze_block",
-        "count": 1
+        "item": "esm:bronze_ingot",
+        "count": 8
     }
 }

@@ -6,21 +6,20 @@
         "DDD"
     ],
     "key": {
-        "A": {
-            "item": "minecraft:golden_apple",
-            "data": 0
-        },
-
         "D": {
             "item": "minecraft:dirt",
             "data": 0
+
+        },
+        "A": {
+            "item": "esm:protector_block",
+            "data": 0
         }
-        
-        
     },
+
     "result": {
-        "item": "minecraft:sapling",
+        "item": "minecraft:grass",
         "data": 0,
-        "count": 9
+        "count": 1
     }
 }

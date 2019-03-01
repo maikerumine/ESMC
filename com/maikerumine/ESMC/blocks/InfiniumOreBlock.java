@@ -14,7 +14,7 @@ public class InfiniumOreBlock extends BlockBase {
 	public InfiniumOreBlock(String name, Material material) {
 		super(name, material);
 		func_149672_a(SoundType.field_185851_d);
-		func_149711_c(5.0F);
+		func_149711_c(8.0F);
 		func_149752_b(15.0F);
 		setHarvestLevel("pickaxe", 4);
 		func_149715_a(0.0F);

@@ -2,25 +2,24 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "DDD",
-        "DAD",
+        "DMD",
         "DDD"
     ],
     "key": {
-        "A": {
-            "item": "minecraft:golden_apple",
-            "data": 0
-        },
-
         "D": {
             "item": "minecraft:dirt",
             "data": 0
+
+        },
+        "C": {
+            "item": "minecraft:mushroom_stew",
+            "data": 0
         }
-        
-        
     },
+
     "result": {
-        "item": "minecraft:sapling",
+        "item": "minecraft:mycelium",
         "data": 0,
-        "count": 9
+        "count": 1
     }
 }

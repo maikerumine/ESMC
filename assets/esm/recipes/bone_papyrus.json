@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "EEE",
+        "DCD",
+        "DDD"
+    ],
+    "key": {
+        "E": {
+            "item": "esm:emerald_block"
+        },
+
+
+        "C": {
+            "item": "minecraft:cactus"
+        },
+
+
+        "D": {
+            "item": "minecraft:dirt"
+        }
+    },
+    "result": {
+        "item": "minecraft:cactus",
+        "count": 1
+    }
+}

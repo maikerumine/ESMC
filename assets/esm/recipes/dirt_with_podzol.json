@@ -2,25 +2,24 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "DDD",
-        "DAD",
+        "DBD",
         "DDD"
     ],
     "key": {
-        "A": {
-            "item": "minecraft:golden_apple",
-            "data": 0
-        },
-
         "D": {
             "item": "minecraft:dirt",
             "data": 0
+
+        },
+        "B": {
+            "item": "minecraft:blaze_powder",
+            "data": 0
         }
-        
-        
     },
+
     "result": {
-        "item": "minecraft:sapling",
+        "item": "minecraft:podzol",
         "data": 0,
-        "count": 9
+        "count": 1
     }
 }

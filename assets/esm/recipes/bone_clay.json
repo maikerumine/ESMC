@@ -1,12 +1,19 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:bone"
-        }
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        " B  ",
+        " B "
     ],
-    "result": {
-        "item": "minecraft:clay",
-        "count": 1
-    }
+    "key": {
+        "B": {
+            "item": "minecraft:bone",
+            "data": 0
+            }
+        },
+        "result": {
+            "item": "minecraft:clay",
+            "data": 0,
+            "count": 2
+        }
 }

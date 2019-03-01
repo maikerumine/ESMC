@@ -4,6 +4,7 @@ import com.maikerumine.ESMC.init.ModRecipes;
 import com.maikerumine.ESMC.proxy.CommonProxy;
 import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.world.ModWorldGeneration;
+import com.maikerumine.ESMC.world.ModWorldGeneration2;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -27,6 +28,14 @@ public class Main {
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
 		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
+		
+		
+		
+		/*		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);
+		 * 
+		 * 
+		 * 
+		 * **/
 	}
 	
 	@EventHandler

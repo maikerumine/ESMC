@@ -1,6 +1,12 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "esm:blocks/rainbow_block"
-    }
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/rainbow_block",
+    "down": "esm:blocks/rainbow_block",
+    "up": "esm:blocks/rainbow_block",
+    "east": "esm:blocks/rainbow_block",
+    "west": "esm:blocks/rainbow_block",
+    "north": "esm:blocks/rainbow_block",
+    "south": "esm:blocks/rainbow_block"
+  }
 }

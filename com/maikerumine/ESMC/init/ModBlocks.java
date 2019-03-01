@@ -82,7 +82,7 @@ public class ModBlocks
 	public static final Block PURPELLIUM_ORE_BLOCK = new PurpelliumOreBlock("purpellium_ore_block", Material.field_151576_e);
 	
 	public static final Block NYANCAT_BLOCK = new NyancatBlock("nyancat_block", Material.field_151575_d);
-	public static final Block RAINBOW_BLOCK = new RainbowBlock("rainbow_block", Material.field_151586_h);
+	public static final Block RAINBOW_BLOCK = new RainbowBlock("rainbow_block", Material.field_151575_d);
 	
 
 }
