@@ -2,7 +2,7 @@ Extreme Survival Minecraft
 ===================
 author: maikerumine
 
-modid: esm-0.1.2
+modid: esm-0.1.3
 
 date: 20190228
 
