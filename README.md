@@ -13,7 +13,7 @@ https://minecraft.curseforge.com/projects/esmc
 ESMC is a W.I.P to eventually be a modpack for Minecraft.
 -------------------
 This base mod contains mostly ores, items, blocks, armour, tools, and special crafting.
-Use this mod with Biometweaker and the special all stone world script made specificly for ESM, and you will experience the old days of the Just Test Server in Minetest!
+Use this mod with Biometweaker and the special all stone world script made specifically for ESM, and you will experience the old days of the Just Test Server in Minetest!
 Many new ores and blocks, some directly from Minetest.
 
  
