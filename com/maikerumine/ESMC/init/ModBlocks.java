@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import com.maikerumine.ESMC.blocks.AikerumBlock;
 import com.maikerumine.ESMC.blocks.AikerumOreBlock;
 import com.maikerumine.ESMC.blocks.BlockBase;
-import com.maikerumine.ESMC.blocks.BoneBlock;
+import com.maikerumine.ESMC.blocks.BonesBlock;
 import com.maikerumine.ESMC.blocks.BronzeBlock;
 import com.maikerumine.ESMC.blocks.CopperBlock;
 import com.maikerumine.ESMC.blocks.CopperOreBlock;
@@ -53,7 +53,7 @@ public class ModBlocks
 	public static final Block AIKERUM_BLOCK = new AikerumBlock("aikerum_block", Material.field_151588_w);
 	public static final Block AIKERUM_ORE_BLOCK = new AikerumOreBlock("aikerum_ore_block", Material.field_151576_e);
 	
-	public static final Block BONE_BLOCK = new BoneBlock("bone_block", Material.field_151573_f);
+	public static final Block BONES_BLOCK = new BonesBlock("bones_block", Material.field_151573_f);
 	public static final Block BRONZE_BLOCK = new BronzeBlock("bronze_block", Material.field_151573_f);
 	
 	public static final Block COPPER_BLOCK = new CopperBlock("copper_block", Material.field_151573_f);
@@ -73,8 +73,6 @@ public class ModBlocks
 	
 	public static final Block RUBY_BLOCK = new RubyBlock("ruby_block", Material.field_151588_w);
 	public static final Block RUBY_ORE_BLOCK = new RubyOreBlock("ruby_ore_block", Material.field_151576_e);
-	
-	public static final Block SMOOTHSTONE_BLOCK = new SmoothstoneBlock("smoothstone_block", Material.field_151576_e);
 
 	public static final Block PROTECTOR_BLOCK = new ProtectorBlock("protector_block", Material.field_151575_d);
 	
@@ -83,6 +81,9 @@ public class ModBlocks
 	
 	public static final Block NYANCAT_BLOCK = new NyancatBlock("nyancat_block", Material.field_151575_d);
 	public static final Block RAINBOW_BLOCK = new RainbowBlock("rainbow_block", Material.field_151575_d);
+
+	public static final Block SMOOTHSTONE_BLOCK = new SmoothstoneBlock("smoothstone_block", Material.field_151576_e);
+	
 	
 
 }

@@ -1,23 +1,23 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "SSS",
-        "SMS",
-        "SSS"
+        "BBB",
+        "BIB",
+        "BBB"
     ],
     "key": {
-        "S": {
-            "item": "esm:smoothstone_block",
+        "B": {
+            "item": "minecraft:bone",
             "data": 0
         },
 
-        "M": {
-            "item": "esm:mese_block",
+        "I": {
+            "item": "minecraft:iron_block",
             "data": 0
         }
     },
     "result": {
-        "item": "esm:protector_block",
+        "item": "esm:bones_block",
         "data": 0,
         "count": 1
     }

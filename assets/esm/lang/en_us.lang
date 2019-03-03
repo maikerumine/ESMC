@@ -25,7 +25,7 @@ item.ruby_crystal.name=Ruby Crystal
 //B L O C K S 
 tile.aikerum_block.name=Aikerum Block
 tile.aikerum_ore_block.name=Aikerum Ore
-tile.bone_block.name=Bone Block
+tile.bones_block.name=Bones Block
 tile.bronze_block.name=Bronze Block
 tile.copper_block.name=Copper Block
 tile.copper_ore_block.name=Copper Ore
