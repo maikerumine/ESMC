@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/vendor_vendor_front",
+    "down": "minecraft:blocks/planks_oak",
+    "up": "esm:blocks/vendor_side",
+    "east": "esm:blocks/vendor_side",
+    "west": "esm:blocks/vendor_side",
+    "north": "esm:blocks/vendor_vendor_front",
+    "south": "esm:blocks/vendor_side"
+  }
+}

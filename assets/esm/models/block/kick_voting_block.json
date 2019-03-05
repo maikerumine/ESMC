@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/kick_voting",
+    "down": "minecraft:blocks/planks_oak",
+    "up": "esm:blocks/kick_voting_top",
+    "east": "esm:blocks/kick_voting",
+    "west": "esm:blocks/kick_voting",
+    "north": "esm:blocks/kick_voting",
+    "south": "esm:blocks/kick_voting"
+  }
+}

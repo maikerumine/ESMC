@@ -5,10 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockRenderLayer;
 
-//public class ObsidianGlassBlock extends BlockBase {
-public class ObsidianGlassBlock extends BlockBaseGlass1 {  //Fucking broken
-
-
+public class ObsidianGlassBlock extends BlockBaseGlass1 {
 
 	public ObsidianGlassBlock(String name, Material material) {
 		super(name, material);
@@ -18,9 +15,6 @@ public class ObsidianGlassBlock extends BlockBaseGlass1 {  //Fucking broken
 		setHarvestLevel("pickaxe", 2);
 		func_149715_a(0.0F);
 		func_149713_g(0);
-		
-		//setBlockUnbreakable();
-	
 	}
 	
     @Override

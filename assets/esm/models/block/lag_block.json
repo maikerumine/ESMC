@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/lag_block",
+    "down": "esm:blocks/obsidian_glass_block",
+    "up": "esm:blocks/obsidian_glass_block",
+    "east": "esm:blocks/lag_block",
+    "west": "esm:blocks/lag_block",
+    "north": "esm:blocks/lag_block",
+    "south": "esm:blocks/lag_block"
+  }
+}
