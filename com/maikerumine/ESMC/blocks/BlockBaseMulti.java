@@ -29,11 +29,13 @@ public class BlockBaseMulti extends Block implements IHasModel
 {
     public static final PropertyDirection FACING = PropertyDirection.func_177714_a("facing");
 
-    public BlockBaseMulti(String name, Material material) {
+    public BlockBaseMulti(String name, Material material, CreativeTabs tab) {
 		super(material);
 		func_149663_c(name);
 		setRegistryName(name);
-		func_149647_a(CreativeTabs.field_78030_b);
+		//setCreativeTab(CreativeTabs.DECORATIONS);
+		//setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		func_149647_a(tab);
 		
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));

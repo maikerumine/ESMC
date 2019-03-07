@@ -13,12 +13,13 @@ import net.minecraft.item.ItemBlock;
 
 public class BlockBase extends Block implements IHasModel 
 {
-	public BlockBase(String name, Material material)
+	public BlockBase(String name, Material material, CreativeTabs tab)
 	{
 		super(material);
 		func_149663_c(name);
 		setRegistryName(name);
-		func_149647_a(CreativeTabs.field_78030_b);
+		//setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		func_149647_a(tab);
 		
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
@@ -28,6 +29,7 @@ public class BlockBase extends Block implements IHasModel
 	public void registerModels() 
 	{
 		Main.proxy.registerItemRenderer(Item.func_150898_a(this), 0, "inventory");
+		//Main.proxy.registerModel(Item.getItemFromBlock(this), 0);  //from Harrys tut
 		
 	}
 }

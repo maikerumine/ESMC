@@ -2,17 +2,19 @@ package com.maikerumine.ESMC.blocks;
 
 import java.util.Random;
 
+import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.init.ModItems;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class CopperOreBlock extends BlockBase {
 
-	public CopperOreBlock(String name, Material material) {
-		super(name, material);
+	public CopperOreBlock(String name, Material material, CreativeTabs tab) {
+		super(name, material, Main.ESM);
 		func_149672_a(SoundType.field_185851_d);
 		func_149711_c(4.0F);
 		func_149752_b(10.0F);

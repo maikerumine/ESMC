@@ -1,6 +1,6 @@
 
 //Extreme Survival Minecraft
-// Ver 0.1.2
+// Ver 0.1.4
 //By: maikerumine
 //20190131 
 
@@ -30,7 +30,7 @@ tile.bones_block.name=Bones Block [NOVELTY]
 tile.bronze_block.name=Bronze Block
 tile.copper_block.name=Copper Block
 tile.copper_ore_block.name=Copper Ore
-tile.cursed_stone.name=Cursed Stone [NOVELTY]
+tile.cursed_stone_block.name=Cursed Stone [NOVELTY]
 tile.depleted_uranium_ore_block.name=Depleted Uranium Ore
 tile.infinium_block.name=Infinium Block
 tile.infinium_ore_block.name=Infinium Ore
@@ -53,6 +53,8 @@ tile.teleport_block.name=Teleport Block [NOVELTY]
 tile.vendor_depositor_block.name=Vendor Depositor Block [NOVELTY]
 tile.vendor_vendor_block.name=Vendor Vendor Block [NOVELTY]
 
+
+tile.esm_chest.name=Extreme Survival Chest [NOVELTY]
 
 //T O O L S
 //aikerum

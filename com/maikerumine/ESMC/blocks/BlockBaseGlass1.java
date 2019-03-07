@@ -15,13 +15,13 @@ import net.minecraft.item.ItemBlock;
 
 public class BlockBaseGlass1 extends Block implements IHasModel
 {
-	public BlockBaseGlass1(String name, Material material)
+	public BlockBaseGlass1(String name, Material material, CreativeTabs tab)
 	{
-		//super(Material.GLASS);//Attempt to get it to draw the transparent parts properly, didn't work
 		super(material);
 		func_149663_c(name);
 		setRegistryName(name);
-		func_149647_a(CreativeTabs.field_78030_b);
+		//setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		func_149647_a(tab);
 		
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));

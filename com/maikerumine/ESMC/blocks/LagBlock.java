@@ -1,14 +1,17 @@
 package com.maikerumine.ESMC.blocks;
 
+import com.maikerumine.ESMC.Main;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.BlockRenderLayer;
 
 public class LagBlock extends BlockBase {
 
-	public LagBlock(String name, Material material) {
-		super(name, material);
+	public LagBlock(String name, Material material, CreativeTabs tab) {
+		super(name, material, Main.ESM);
 		func_149672_a(SoundType.field_185853_f);
 		func_149711_c(20.0F);
 		func_149752_b(25.0F);

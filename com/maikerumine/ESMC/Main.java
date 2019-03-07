@@ -1,11 +1,15 @@
 package com.maikerumine.ESMC;
 
+import java.io.File;
+
+import com.maikerumine.ESMC.creativetabs.EsmTab;
 import com.maikerumine.ESMC.init.ModRecipes;
 import com.maikerumine.ESMC.proxy.CommonProxy;
 import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.world.ModWorldGeneration;
 import com.maikerumine.ESMC.world.ModWorldGeneration2;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -18,11 +22,16 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 	
+	//public static final CreativeTabs ESM = null;
+	public static final CreativeTabs ESM = new EsmTab();
+
 	@Instance
 	public static Main instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
+
+	public static File config;
 	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)

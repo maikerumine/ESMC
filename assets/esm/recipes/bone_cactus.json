@@ -2,22 +2,25 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "EEE",
-        "DSD",
+        "DRD",
         "DDD"
     ],
     "key": {
         "E": {
-            "item": "minecraft:emerald_block"
+            "item": "minecraft:emerald_block",
+            "data": 0
         },
 
 
-        "S": {
-            "item": "minecraft:sapling"
+        "R": {
+            "item": "minecraft:reeds",
+            "data": 0
         },
 
 
         "D": {
-            "item": "minecraft:dirt"
+            "item": "minecraft:sand",
+            "data": 0
         }
     },
     "result": {

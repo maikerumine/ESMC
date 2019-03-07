@@ -1,12 +1,6 @@
 {
-  "parent": "block/cube",
-  "textures": {
-    "particle": "esm:blocks/teleports_teleport_top",
-    "down": "esm:blocks/teleports_teleport_top",
-    "up": "esm:blocks/teleports_teleport_top",
-    "east": "minecraft:blocks/diamond_block",
-    "west": "minecraft:blocks/diamond_block",
-    "north": "minecraft:blocks/diamond_block",
-    "south": "minecraft:blocks/diamond_block"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "esm:blocks/teleports_teleport_top"
+    }
 }
