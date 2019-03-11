@@ -9,7 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 public class SmoothstoneBlock extends BlockBase {
 
 	public SmoothstoneBlock(String name, Material material, CreativeTabs tab) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
 		func_149711_c(5.0F);
 		func_149752_b(15.0F);

@@ -1,0 +1,41 @@
+{
+    "entity.stonemonster.ambient":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "mob/stonemonster/ambient1",
+            "mob/stonemonster/ambient2",
+            "mob/stonemonster/ambient3"
+        ]
+    },
+    "entity.stonemonster.death":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "mob/stonemonster/death"
+        ]
+    },
+    "entity.stonemonster.hurt":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "mob/stonemonster/hurt1"
+        ]
+    },
+    "entity.stonemonster.step":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "mob/stonemonster/step1",
+            "mob/stonemonster/step2",
+            "mob/stonemonster/step3",
+            "mob/stonemonster/step4",
+            "mob/stonemonster/step5",
+            "mob/stonemonster/step6"
+        ]
+    }
+}

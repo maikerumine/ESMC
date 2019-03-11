@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 public class RainbowBlock extends BlockBaseMulti {
 
 	public RainbowBlock(String name, Material material) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185854_g);
 		func_149711_c(1.0F);
 		func_149752_b(15.0F);

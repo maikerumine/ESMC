@@ -1,6 +1,6 @@
 package com.maikerumine.ESMC.blocks.tileentities;
 
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.blocks.containers.ContainerEsmChest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -80,7 +80,7 @@ public class TileEntityEsmChest extends TileEntityLockableLoot implements ITicka
 	@Override
 	public String func_174875_k() 
 	{
-		return Reference.MODID + ":esm_chest";
+		return Reference.MOD_ID + ":esm_chest";
 	}
 	
 	@Override

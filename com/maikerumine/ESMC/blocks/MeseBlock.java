@@ -9,7 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 public class MeseBlock extends BlockBase {
 
 	public MeseBlock(String name, Material material, CreativeTabs tab) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185852_e);
 		func_149711_c(9.0F);
 		func_149752_b(25.0F);

@@ -11,7 +11,7 @@ import net.minecraft.util.BlockRenderLayer;
 public class TeleportBlock extends BlockBase {
 
 	public TeleportBlock(String name, Material material, CreativeTabs tab) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.JT);
 		func_149672_a(SoundType.field_185853_f);
 		func_149711_c(20.0F);
 		func_149752_b(15.0F);

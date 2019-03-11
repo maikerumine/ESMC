@@ -1,6 +1,6 @@
 package com.maikerumine.ESMC.blocks.guis;
 
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.blocks.containers.ContainerEsmChest;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
 
@@ -12,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiEsmChest extends GuiContainer
 {
-	private static final ResourceLocation GUI_CHEST = new ResourceLocation(Reference.MODID + ":textures/gui/esm_chest.png");
+	private static final ResourceLocation GUI_CHEST = new ResourceLocation(Reference.MOD_ID + ":textures/gui/esm_chest.png");
 	private final InventoryPlayer playerInventory;
 	private final TileEntityEsmChest te;
 	

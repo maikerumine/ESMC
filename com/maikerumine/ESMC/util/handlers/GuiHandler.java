@@ -1,6 +1,6 @@
 package com.maikerumine.ESMC.util.handlers;
 
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.blocks.containers.ContainerEsmChest;
 import com.maikerumine.ESMC.blocks.guis.GuiEsmChest;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;

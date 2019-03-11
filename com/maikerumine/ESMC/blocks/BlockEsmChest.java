@@ -1,7 +1,7 @@
 package com.maikerumine.ESMC.blocks;
 
 import com.maikerumine.ESMC.Main;
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
 import com.maikerumine.ESMC.init.ModBlocks;
 import com.maikerumine.ESMC.init.ModItems;

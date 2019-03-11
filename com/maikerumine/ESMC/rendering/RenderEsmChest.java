@@ -1,6 +1,6 @@
 package com.maikerumine.ESMC.rendering;
 
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
 import com.maikerumine.ESMC.rendering.models.blocks.ModelEsmChest;
 
@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderEsmChest extends TileEntitySpecialRenderer<TileEntityEsmChest>
 {
-	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MODID + ":textures/blocks/esm_chest_front.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MOD_ID + ":textures/blocks/esm_chest_front.png");
 	private final ModelEsmChest MODEL = new ModelEsmChest();
 	
 	@Override

@@ -11,7 +11,7 @@ public class ObsidianBrickBlock extends BlockBase {
 //public class ObsidianBrickBlock extends BlockBaseGlass {
 
 	public ObsidianBrickBlock(String name, Material material, CreativeTabs tab) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
 		func_149711_c(7.0F);
 		func_149752_b(25.0F);

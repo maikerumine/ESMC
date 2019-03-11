@@ -1,11 +1,18 @@
 package com.maikerumine.ESMC.util.handlers;
 
+import com.maikerumine.ESMC.init.BiomeInit;
+import com.maikerumine.ESMC.init.EntityInit;
 import com.maikerumine.ESMC.init.ModBlocks;
 import com.maikerumine.ESMC.init.ModItems;
 import com.maikerumine.ESMC.util.IHasModel;
+import com.maikerumine.ESMC.world.type.WorldTypeDesert;
+import com.maikerumine.ESMC.world.type.WorldTypeOcean;
+import com.maikerumine.ESMC.world.type.WorldTypeStone;
+import com.maikerumine.ESMC.world.type.WorldTypeStoneJustTest;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.world.WorldType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -46,5 +53,24 @@ public class RegistryHandler
 			}
 		}
 	}
+	
+	
+	public static void preInitRegistries()
+	{
+		BiomeInit.registerBiomes();
+		
+		RenderHandler.registerEntityRenders();
+		EntityInit.registerEntities();
+	}
+	
+	public static void postRegistries()
+	{
+		WorldType STONE = new WorldTypeStone();
+		WorldType STONEJUSTTEST = new WorldTypeStoneJustTest();
+		WorldType OCEAN = new WorldTypeOcean();
+		WorldType DESERT = new WorldTypeDesert();
+		
+	}
+	
 	
 }

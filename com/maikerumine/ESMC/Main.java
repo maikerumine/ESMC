@@ -2,10 +2,13 @@ package com.maikerumine.ESMC;
 
 import java.io.File;
 
-import com.maikerumine.ESMC.creativetabs.EsmTab;
+import com.maikerumine.ESMC.creativetabs.Esm;
+import com.maikerumine.ESMC.creativetabs.Jt;
+import com.maikerumine.ESMC.creativetabs.Minetest;
 import com.maikerumine.ESMC.init.ModRecipes;
 import com.maikerumine.ESMC.proxy.CommonProxy;
 import com.maikerumine.ESMC.util.Reference;
+import com.maikerumine.ESMC.util.handlers.RegistryHandler;
 import com.maikerumine.ESMC.world.ModWorldGeneration;
 import com.maikerumine.ESMC.world.ModWorldGeneration2;
 
@@ -23,7 +26,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Main {
 	
 	//public static final CreativeTabs ESM = null;
-	public static final CreativeTabs ESM = new EsmTab();
+	public static final CreativeTabs ESM = new Esm();
+	public static final CreativeTabs JT = new Jt();
+	public static final CreativeTabs MINETEST = new Minetest();
 
 	@Instance
 	public static Main instance;
@@ -37,14 +42,9 @@ public class Main {
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
 		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
-		
-		
-		
-		/*		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);
-		 * 
-		 * 
-		 * 
-		 * **/
+//		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);
+
+		RegistryHandler.preInitRegistries();
 	}
 	
 	@EventHandler
@@ -56,7 +56,8 @@ public class Main {
 	@EventHandler
 	public static void Postinit(FMLPostInitializationEvent event)
 	{
-		
+		RegistryHandler.postRegistries();
 	}
 
+	
 }

@@ -1,8 +1,8 @@
 package com.maikerumine.ESMC.rendering;
 
-import com.maikerumine.ESMC.Reference;
+import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.entity.EntityStonemonster;
-import com.maikerumine.ESMC.rendering.models.entities.ModelStonemonster;
+import com.maikerumine.ESMC.entity.model.ModelStonemonster;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderStonemonster extends RenderLiving<EntityStonemonster>
 {
-	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/entity/centaur.png");
+	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":textures/entity/stonemonster.png");
 	
 	public RenderStonemonster(RenderManager manager) 
 	{

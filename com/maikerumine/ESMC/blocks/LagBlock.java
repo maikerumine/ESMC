@@ -11,7 +11,7 @@ import net.minecraft.util.BlockRenderLayer;
 public class LagBlock extends BlockBase {
 
 	public LagBlock(String name, Material material, CreativeTabs tab) {
-		super(name, material, Main.ESM);
+		super(name, material, Main.JT);
 		func_149672_a(SoundType.field_185853_f);
 		func_149711_c(20.0F);
 		func_149752_b(25.0F);

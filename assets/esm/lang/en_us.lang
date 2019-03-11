@@ -2,7 +2,7 @@
 //Extreme Survival Minecraft
 // Ver 0.1.4
 //By: maikerumine
-//20190131 
+//20190309 
 
 //I T E M S
 item.aikerum_crystal.name=Aikerum Crystal
@@ -122,10 +122,6 @@ item.ruby_crystal_leggings.name=Ruby Crystal Leggings
 item.ruby_crystal_boots.name=Ruby Crystal Boots
 
 
-
-
-
-
 //R E F E R E N C E S 
 //TODO:
 
@@ -173,7 +169,6 @@ item.shotgunround.name=12ga Round
 //e n t i t i e s 
 entity.stonemonster.name=stonemonster
 entity.badplayer1.name=Soldier Grunt
-entity.stonemons.name=stonemonster
 
 //f l u i d s
 fluid.toxicwater=Toxicwater
@@ -185,3 +180,12 @@ tile.jtstone.name=jtstone
 itemGroup.tabfirearms=Firearms
 itemGroup.tabaikerumtab=Extreme Survival Items
 
+itemGroup.tabesm=Extreme Survival
+itemGroup.tabjt=Just Test Stuff
+itemGroup.tabminetest=Minetest Default
+
+// w o r l d   g e n e r a t i o n
+generator.Stone=Stone World Easy
+generator.StoneJustTest=Stone World Difficult (NO DIRT)
+generator.Ocean=Ocean World
+generator.Desert=Desert World
