@@ -27,8 +27,9 @@ public class ToolSpade extends ItemSpade implements IHasModel
 	@Override
 	public void registerModels() 
 	{
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+		//Main.proxy.registerItemRenderer(this, 0, "inventory");			//Lore
 		// TODO Auto-generated method stub
+		Main.proxy.registerModel(this, 0);				//Harry
 		
 	}
 	

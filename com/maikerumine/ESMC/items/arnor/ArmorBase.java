@@ -24,7 +24,8 @@ public class ArmorBase extends ItemArmor implements IHasModel {
 	@Override
 	public void registerModels() 
 	{
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+//		Main.proxy.registerItemRenderer(this, 0, "inventory");		Loremaster
+		Main.proxy.registerModel(this, 0);		//Harry
 	}
 
 }

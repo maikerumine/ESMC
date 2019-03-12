@@ -15,7 +15,7 @@ public class GuiHandler implements IGuiHandler
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
 	{
-		if(ID == Reference.GUI_ESM_CHEST) return new ContainerEsmChest(player.field_71071_by, (TileEntityEsmChest)world.func_175625_s(new BlockPos(x,y,z)), player);
+//		if(ID == Reference.GUI_ESM_CHEST) return new ContainerEsmChest(player.inventory, (TileEntityEsmChest)world.getTileEntity(new BlockPos(x,y,z)), player);
 
 		return null;
 	}
@@ -23,7 +23,7 @@ public class GuiHandler implements IGuiHandler
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
 	{
-		if(ID == Reference.GUI_ESM_CHEST) return new GuiEsmChest(player.field_71071_by, (TileEntityEsmChest)world.func_175625_s(new BlockPos(x,y,z)), player);
+//		if(ID == Reference.GUI_ESM_CHEST) return new GuiEsmChest(player.inventory, (TileEntityEsmChest)world.getTileEntity(new BlockPos(x,y,z)), player);
 		return null;
 	}
 }

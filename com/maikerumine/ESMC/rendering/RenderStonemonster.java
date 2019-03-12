@@ -4,9 +4,12 @@ import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.entity.EntityStonemonster;
 import com.maikerumine.ESMC.entity.model.ModelStonemonster;
 
+import net.minecraft.client.renderer.entity.RenderLiving;   //needs to be sided?
+import net.minecraft.client.renderer.entity.RenderManager;	//needs to be sided?
+import net.minecraft.util.ResourceLocation;
+
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.util.ResourceLocation;
 
 public class RenderStonemonster extends RenderLiving<EntityStonemonster>
 {

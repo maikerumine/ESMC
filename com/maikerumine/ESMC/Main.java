@@ -20,6 +20,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
@@ -35,6 +36,10 @@ public class Main {
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
+	
+//	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
+//	public static CommonProxy proxy;
+	
 
 	public static File config;
 	
@@ -43,20 +48,27 @@ public class Main {
 	{
 		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
 //		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);
-
-		RegistryHandler.preInitRegistries();
+		RegistryHandler.preInitRegistries(event);
 	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
-		ModRecipes.init();
+		ModRecipes.init();						//Loremaster's
+		RegistryHandler.initRegistries(event);  //Harry's
 	}
 	
 	@EventHandler
 	public static void Postinit(FMLPostInitializationEvent event)
 	{
-		RegistryHandler.postRegistries();
+		//RegistryHandler.postRegistries();			//Loremaster's
+		RegistryHandler.postInitRegistries(event);	//Harry's
+	}
+	
+	@EventHandler
+	public static void serverInit(FMLServerStartingEvent event)
+	{
+		RegistryHandler.serverRegistries(event);
 	}
 
 	

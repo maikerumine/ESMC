@@ -93,9 +93,11 @@ public class EntityStonemonster extends EntityZombie
     private final EntityAIBreakDoor breakDoor = new EntityAIBreakDoor(this);
     private boolean isBreakDoorsTaskSet;
     /** The width of the entity */
-    private float stonemonsterWidth = -1.0F;
+//    private float stonemonsterWidth = -1.0F;
+    private float zombieWidth = -1.0F;
     /** The height of the the entity. */
-    private float stonemonsterHeight;
+//    private float stonemonsterHeight;
+    private float zombieHeight;
     
     
 	public EntityStonemonster(World worldIn) 
@@ -256,28 +258,28 @@ public class EntityStonemonster extends EntityZombie
      * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
      * use this to react to sunlight and start to burn.
      */
-
-    public void func_70636_d()
+/**
+    public void onLivingUpdate()
     {
-        if (this.field_70170_p.func_72935_r() && !this.field_70170_p.field_72995_K && !this.func_70631_g_() && this.func_190730_o())
+        if (this.world.isDaytime() && !this.world.isRemote && !this.isChild() && this.shouldBurnInDay())
         {
-            float f = this.func_70013_c();
+            float f = this.getBrightness();
 
-            if (f > 0.5F && this.field_70146_Z.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && this.field_70170_p.func_175678_i(new BlockPos(this.field_70165_t, this.field_70163_u + (double)this.func_70047_e(), this.field_70161_v)))
+            if (f > 0.5F && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && this.world.canSeeSky(new BlockPos(this.posX, this.posY + (double)this.getEyeHeight(), this.posZ)))
             {
                 boolean flag = true;
-                ItemStack itemstack = this.func_184582_a(EntityEquipmentSlot.HEAD);
+                ItemStack itemstack = this.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
 
-                if (!itemstack.func_190926_b())
+                if (!itemstack.isEmpty())
                 {
-                    if (itemstack.func_77984_f())
+                    if (itemstack.isItemStackDamageable())
                     {
-                        itemstack.func_77964_b(itemstack.func_77952_i() + this.field_70146_Z.nextInt(2));
+                        itemstack.setItemDamage(itemstack.getItemDamage() + this.rand.nextInt(2));
 
-                        if (itemstack.func_77952_i() >= itemstack.func_77958_k())
+                        if (itemstack.getItemDamage() >= itemstack.getMaxDamage())
                         {
-                            this.func_70669_a(itemstack);
-                            this.func_184201_a(EntityEquipmentSlot.HEAD, ItemStack.field_190927_a);
+                            this.renderBrokenItemStack(itemstack);
+                            this.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
                         }
                     }
 
@@ -286,19 +288,19 @@ public class EntityStonemonster extends EntityZombie
 
                 if (flag)
                 {
-                    this.func_70015_d(8);
+                    this.setFire(8);
                 }
             }
         }
 
-        super.func_70636_d();
+        super.onLivingUpdate();
     }
 
-    protected boolean func_190730_o()
+    protected boolean shouldBurnInDay()
     {
         return true;
     }
-
+**/
     /**
      * Called when the entity is attacked.
      */
@@ -395,10 +397,10 @@ public class EntityStonemonster extends EntityZombie
         return SoundsHandler.ENTITY_STONEMONSTER_DEATH;			//set to custom Stonemonster
     }
 
-    protected SoundEvent func_190731_di()
-    {
-        return SoundsHandler.ENTITY_STONEMONSTER_STEP;			//set to custom Stonemonster
-    }
+//    protected SoundEvent getStepSound()
+//    {
+//       return SoundsHandler.ENTITY_STONEMONSTER_STEP;			//set to custom Stonemonster
+//    }
 
     protected void func_180429_a(BlockPos pos, Block blockIn)
     {
@@ -409,7 +411,7 @@ public class EntityStonemonster extends EntityZombie
      * Get this Entity's EnumCreatureAttribute
      */
     
-    /*
+/*
     public EnumCreatureAttribute getCreatureAttribute()
     {
         return EnumCreatureAttribute.UNDEAD;			//set to custom Stonemonster
@@ -617,32 +619,7 @@ public class EntityStonemonster extends EntityZombie
         this.func_146069_a(isChild ? 0.5F : 1.0F);
     }
 
-    /**
-     * Sets the width and height of the entity.
-     */
- /*   
-    protected final void setSize(float width, float height)
-    {
-        boolean flag = this.zombieWidth > 0.0F && this.zombieHeight > 0.0F;
-        this.zombieWidth = width;
-        this.zombieHeight = height;
 
-        if (!flag)
-        {
-            this.multiplySize(1.0F);
-        }
-    }
-
-    /**
-     * Multiplies the height and width by the provided float.
-     */
-    
-/*    
-    protected final void multiplySize(float size)
-    {
-        super.setSize(this.zombieWidth * size, this.zombieHeight * size);
-    }
-*/
     /**
      * Returns the Y Offset of this entity.
      */
@@ -691,3 +668,96 @@ public class EntityStonemonster extends EntityZombie
     }
 
 }
+
+
+
+
+//THE BELOW CODE IS TEST SAMPLE FROM HARRY"S MODDING TUTORIAL
+/**
+package com.maikerumine.ESMC.entity;
+
+import com.maikerumine.ESMC.init.ModItems;
+import com.maikerumine.ESMC.util.handlers.LootTableHandler;
+import com.maikerumine.ESMC.util.handlers.SoundsHandler;
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIFollowParent;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAIMate;
+import net.minecraft.entity.ai.EntityAIPanic;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAITempt;
+import net.minecraft.entity.ai.EntityAIWanderAvoidWater;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.world.World;
+
+public class EntityStonemonster extends EntityCow
+{
+	public EntityStonemonster(World worldIn) 
+	{
+		super(worldIn);
+		this.setSize(0.9F, 2.8F);
+	}
+	
+	@Override
+	protected void initEntityAI()
+	{
+		this.tasks.addTask(0, new EntityAISwimming(this));
+        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
+        this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
+        this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));
+        this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
+        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+        this.tasks.addTask(7, new EntityAILookIdle(this));
+	}
+	
+	@Override
+	protected void applyEntityAttributes() 
+	{
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.25D);
+	}
+	
+	@Override
+	public float getEyeHeight()
+	{
+		return 2.6F;
+	}
+	
+	@Override
+	public EntityCow createChild(EntityAgeable ageable) 
+	{
+		return new EntityStonemonster(world);
+	}
+	
+	@Override
+	protected ResourceLocation getLootTable() 
+	{
+		return LootTableHandler.STONEMONSTER;
+	}
+	
+	@Override
+	protected SoundEvent getAmbientSound() 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_AMBIENT;
+	}
+	
+	@Override
+	protected SoundEvent getHurtSound(DamageSource source) 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_HURT;
+	}
+	
+	@Override
+	protected SoundEvent getDeathSound() 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_DEATH;
+	}
+}
+*/

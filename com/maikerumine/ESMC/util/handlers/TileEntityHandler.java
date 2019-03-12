@@ -8,8 +8,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TileEntityHandler 
 {
-	public static void registerTileEntities()
-	{
-		GameRegistry.registerTileEntity(TileEntityEsmChest.class, new ResourceLocation(Reference.MOD_ID + ":esm_chest"));
-	}
+//	public static void registerTileEntities()
+//	{
+//		GameRegistry.registerTileEntity(TileEntityEsmChest.class, new ResourceLocation(Reference.MOD_ID + ":esm_chest"));
+//	}
 }

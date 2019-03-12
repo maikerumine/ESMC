@@ -30,7 +30,8 @@ public class Toolaxe extends ItemAxe implements IHasModel
 	@Override
 	public void registerModels() 
 	{
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+		//Main.proxy.registerItemRenderer(this, 0, "inventory");		//lore
+		Main.proxy.registerModel(this, 0);								//Harry
 		// TODO Auto-generated method stub
 		
 	}

@@ -38,7 +38,7 @@ public class BlockEsmChest extends BlockContainer
 	{
 		if(!worldIn.field_72995_K)
 		{
-			playerIn.openGui(Main.instance, Reference.GUI_ESM_CHEST, worldIn, pos.func_177958_n(), pos.func_177956_o(), pos.func_177952_p());
+//			playerIn.openGui(Main.instance, Reference.GUI_ESM_CHEST, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		
 		return true;

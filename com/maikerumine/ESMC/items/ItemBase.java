@@ -9,15 +9,41 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item implements IHasModel {
 	
-	public ItemBase(String name)
+
+
+	
+	/**Harrys code
+	 * 
+	 */
+	public ItemBase(String name, CreativeTabs tab) 
 	{
 		func_77655_b(name);
 		setRegistryName(name);
-		func_77637_a(CreativeTabs.field_78035_l);
+		func_77637_a(tab);
 		
 		ModItems.ITEMS.add(this);
 	}
-
+	
+	@Override
+	public void registerModels() 
+	{
+		Main.proxy.registerModel(this, 0);
+	}
+	/**
+	 * 
+	 * Loremaster code
+	 */
+	/**
+	 *	public ItemBase(String name)
+	{
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		setCreativeTab(CreativeTabs.MATERIALS);
+		
+		ModItems.ITEMS.add(this);
+	}
+	
+	
 	@Override
 	public void registerModels() 
 	{
@@ -25,5 +51,5 @@ public class ItemBase extends Item implements IHasModel {
 		// TODO Auto-generated method stub
 		
 	}
-
+*/
 }

@@ -52,21 +52,21 @@ public class ModItems
 
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	//Items
-	public static final Item AIKERUM_CRYSTAL = new ItemBase("aikerum_crystal");
-	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot");
-	public static final Item COPPER_LUMP = new ItemBase("copper_lump");
-	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
-	public static final Item DEPLETED_URANIUM_LUMP = new ItemBase("depleted_uranium_lump");
-	public static final Item DEPLETED_URANIUM_INGOT = new ItemBase("depleted_uranium_ingot");
-	public static final Item EMERALD_CRYSTAL = new ItemBase("emerald_crystal");
-	public static final Item INFINIUM_GOO = new ItemBase("infinium_goo");
-	public static final Item INFINIUM_INGOT = new ItemBase("infinium_ingot");
-	public static final Item MESE_CRYSTAL = new ItemBase("mese_crystal");
-	public static final Item MESE_CRYSTAL_FRAGMENT = new ItemBase("mese_crystal_fragment");
-	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard");
-	public static final Item PURPELLIUM_LUMP = new ItemBase("purpellium_lump");
-	public static final Item PURPELLIUM_INGOT = new ItemBase("purpellium_ingot");
-	public static final Item RUBY_CRYSTAL = new ItemBase("ruby_crystal");
+	public static final Item AIKERUM_CRYSTAL = new ItemBase("aikerum_crystal", null);
+	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot", null);
+	public static final Item COPPER_LUMP = new ItemBase("copper_lump", null);
+	public static final Item COPPER_INGOT = new ItemBase("copper_ingot", null);
+	public static final Item DEPLETED_URANIUM_LUMP = new ItemBase("depleted_uranium_lump", null);
+	public static final Item DEPLETED_URANIUM_INGOT = new ItemBase("depleted_uranium_ingot", null);
+	public static final Item EMERALD_CRYSTAL = new ItemBase("emerald_crystal", null);
+	public static final Item INFINIUM_GOO = new ItemBase("infinium_goo", null);
+	public static final Item INFINIUM_INGOT = new ItemBase("infinium_ingot", null);
+	public static final Item MESE_CRYSTAL = new ItemBase("mese_crystal", null);
+	public static final Item MESE_CRYSTAL_FRAGMENT = new ItemBase("mese_crystal_fragment", null);
+	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard", null);
+	public static final Item PURPELLIUM_LUMP = new ItemBase("purpellium_lump", null);
+	public static final Item PURPELLIUM_INGOT = new ItemBase("purpellium_ingot", null);
+	public static final Item RUBY_CRYSTAL = new ItemBase("ruby_crystal", null);
 
 	
 	//T O O L S 

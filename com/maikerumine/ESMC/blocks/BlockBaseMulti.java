@@ -77,7 +77,8 @@ public class BlockBaseMulti extends Block implements IHasModel
 
 	@Override
 	public void registerModels() {
-		Main.proxy.registerItemRenderer(Item.func_150898_a(this), 0, "inventory");
+		//Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+		Main.proxy.registerModel(Item.func_150898_a(this), 0);
 		
 	}
 }
