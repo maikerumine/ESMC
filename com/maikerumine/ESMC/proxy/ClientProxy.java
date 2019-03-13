@@ -128,10 +128,10 @@ public class ClientProxy implements IProxy
 		
 
     //public static ModRenderItem modRenderItem; // used to provide custom enchantment glint color
-    public static Field modelManager = ReflectionHelper.findField(Minecraft.class, "modelManager", "modelManager");
-    public static Field renderItem = ReflectionHelper.findField(Minecraft.class, "renderItem", "renderItem");
-    public static Field itemRenderer = ReflectionHelper.findField(ItemRenderer.class, "itemRenderer", "itemRenderer");
-    public static Field playerRenderer = ReflectionHelper.findField(RenderManager.class, "playerRender", "playerRenderer");
+ //   public static Field modelManager = ReflectionHelper.findField(Minecraft.class, "modelManager", "modelManager");  20190313-crash?
+ //   public static Field renderItem = ReflectionHelper.findField(Minecraft.class, "renderItem", "renderItem");
+//    public static Field itemRenderer = ReflectionHelper.findField(ItemRenderer.class, "itemRenderer", "itemRenderer");
+//    public static Field playerRenderer = ReflectionHelper.findField(RenderManager.class, "playerRender", "playerRenderer");
 
 
 
