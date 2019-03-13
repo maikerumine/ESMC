@@ -3,7 +3,8 @@ package com.maikerumine.ESMC.blocks.slabs;
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.init.ModItems;
 import com.maikerumine.ESMC.items.ItemBase;
-import com.maikerumine.ESMC.util.IHasModel;
+import com.maikerumine.ESMC.util.interfaces.IHasModel;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;

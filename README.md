@@ -2,9 +2,9 @@ Extreme Survival Minecraft
 ===================
 author: maikerumine
 
-modid: esm-0.1.3
+modid: esm-0.1.3.9_1.12.2-client
 
-date: 20190228
+date: 20190313
 
 
 https://minecraft.curseforge.com/projects/esmc

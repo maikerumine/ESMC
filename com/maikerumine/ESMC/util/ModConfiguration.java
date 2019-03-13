@@ -9,14 +9,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ModConfiguration 
 {
-	public static Configuration config;
-	
-	public static int ENTITY_STONEMONSTER_ID = 201;
-	
-
+	public static Configuration config;	
+	public static int ENTITY_STONEMONSTER_ID = 222;
 	public static int GUI_ESM_CHEST_ID = 2;
-
-	
 	public static boolean spawnCustomBiomesInOverworld = true;
 	
 	public static void init(File file)

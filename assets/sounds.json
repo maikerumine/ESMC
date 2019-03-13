@@ -1,41 +1,34 @@
 {
-    "entity.stonemonster.ambient":
-    {
-        "category": "neutral",
-        "sounds":
-        [
-            "mob/stonemonster/ambient1",
-            "mob/stonemonster/ambient2",
-            "mob/stonemonster/ambient3"
-        ]
+    "entity.stonemonster.ambient": {
+        "category": "entity",
+        "subtitle": "entity.stonemonster.ambient",
+        "sounds": [{
+            "name": "esm:entity/stonemonster/ambient",
+            "stream": true
+        }]
     },
-    "entity.stonemonster.death":
-    {
-        "category": "neutral",
-        "sounds":
-        [
-            "mob/stonemonster/death"
-        ]
+    "entity.stonemonster.death": {
+        "category": "entity",
+        "subtitle": "entity.stonemonster.death",
+        "sounds": [{
+            "name": "esm:entity/stonemonster/death",
+            "stream": true
+        }]
     },
-    "entity.stonemonster.hurt":
-    {
-        "category": "neutral",
-        "sounds":
-        [
-            "mob/stonemonster/hurt1"
-        ]
+    "entity.stonemonster.hurt": {
+        "category": "entity",
+        "subtitle": "entity.stonemonster.hurt",
+        "sounds": [{
+            "name": "esm:entity/stonemonster/hurt",
+            "stream": true
+        }]
     },
-    "entity.stonemonster.step":
-    {
-        "category": "neutral",
-        "sounds":
-        [
-            "mob/stonemonster/step1",
-            "mob/stonemonster/step2",
-            "mob/stonemonster/step3",
-            "mob/stonemonster/step4",
-            "mob/stonemonster/step5",
-            "mob/stonemonster/step6"
-        ]
+    "entity.stonemonster.step": {
+        "category": "entity",
+        "subtitle": "entity.stonemonster.step",
+        "sounds": [{
+            "name": "esm:entity/stonemonster/step",
+            "stream": true
+        }]
     }
 }

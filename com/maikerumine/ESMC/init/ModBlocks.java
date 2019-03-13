@@ -109,14 +109,16 @@ public class ModBlocks
 	
 	
 	
-	//From Harrys Tutorial:  https://github.com/HarryTechRevs/Minecraft-Modding-1.12
+	/*
+	 * From Harry's Tutorial:  
+	 * https://github.com/HarryTechRevs/Minecraft-Modding-1.12
+	 * 
+	 */
 	//public static final Block MOLTEN_COPPER_BLOCK = new BlockFluid("molten_copper", FluidInit.MOLTEN_COPPER_FLUID, Material.LAVA);
-	
-	
 	//public static final BlockSlab COPPER_SLAB_DOUBLE = new BlockSlabDoubleBase("copper_slab_double", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF);
 	//public static final BlockSlab COPPER_SLAB_HALF = new BlockSlabHalfBase("copper_slab_half", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF, BlockInit.COPPER_SLAB_DOUBLE);
 	
-	//public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
+	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
 	
 	
 

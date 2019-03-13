@@ -10,8 +10,8 @@ import com.maikerumine.ESMC.init.FluidInit;
 import com.maikerumine.ESMC.init.ModBlocks;
 import com.maikerumine.ESMC.init.ModItems;
 import com.maikerumine.ESMC.rendering.RenderEsmChest;
-import com.maikerumine.ESMC.util.IHasModel;
 import com.maikerumine.ESMC.util.ModConfiguration;
+import com.maikerumine.ESMC.util.interfaces.IHasModel;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomOres;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomStructures;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomTrees;
@@ -50,8 +50,8 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-//		TileEntityHandler.registerTileEntities();
-//		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+		TileEntityHandler.registerTileEntities();
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 	}
 	
 	@SubscribeEvent
@@ -63,7 +63,7 @@ public class RegistryHandler
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event)
 	{		
-//		Main.proxy.registerModel(Item.getItemFromBlock(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
+		Main.proxy.registerModel(Item.func_150898_a(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
 		
 		for(Item item : ModItems.ITEMS)
 		{
@@ -85,19 +85,17 @@ public class RegistryHandler
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
-		FluidInit.registerFluids();
-
 		// TODO
 //		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 //		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 //		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
+//		DimensionInit.registerDimensions();
 		
 		BiomeInit.registerBiomes();
-//		DimensionInit.registerDimensions();
-//		EntityInit.registerEntities();  //added forge forum stuff instead
-//		EntityInit.registerEntities();
-//		RenderHandler.registerEntityRenders();				//CRASHING SERVER
-//		RenderHandler.registerCustomMeshesAndStates();
+		EntityInit.registerEntities();						//CRASHING SERVER
+		FluidInit.registerFluids();
+		RenderHandler.registerEntityRenders();				//CRASHING SERVER
+		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER
 		ModConfiguration.registerConfig(event);
 	}
 
@@ -122,46 +120,3 @@ public class RegistryHandler
 	}
 	
 }
-	/**
-	 * This was old code
-	 * 
-	 */
-/*
-	@SubscribeEvent
-	public static void onModelRegister(ModelRegistryEvent event)
-	{
-		for(Item item : ModItems.ITEMS)
-		{
-			if(item instanceof IHasModel)
-			{
-				((IHasModel)item).registerModels();
-			}
-		}
-		
-		for(Block block : ModBlocks.BLOCKS)
-		{
-			if(block instanceof IHasModel)
-			{
-				((IHasModel)block).registerModels();
-			}
-		}
-	}
-	
-	
-	public static void preInitRegistries()
-	{
-		BiomeInit.registerBiomes();
-		RenderHandler.registerEntityRenders();
-		EntityInit.registerEntities();
-	}
-	
-	public static void postRegistries()
-	{
-		WorldType STONE = new WorldTypeStone();
-		WorldType STONEJUSTTEST = new WorldTypeStoneJustTest();
-		WorldType OCEAN = new WorldTypeOcean();
-		WorldType DESERT = new WorldTypeDesert();
-		
-	}
-*/	
-	

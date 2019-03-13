@@ -142,9 +142,9 @@ public class EntityStonemonster extends EntityZombie
     protected void func_110147_ax()
     {
         super.func_110147_ax();
-        this.func_110148_a(SharedMonsterAttributes.field_111265_b).func_111128_a(35.0D);
+        this.func_110148_a(SharedMonsterAttributes.field_111265_b).func_111128_a(40.0D);
         this.func_110148_a(SharedMonsterAttributes.field_111263_d).func_111128_a(0.23000000417232513D);
-        this.func_110148_a(SharedMonsterAttributes.field_111264_e).func_111128_a(3.0D);
+        this.func_110148_a(SharedMonsterAttributes.field_111264_e).func_111128_a(4.0D);
         this.func_110148_a(SharedMonsterAttributes.field_188791_g).func_111128_a(2.0D);
         this.func_110140_aT().func_111150_b(SPAWN_REINFORCEMENTS_CHANCE).func_111128_a(this.field_70146_Z.nextDouble() * net.minecraftforge.common.ForgeModContainer.zombieSummonBaseChance);
     }
@@ -217,7 +217,7 @@ public class EntityStonemonster extends EntityZombie
     {
         if (this.func_70631_g_())
         {
-            this.field_70728_aV = (int)((float)this.field_70728_aV * 2.5F);
+            this.field_70728_aV = (int)((float)this.field_70728_aV * 0.5F);
         }
 
         return super.func_70693_a(player);
@@ -258,28 +258,28 @@ public class EntityStonemonster extends EntityZombie
      * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
      * use this to react to sunlight and start to burn.
      */
-/**
-    public void onLivingUpdate()
-    {
-        if (this.world.isDaytime() && !this.world.isRemote && !this.isChild() && this.shouldBurnInDay())
-        {
-            float f = this.getBrightness();
 
-            if (f > 0.5F && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && this.world.canSeeSky(new BlockPos(this.posX, this.posY + (double)this.getEyeHeight(), this.posZ)))
+    public void func_70636_d()
+    {
+        if (this.field_70170_p.func_72935_r() && !this.field_70170_p.field_72995_K && !this.func_70631_g_() && this.func_190730_o())
+        {
+            float f = this.func_70013_c();
+
+            if (f > 0.5F && this.field_70146_Z.nextFloat() * 30.0F < (f - 0.4F) * 2.0F && this.field_70170_p.func_175678_i(new BlockPos(this.field_70165_t, this.field_70163_u + (double)this.func_70047_e(), this.field_70161_v)))
             {
                 boolean flag = true;
-                ItemStack itemstack = this.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
+                ItemStack itemstack = this.func_184582_a(EntityEquipmentSlot.HEAD);
 
-                if (!itemstack.isEmpty())
+                if (!itemstack.func_190926_b())
                 {
-                    if (itemstack.isItemStackDamageable())
+                    if (itemstack.func_77984_f())
                     {
-                        itemstack.setItemDamage(itemstack.getItemDamage() + this.rand.nextInt(2));
+                        itemstack.func_77964_b(itemstack.func_77952_i() + this.field_70146_Z.nextInt(2));
 
-                        if (itemstack.getItemDamage() >= itemstack.getMaxDamage())
+                        if (itemstack.func_77952_i() >= itemstack.func_77958_k())
                         {
-                            this.renderBrokenItemStack(itemstack);
-                            this.setItemStackToSlot(EntityEquipmentSlot.HEAD, ItemStack.EMPTY);
+                            this.func_70669_a(itemstack);
+                            this.func_184201_a(EntityEquipmentSlot.HEAD, ItemStack.field_190927_a);
                         }
                     }
 
@@ -288,19 +288,19 @@ public class EntityStonemonster extends EntityZombie
 
                 if (flag)
                 {
-                    this.setFire(8);
+                    this.func_70015_d(8);
                 }
             }
         }
 
-        super.onLivingUpdate();
+        super.func_70636_d();
     }
 
-    protected boolean shouldBurnInDay()
+    protected boolean func_190730_o()
     {
-        return true;
+        return false;			//Set to false to make tough
     }
-**/
+
     /**
      * Called when the entity is attacked.
      */
@@ -381,42 +381,72 @@ public class EntityStonemonster extends EntityZombie
 
         return flag;
     }
-
-    protected SoundEvent func_184639_G()
+/**
+    protected SoundEvent getAmbientSound()
     {
         return SoundsHandler.ENTITY_STONEMONSTER_AMBIENT;			//set to custom Stonemonster
     }
 
-    protected SoundEvent func_184601_bQ(DamageSource damageSourceIn)
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn)
     {
         return SoundsHandler.ENTITY_STONEMONSTER_HURT;			//set to custom Stonemonster
     }
 
-    protected SoundEvent func_184615_bR()
+    protected SoundEvent getDeathSound()
     {
         return SoundsHandler.ENTITY_STONEMONSTER_DEATH;			//set to custom Stonemonster
     }
 
-//    protected SoundEvent getStepSound()
-//    {
-//       return SoundsHandler.ENTITY_STONEMONSTER_STEP;			//set to custom Stonemonster
-//    }
-
-    protected void func_180429_a(BlockPos pos, Block blockIn)
+    protected SoundEvent getStepSound()
     {
-        this.func_184185_a(this.func_190731_di(), 0.15F, 1.0F);
+       return SoundsHandler.ENTITY_STONEMONSTER_STEP;			//set to custom Stonemonster
     }
 
+    protected void playStepSound(BlockPos pos, Block blockIn)
+    {
+        this.playSound(this.getStepSound(), 0.15F, 1.0F);
+    }
+*/
+    
+	@Override
+	protected SoundEvent func_184639_G() 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_AMBIENT;
+	}
+	
+	@Override
+	protected SoundEvent func_184601_bQ(DamageSource source) 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_HURT;
+	}
+	
+	@Override
+	protected SoundEvent func_184615_bR() 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_DEATH;
+	}  
+	
+	@Override
+	protected SoundEvent func_190731_di() 
+	{
+		return SoundsHandler.ENTITY_STONEMONSTER_STEP;
+	} 
+    
+    
+    
+    
+    
+    
     /**
      * Get this Entity's EnumCreatureAttribute
      */
     
-/*
-    public EnumCreatureAttribute getCreatureAttribute()
+
+    public EnumCreatureAttribute func_70668_bt()
     {
         return EnumCreatureAttribute.UNDEAD;			//set to custom Stonemonster
     }
-*/
+
     @Nullable
     protected ResourceLocation func_184647_J()
     {

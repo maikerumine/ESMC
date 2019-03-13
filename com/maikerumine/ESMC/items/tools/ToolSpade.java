@@ -2,7 +2,7 @@ package com.maikerumine.ESMC.items.tools;
 
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.init.ModItems;
-import com.maikerumine.ESMC.util.IHasModel;
+import com.maikerumine.ESMC.util.interfaces.IHasModel;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;

@@ -10,7 +10,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
 /**
- * ModelZombie - Either Mojang or a mod author
+ * Minetest Stonemonster replica
  * Created using Tabula 7.0.0
  */
 public class ModelStonemonster extends ModelBase {
@@ -24,28 +24,28 @@ public class ModelStonemonster extends ModelBase {
     public ModelStonemonster() {
         this.field_78090_t = 64;
         this.field_78089_u = 64;
-        this.arm_right = new ModelRenderer(this, 40, 16);
-        this.arm_right.func_78793_a(-5.0F, 2.0F, 0.0F);
-        this.arm_right.func_78790_a(-3.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F);
-        this.setRotateAngle(arm_right, -1.3962634015954636F, -0.10000736613927509F, 0.10000736613927509F);
-        this.head_inner = new ModelRenderer(this, 0, 0);
-        this.head_inner.func_78793_a(0.0F, 0.0F, 0.0F);
-        this.head_inner.func_78790_a(-4.0F, -8.0F, -4.0F, 8, 8, 8, 0.0F);
         this.arm_left = new ModelRenderer(this, 40, 16);
         this.arm_left.field_78809_i = true;
-        this.arm_left.func_78793_a(5.0F, 2.0F, 0.0F);
-        this.arm_left.func_78790_a(-1.0F, -2.0F, -2.0F, 4, 12, 4, 0.0F);
-        this.setRotateAngle(arm_left, -1.3962634015954636F, 0.10000736613927509F, -0.10000736613927509F);
+        this.arm_left.func_78793_a(6.0F, 1.0F, 0.0F);
+        this.arm_left.func_78790_a(-1.0F, -2.0F, -2.0F, 2, 14, 3, 0.0F);
+        this.setRotateAngle(arm_left, -1.5707963267948966F, 0.0F, 0.0F);
+        this.arm_right = new ModelRenderer(this, 40, 16);
+        this.arm_right.func_78793_a(-6.0F, 1.0F, 0.0F);
+        this.arm_right.func_78790_a(-1.0F, -2.0F, -2.0F, 2, 14, 3, 0.0F);
+        this.setRotateAngle(arm_right, -1.5707963267948966F, 0.0F, 0.0F);
+        this.body = new ModelRenderer(this, 16, 16);
+        this.body.func_78793_a(0.0F, -1.0F, 0.0F);
+        this.body.func_78790_a(-4.5F, 0.0F, -1.5F, 9, 13, 3, 0.0F);
+        this.leg_right = new ModelRenderer(this, 0, 16);
+        this.leg_right.func_78793_a(-2.5F, 12.0F, -0.6F);
+        this.leg_right.func_78790_a(-1.6F, 0.0F, -1.0F, 3, 12, 2, 0.0F);
+        this.head_inner = new ModelRenderer(this, 20, 0);
+        this.head_inner.func_78793_a(0.0F, -2.0F, 0.0F);
+        this.head_inner.func_78790_a(-4.0F, -7.0F, -4.0F, 8, 7, 8, 0.0F);
         this.leg_left = new ModelRenderer(this, 0, 16);
         this.leg_left.field_78809_i = true;
-        this.leg_left.func_78793_a(1.9F, 12.0F, 0.1F);
-        this.leg_left.func_78790_a(-2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F);
-        this.leg_right = new ModelRenderer(this, 0, 16);
-        this.leg_right.func_78793_a(-1.9F, 12.0F, 0.1F);
-        this.leg_right.func_78790_a(-2.0F, 0.0F, -2.0F, 4, 12, 4, 0.0F);
-        this.body = new ModelRenderer(this, 16, 16);
-        this.body.func_78793_a(0.0F, 0.0F, 0.0F);
-        this.body.func_78790_a(-4.0F, 0.0F, -2.0F, 8, 12, 4, 0.0F);
+        this.leg_left.func_78793_a(2.5F, 12.0F, -0.6F);
+        this.leg_left.func_78790_a(-1.5F, 0.0F, -1.0F, 3, 12, 2, 0.0F);
     }
 
     @Override
