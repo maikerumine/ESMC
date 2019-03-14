@@ -19,7 +19,8 @@ public class ItemBase extends Item implements IHasModel {
 	{
 		func_77655_b(name);
 		setRegistryName(name);
-		func_77637_a(tab);
+//		setCreativeTab(tab);
+		func_77637_a(CreativeTabs.field_78035_l);
 		
 		ModItems.ITEMS.add(this);
 	}

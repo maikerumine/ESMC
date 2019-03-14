@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)
+@SideOnly(Side.CLIENT)				//<---This is lame.  :/
 public class ModelEsmChest extends ModelBase 
 {
 	public ModelRenderer chestKnob;

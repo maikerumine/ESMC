@@ -11,19 +11,10 @@ import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.client.model.ModelLoader;
 
-//import net.minecraft.client.renderer.entity.Render;
-//import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.client.model.ModelLoader;
-//import net.minecraftforge.fml.client.registry.IRenderFactory;
-//import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 
 
@@ -43,21 +34,21 @@ public class RenderHandler
 	
 	public static void registerCustomMeshesAndStates()
 	{
-		ModelLoader.setCustomMeshDefinition(Item.func_150898_a(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK), new ItemMeshDefinition() 
+		ModelLoader.setCustomMeshDefinition(Item.func_150898_a(ModBlocks.TOXIC_WATER_FLUID), new ItemMeshDefinition() 
 		{	
 			@Override
 			public ModelResourceLocation func_178113_a(ItemStack stack) 
 			{
-				return new ModelResourceLocation("ESMC:toxic_water", "fluid");
+				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
 		});
 		
-		ModelLoader.setCustomStateMapper(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK, new StateMapperBase() 
+		ModelLoader.setCustomStateMapper(ModBlocks.TOXIC_WATER_FLUID, new StateMapperBase() 
 		{	
 			@Override
 			protected ModelResourceLocation func_178132_a(IBlockState state)
 			{
-				return new ModelResourceLocation("ESMC:toxic_water", "fluid");
+				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
 		});
 	}

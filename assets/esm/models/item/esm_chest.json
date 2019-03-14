@@ -1,3 +1,7 @@
 {
-    "parent": "esm:block/esm_chest"
+    "parent": "item/generated",
+    "textures":
+    {
+        "layer0": "esm:items/esm_chest"
+    }
 }

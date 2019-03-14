@@ -18,38 +18,38 @@ import net.minecraftforge.common.util.EnumHelper;
 import java.util.List;
 import java.util.ArrayList;
 
-
-import com.maikerumine.ESMC.blocks.AdminTntBlock;
-import com.maikerumine.ESMC.blocks.AikerumBlock;
-import com.maikerumine.ESMC.blocks.AikerumOreBlock;
 import com.maikerumine.ESMC.blocks.BlockBase;
 import com.maikerumine.ESMC.blocks.BlockEsmChest;
-import com.maikerumine.ESMC.blocks.BonesBlock;
-import com.maikerumine.ESMC.blocks.BronzeBlock;
-import com.maikerumine.ESMC.blocks.CopperBlock;
-import com.maikerumine.ESMC.blocks.CopperOreBlock;
-import com.maikerumine.ESMC.blocks.CursedStoneBlock;
-import com.maikerumine.ESMC.blocks.DepletedUraniumOreBlock;
-import com.maikerumine.ESMC.blocks.InfiniumBlock;
-import com.maikerumine.ESMC.blocks.InfiniumOreBlock;
-import com.maikerumine.ESMC.blocks.KickVotingBlock;
-import com.maikerumine.ESMC.blocks.LagBlock;
-import com.maikerumine.ESMC.blocks.MeseBlock;
-import com.maikerumine.ESMC.blocks.MeseOreBlock;
-import com.maikerumine.ESMC.blocks.MeselampBlock;
-import com.maikerumine.ESMC.blocks.NyancatBlock;
-import com.maikerumine.ESMC.blocks.ObsidianBrickBlock;
-import com.maikerumine.ESMC.blocks.ObsidianGlassBlock;
-import com.maikerumine.ESMC.blocks.ProtectorBlock;
-import com.maikerumine.ESMC.blocks.PurpelliumBlock;
-import com.maikerumine.ESMC.blocks.PurpelliumOreBlock;
-import com.maikerumine.ESMC.blocks.RainbowBlock;
-import com.maikerumine.ESMC.blocks.RubyBlock;
-import com.maikerumine.ESMC.blocks.RubyOreBlock;
-import com.maikerumine.ESMC.blocks.SmoothstoneBlock;
-import com.maikerumine.ESMC.blocks.TeleportBlock;
-import com.maikerumine.ESMC.blocks.VendorDepositorBlock;
-import com.maikerumine.ESMC.blocks.VendorVendorBlock;
+import com.maikerumine.ESMC.blocks.BlockFluid;
+import com.maikerumine.ESMC.blocks.block_esm.AikerumBlock;
+import com.maikerumine.ESMC.blocks.block_esm.AikerumOreBlock;
+import com.maikerumine.ESMC.blocks.block_esm.DepletedUraniumOreBlock;
+import com.maikerumine.ESMC.blocks.block_esm.InfiniumBlock;
+import com.maikerumine.ESMC.blocks.block_esm.InfiniumOreBlock;
+import com.maikerumine.ESMC.blocks.block_esm.PurpelliumBlock;
+import com.maikerumine.ESMC.blocks.block_esm.PurpelliumOreBlock;
+import com.maikerumine.ESMC.blocks.block_esm.RubyBlock;
+import com.maikerumine.ESMC.blocks.block_esm.RubyOreBlock;
+import com.maikerumine.ESMC.blocks.block_jt.AdminTntBlock;
+import com.maikerumine.ESMC.blocks.block_jt.BonesBlock;
+import com.maikerumine.ESMC.blocks.block_jt.CursedStoneBlock;
+import com.maikerumine.ESMC.blocks.block_jt.KickVotingBlock;
+import com.maikerumine.ESMC.blocks.block_jt.LagBlock;
+import com.maikerumine.ESMC.blocks.block_jt.ProtectorBlock;
+import com.maikerumine.ESMC.blocks.block_jt.TeleportBlock;
+import com.maikerumine.ESMC.blocks.block_jt.VendorDepositorBlock;
+import com.maikerumine.ESMC.blocks.block_jt.VendorVendorBlock;
+import com.maikerumine.ESMC.blocks.block_mt.BronzeBlock;
+import com.maikerumine.ESMC.blocks.block_mt.CopperBlock;
+import com.maikerumine.ESMC.blocks.block_mt.CopperOreBlock;
+import com.maikerumine.ESMC.blocks.block_mt.MeseBlock;
+import com.maikerumine.ESMC.blocks.block_mt.MeseOreBlock;
+import com.maikerumine.ESMC.blocks.block_mt.MeselampBlock;
+import com.maikerumine.ESMC.blocks.block_mt.NyancatBlock;
+import com.maikerumine.ESMC.blocks.block_mt.ObsidianBrickBlock;
+import com.maikerumine.ESMC.blocks.block_mt.ObsidianGlassBlock;
+import com.maikerumine.ESMC.blocks.block_mt.RainbowBlock;
+import com.maikerumine.ESMC.blocks.block_mt.SmoothstoneBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
@@ -114,7 +114,7 @@ public class ModBlocks
 	 * https://github.com/HarryTechRevs/Minecraft-Modding-1.12
 	 * 
 	 */
-	//public static final Block MOLTEN_COPPER_BLOCK = new BlockFluid("molten_copper", FluidInit.MOLTEN_COPPER_FLUID, Material.LAVA);
+	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.field_151587_i, null);
 	//public static final BlockSlab COPPER_SLAB_DOUBLE = new BlockSlabDoubleBase("copper_slab_double", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF);
 	//public static final BlockSlab COPPER_SLAB_HALF = new BlockSlabHalfBase("copper_slab_half", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF, BlockInit.COPPER_SLAB_DOUBLE);
 	

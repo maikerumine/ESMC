@@ -10,10 +10,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)
+@SideOnly(Side.CLIENT)			//<---This is lame.  :/
 public class RenderEsmChest extends TileEntitySpecialRenderer<TileEntityEsmChest>
 {
-	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MOD_ID + ":textures/blocks/esm_chest_front.png");
+	private static final ResourceLocation TEXTURE = new ResourceLocation(Reference.MOD_ID + ":textures/blocks/esm_chest.png");
 	private final ModelEsmChest MODEL = new ModelEsmChest();
 	
 	@Override

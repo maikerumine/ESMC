@@ -16,6 +16,27 @@
 
 package com.maikerumine.ESMC.proxy;
 
+import java.util.List;
+
+import com.google.common.collect.Lists;
+import com.maikerumine.ESMC.util.Reference;
+
+import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.fml.relauncher.Side;
+
+/**
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.List;
@@ -88,13 +109,16 @@ import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.Side;
-
+*/
 
 
 //public class ClientProxy extends CommonProxy   //maik
 
 // TODO: Auto-generated Javadoc
 //@EventBusSubscriber(value = Side.CLIENT, modid = Main.MOD_ID)
+
+
+@EventBusSubscriber(value = Side.CLIENT, modid = Reference.MOD_ID)
 public class ClientProxy implements IProxy
 {
 

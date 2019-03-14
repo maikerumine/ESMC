@@ -11,12 +11,12 @@ public class Esm extends CreativeTabs
 {
 	public Esm() 
 	{
-		super("Esm");
+		super("Extreme Survival");
 	}
 
 	@Override
 	public ItemStack func_78016_d() 
 	{
-		return new ItemStack(ModItems.AIKERUM_CRYSTAL);
+		return new ItemStack(ModBlocks.AIKERUM_BLOCK);
 	}
 }

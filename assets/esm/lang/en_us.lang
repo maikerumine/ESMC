@@ -2,7 +2,7 @@
 //Extreme Survival Minecraft
 // Ver 0.1.4
 //By: maikerumine
-//20190309 
+//20190314 
 
 //I T E M S
 item.aikerum_crystal.name=Aikerum Crystal
@@ -48,7 +48,7 @@ tile.purpellium_ore_block.name=Purpellium Ore
 tile.rainbow_block.name=Rainbow Block
 tile.ruby_block.name=Ruby Block
 tile.ruby_ore_block.name=Ruby Ore
-tile.smoothstone_block.name=Smoothstone Block
+tile.smoothstone_block.name=Stone Block
 tile.teleport_block.name=Teleport Block [NOVELTY]
 tile.vendor_depositor_block.name=Vendor Depositor Block [NOVELTY]
 tile.vendor_vendor_block.name=Vendor Vendor Block [NOVELTY]
@@ -145,7 +145,7 @@ advancements.achievemark19.title=Commando!
 advancements.achieveuranium.descr=You found depleted uranium, time to get cookin'!
 advancements.achieveruby.title=Ruby's are for Slippers!
 advancements.aikachievement.title=OP!
-advancements.achieveshotgun.descr=You weild the most powerful shotgun and brave the wild beasts for more ammo.
+advancements.achieveshotgun.descr=You wield the most powerful shotgun and brave the wild beasts for more ammo.
 
 //i t e m s
 item.jtstonedust.name=JT Stone Dust
@@ -180,9 +180,9 @@ tile.jtstone.name=jtstone
 itemGroup.tabfirearms=Firearms
 itemGroup.tabaikerumtab=Extreme Survival Items
 
-itemGroup.tabesm=Extreme Survival
-itemGroup.tabjt=Just Test Stuff
-itemGroup.tabminetest=Minetest Default
+itemGroup.tabEsm=Extreme Survival
+itemGroup.tabJt=Just Test Stuff
+itemGroup.tabMinetest=Minetest Default
 
 // w o r l d   g e n e r a t i o n
 generator.Stone=Stone World Easy

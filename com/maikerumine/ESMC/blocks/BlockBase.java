@@ -29,7 +29,7 @@ public class BlockBase extends Block implements IHasModel
 	public void registerModels() 
 	{
 		//Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");		//From Lore
-		Main.proxy.registerModel(Item.func_150898_a(this), 0);  //from Harrys tut
+		Main.proxy.registerModel(Item.func_150898_a(this), 0);  							//from Harrys tut
 		
 	}
 }
