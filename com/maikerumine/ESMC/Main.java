@@ -10,10 +10,12 @@ import com.maikerumine.ESMC.proxy.CommonProxy;
 import com.maikerumine.ESMC.proxy.IProxy;
 import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.util.handlers.RegistryHandler;
+import com.maikerumine.ESMC.world.ModEventHandler;
 import com.maikerumine.ESMC.world.ModWorldGeneration;
 import com.maikerumine.ESMC.world.ModWorldGeneration2;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -30,7 +32,23 @@ public class Main {
 	public static final CreativeTabs ESM = new Esm();
 	public static final CreativeTabs JT = new Jt();
 	public static final CreativeTabs MINETEST = new Minetest();
-
+	//From Jabelar
+    public static final String MOD_ID = "esm";
+    public static final String MODNAME = "Extreme Survival Minecraft";
+    public static final String MODVERSION = "0.1.4";
+    public static final String MODDESCRIPTION = "Extreme Survival made for Minecraft!  Created by maikerumine for Minetest, then made for Minecraft!   Best used with BiomeTweaker and BiomeTweakerCore to get full effect of all stone world.  Place the BiomeTweaker folders into your config folder in your Forge installation.";
+    public static final String MODAUTHOR = "maikerumine";
+    public static final String MODCREDITS = "maikerumine and some Minetest community members for the ideas, textures, and gameplay.  Special thanks to Andrey for inspiring me to make stone world subgames.  :)  Special Thanks to Jabelar's modding examples, Harry's Modding examples, and Loremaster's Modding examples to help make this possible.";
+    public static final String MODURL = "www.esmine.net";
+    public static final String MODLOGO = "/assets/esm/textures/gui/logo.png";
+    
+    
+	
+	
+//	MinecraftForge.TERRAIN_GEN_BUS.register(new)ModEventHandler());  //from forge forum
+	
+	
+	
 	@Instance
 	public static Main instance;
 	
@@ -48,6 +66,7 @@ public class Main {
     
     
 	public static File config;
+
 	
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
@@ -55,6 +74,7 @@ public class Main {
 		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
 //		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);		//This is prototype, to add dirt patches.
 		RegistryHandler.preInitRegistries(event);
+		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
 	}
 	
 	@EventHandler
@@ -62,6 +82,12 @@ public class Main {
 	{
 		ModRecipes.init();														//Loremaster's
 		RegistryHandler.initRegistries(event);  								//Harry's
+//		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
+		/**
+		 * This removes decorations.
+		 * http://www.minecraftforge.net/forum/topic/53576-1112-remove-overwrite-vanilla-tree-generation/
+		 * 
+		 */
 	}
 	
 	@EventHandler
@@ -77,5 +103,6 @@ public class Main {
 		RegistryHandler.serverRegistries(event);
 	}
 
+	
 	
 }

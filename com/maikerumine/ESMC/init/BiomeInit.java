@@ -14,6 +14,11 @@ import net.minecraftforge.common.BiomeManager.BiomeEntry;
 import net.minecraftforge.common.BiomeManager.BiomeType;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
+
+
+
+	
+
 public class BiomeInit 
 {
 	public static final Biome STONE = new BiomeStone();
@@ -25,13 +30,13 @@ public class BiomeInit
 	public static void registerBiomes()
 	{
 		initBiome(STONE, "Stone", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
-		initBiome(STONEJT, "StoneJustTest", BiomeType.COOL, Type.HILLS, Type.MOUNTAIN, Type.DRY);
+		initBiome(STONEJT, "Stone Just Test", BiomeType.COOL, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 //  TODO:  ADD MORE STONE ONLY BIOMES
 		
 		
 //
-		initBiome(OCEAN, "Ocean", BiomeType.COOL, Type.WET, Type.OCEAN, Type.SPARSE);
-		initBiome(DESERT, "Desert", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
+		initBiome(OCEAN, "Esm Ocean", BiomeType.COOL, Type.WET, Type.OCEAN, Type.SPARSE);
+		initBiome(DESERT, "Esm Desert", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
 	}
 	
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types)
@@ -39,7 +44,8 @@ public class BiomeInit
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		BiomeDictionary.addTypes(biome, types);
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1000));
+		//BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1024));
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
 		
 		if(ModConfiguration.spawnCustomBiomesInOverworld) 
 		{
@@ -47,4 +53,8 @@ public class BiomeInit
 		}
 		return biome;
 	}
+	
+	
+	
+	
 }

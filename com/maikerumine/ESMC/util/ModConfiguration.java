@@ -12,7 +12,7 @@ public class ModConfiguration
 	public static Configuration config;	
 	public static int ENTITY_STONEMONSTER_ID = 222;
 	public static int GUI_ESM_CHEST_ID = 2;
-	public static boolean spawnCustomBiomesInOverworld = true;
+	public static boolean spawnCustomBiomesInOverworld = false;
 	
 	public static void init(File file)
 	{
@@ -34,7 +34,7 @@ public class ModConfiguration
 
 		category = "Biomes";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
-		spawnCustomBiomesInOverworld = config.getBoolean("spawnCustomBiomesInOverworld", category, true, "Decide whether the custom biomes should spawn in the overworld");	
+		spawnCustomBiomesInOverworld = config.getBoolean("spawnCustomBiomesInOverworld", category, false, "Decide whether the custom biomes should spawn in the overworld");	
 	}
 	
 	public static void registerConfig(FMLPreInitializationEvent event)
@@ -43,4 +43,10 @@ public class ModConfiguration
 		Main.config.mkdirs();
 		init(new File(Main.config.getPath(), Reference.MOD_ID + ".cfg"));
 	}
+/**
+	public static void initConfig(FMLPreInitializationEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+	*/
 } 

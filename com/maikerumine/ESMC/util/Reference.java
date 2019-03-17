@@ -1,6 +1,10 @@
 package com.maikerumine.ESMC.util;
 
+
+import com.maikerumine.ESMC.init.FluidInit;
 import com.maikerumine.ESMC.proxy.IProxy;
+import com.maikerumine.ESMC.util.handlers.TileEntityHandler;
+import com.maikerumine.ESMC.utilities.Utilities;
 
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -18,8 +22,9 @@ public class Reference
 //	public static final String CLIENT_PROXY_CLASS = "com.maikerumine.ESMC.proxy.ClientProxy";		//Loremaster's
 //	public static final String COMMON_PROXY_CLASS = "com.maikerumine.ESMC.proxy.CommonProxy";		//Loremaster's
 
-//	public static final String CLIENT = "harry.mods.tutorial.proxy.ClientProxy";		//Harry's
-//	public static final String SERVER = "harry.mods.tutorial.proxy.CommonProxy";		//Harry's
+//	public static final String CLIENT = "com.maikerumine.ESMC.proxy.ClientProxy";		//Harry's
+//	public static final String SERVER = "com.maikerumine.ESMC.proxy.CommonProxy";		//Harry's
+
 	
 	/**
 	 * From Jabelar's code
@@ -43,11 +48,11 @@ public class Reference
         // DEBUG
         System.out.println("preInit() " + event.getModMetadata().name);
 
-        // Utilities.setModInfo(event);
-        // ModConfig.initConfig(event); // load configuration before doing anything else that may be controlled by it.
+         Utilities.setModInfo(event);
+         ModConfiguration.registerConfig(event); // load configuration before doing anything else that may be controlled by it.
         // register stuff
-        // ModTileEntities.registerTileEntities();
-        // ModFluids.registerFluids();
+         TileEntityHandler.registerTileEntities();
+         FluidInit.registerFluids();
         // ModNetworking.registerSimpleNetworking();
         // ModWorldGen.registerDimensions();
 

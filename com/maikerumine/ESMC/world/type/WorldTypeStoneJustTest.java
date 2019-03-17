@@ -18,7 +18,7 @@ public class WorldTypeStoneJustTest extends WorldType
 {
 	public WorldTypeStoneJustTest() 
 	{
-		super("StoneJustTest");
+		super("Stone Just Test");
 	}
 	
 	@Override

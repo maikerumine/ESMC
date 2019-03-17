@@ -10,7 +10,7 @@ public class WorldTypeDesert extends WorldType
 {
 	public WorldTypeDesert() 
 	{
-		super("Desert");
+		super("ESM Desert");
 	}
 	
 	@Override

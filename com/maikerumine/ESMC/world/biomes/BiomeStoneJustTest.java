@@ -1,4 +1,4 @@
-                                                                                            package com.maikerumine.ESMC.world.biomes;
+package com.maikerumine.ESMC.world.biomes;
 
 
 import java.util.Random;
@@ -14,9 +14,12 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraftforge.event.terraingen.OreGenEvent;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType;
+import net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
+import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
 
@@ -27,7 +30,7 @@ public class BiomeStoneJustTest extends Biome
 {
 	public BiomeStoneJustTest() 
 	{
-		super(new BiomeProperties("StoneJustTest").func_185398_c(0.4F).func_185400_d(0.2F).func_185396_a().func_185410_a(0.6F));
+		super(new BiomeProperties("Stone Just Test").func_185398_c(0.4F).func_185400_d(0.2F).func_185396_a().func_185410_a(0.6F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();
@@ -42,7 +45,7 @@ public class BiomeStoneJustTest extends Biome
 		
 		
 	}
-	
+/**	
 	@SubscribeEvent
 	public void onDecorate(Decorate e)
 	{
@@ -55,12 +58,64 @@ public class BiomeStoneJustTest extends Biome
 	}
 	
 		@Override
+		
+		
+*/		
+	    /**
+	     * Allocate a new BiomeDecorator for this BiomeGenBase
+	     */
 	    public BiomeDecorator func_76729_a()
 	    {
-	        return getModdedBiomeDecorator(new BiomeDecorator());
-	        
-	        
+//	        return getModdedBiomeDecorator(new BiomeDecorator());
+	    	
+	    	return getModdedBiomeDecorator(new BiomeDecorator());	    	
+	    	
 	    }
+		
+/**		
+		@SubscribeEvent()
+		public void BiomeDecorator(Decorate event) {
+			if(event.getType()==Decorate.EventType.BIG_SHROOM){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.CACTUS){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.CLAY){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.CUSTOM){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.DEAD_BUSH){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.DESERT_WELL){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.FLOWERS){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.FOSSIL){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.GRASS){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.ICE){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.LAKE_LAVA){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.LAKE_WATER){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.LILYPAD){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.PUMPKIN){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.REED){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.ROCK){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.SAND){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.SAND_PASS2){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.SHROOM){event.setResult(Event.Result.DENY);}
+			if(event.getType()==Decorate.EventType.TREE){event.setResult(Event.Result.DENY);}
+		}
 
+		@SubscribeEvent()
+		public void BiomeDecorator(OreGenEvent event) {
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.ANDESITE) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.COAL) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.CUSTOM) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.DIAMOND) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.DIORITE) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.DIRT) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.EMERALD) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.GOLD) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.GRANITE) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.GRAVEL) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.IRON) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.LAPIS) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.QUARTZ) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.REDSTONE) {event.setResult(Event.Result.DENY);}
+			if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.SILVERFISH) {event.setResult(Event.Result.DENY);}
+		}
+*/    
+	    
 
 }

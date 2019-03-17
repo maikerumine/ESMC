@@ -10,7 +10,7 @@ public class WorldTypeStone extends WorldType
 {
 	public WorldTypeStone() 
 	{
-		super("Stone");
+		super("ESM Stone");
 	}
 	
 	@Override
