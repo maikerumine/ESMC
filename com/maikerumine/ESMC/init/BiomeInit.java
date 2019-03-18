@@ -1,8 +1,10 @@
 package com.maikerumine.ESMC.init;
 
 import com.maikerumine.ESMC.util.ModConfiguration;
+import com.maikerumine.ESMC.world.biomes.BiomeBeach;
 import com.maikerumine.ESMC.world.biomes.BiomeDesert;
 import com.maikerumine.ESMC.world.biomes.BiomeOcean;
+import com.maikerumine.ESMC.world.biomes.BiomeRiver;
 import com.maikerumine.ESMC.world.biomes.BiomeStone;
 import com.maikerumine.ESMC.world.biomes.BiomeStoneJustTest;
 
@@ -25,6 +27,8 @@ public class BiomeInit
 	public static final Biome STONEJT = new BiomeStoneJustTest();
 	public static final Biome OCEAN = new BiomeOcean();
 	public static final Biome DESERT = new BiomeDesert();
+	public static final Biome BEACH = new BiomeBeach();
+	public static final Biome RIVER = new BiomeRiver();
 
 	
 	public static void registerBiomes()
@@ -32,11 +36,11 @@ public class BiomeInit
 		initBiome(STONE, "Stone", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 		initBiome(STONEJT, "Stone Just Test", BiomeType.COOL, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 //  TODO:  ADD MORE STONE ONLY BIOMES
-		
-		
-//
+
 		initBiome(OCEAN, "Esm Ocean", BiomeType.COOL, Type.WET, Type.OCEAN, Type.SPARSE);
 		initBiome(DESERT, "Esm Desert", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
+		initBiome(BEACH, "Esm Beach", BiomeType.WARM, Type.BEACH, Type.RIVER, Type.WET);
+		initBiome(RIVER, "Esm River", BiomeType.COOL, Type.HILLS, Type.RIVER, Type.WET);
 	}
 	
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types)
@@ -44,8 +48,8 @@ public class BiomeInit
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		BiomeDictionary.addTypes(biome, types);
-		//BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1024));
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1024));
+		//BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
 		
 		if(ModConfiguration.spawnCustomBiomesInOverworld) 
 		{

@@ -39,7 +39,7 @@ public class ModEventHandler {
 		if(event.getType()==Decorate.EventType.SHROOM){event.setResult(Event.Result.DENY);}
 		if(event.getType()==Decorate.EventType.TREE){event.setResult(Event.Result.DENY);}
 	}
-
+/*
 	@SubscribeEvent()
 	public void onEvent(OreGenEvent event) {
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.ANDESITE) {event.setResult(Event.Result.DENY);}
@@ -58,7 +58,7 @@ public class ModEventHandler {
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.REDSTONE) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.SILVERFISH) {event.setResult(Event.Result.DENY);}
 	}
-	
+*/	
 	
 	
 	//Code from Forge forum by; EmperorZelos

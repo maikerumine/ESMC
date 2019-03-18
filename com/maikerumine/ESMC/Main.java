@@ -75,6 +75,7 @@ public class Main {
 //		GameRegistry.registerWorldGenerator(new ModWorldGeneration2(), 3);		//This is prototype, to add dirt patches.
 		RegistryHandler.preInitRegistries(event);
 		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
+		MinecraftForge.ORE_GEN_BUS.register(new ModEventHandler());  		//from forge forum
 	}
 	
 	@EventHandler

@@ -25,11 +25,8 @@ public class WorldTypeStoneJustTest extends WorldType
 	public BiomeProvider getBiomeProvider(World world) 
 	{
 		BiomeProvider provider = new BiomeProviderSingle(BiomeInit.STONEJT);
+
 		return provider;
 	}
-	
-	
-
-	
 	
 }
