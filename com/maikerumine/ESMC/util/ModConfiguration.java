@@ -43,10 +43,10 @@ public class ModConfiguration
 		Main.config.mkdirs();
 		init(new File(Main.config.getPath(), Reference.MOD_ID + ".cfg"));
 	}
-/**
+
 	public static void initConfig(FMLPreInitializationEvent event) {
 		// TODO Auto-generated method stub
 		
 	}
-	*/
+	
 } 

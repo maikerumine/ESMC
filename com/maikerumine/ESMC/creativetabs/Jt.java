@@ -11,7 +11,7 @@ public class Jt extends CreativeTabs
 {
 	public Jt() 
 	{
-		super("Just Test");
+		super("Jt");
 	}
 
 	@Override

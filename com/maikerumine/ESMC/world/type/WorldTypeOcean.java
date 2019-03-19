@@ -10,7 +10,7 @@ public class WorldTypeOcean extends WorldType
 {
 	public WorldTypeOcean() 
 	{
-		super("ESM Ocean");
+		super("Ocean");
 	}
 	
 	@Override

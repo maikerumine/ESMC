@@ -50,8 +50,8 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-		TileEntityHandler.registerTileEntities();
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+//				TileEntityHandler.registerTileEntities();
+//				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 	}
 	
 	@SubscribeEvent
@@ -92,10 +92,14 @@ public class RegistryHandler
 //		DimensionInit.registerDimensions();
 		
 		BiomeInit.registerBiomes();
-		EntityInit.registerEntities();						//CRASHING SERVER
 		FluidInit.registerFluids();
-		RenderHandler.registerEntityRenders();				//CRASHING SERVER
-		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER
+		//=======================================================================================================================
+		//=======================================================================================================================		
+//		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
+//		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
+//		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+		//=======================================================================================================================
+		//=======================================================================================================================
 		ModConfiguration.registerConfig(event);
 	}
 

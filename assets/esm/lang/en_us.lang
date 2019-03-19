@@ -171,7 +171,7 @@ entity.stonemonster.name=stonemonster
 entity.badplayer1.name=Soldier Grunt
 
 //f l u i d s
-fluid.toxicwater=Toxicwater
+tile.toxic_water_fluid.name=Toxic Water
 
 //t i l e s 
 tile.jtstone.name=jtstone
@@ -180,12 +180,12 @@ tile.jtstone.name=jtstone
 itemGroup.tabfirearms=Firearms
 itemGroup.tabaikerumtab=Extreme Survival Items
 
-itemGroup.tabEsm=Extreme Survival
-itemGroup.tabJt=Just Test Stuff
-itemGroup.tabMinetest=Minetest Default
+itemGroup.Esm=Extreme Survival
+itemGroup.Jt=Just Test Stuff
+itemGroup.Minetest=Minetest Default
 
 // w o r l d   g e n e r a t i o n
-generator.Stone=Stone World Easy
-generator.StoneJustTest=Stone World Difficult (NO DIRT)
+generator.Stone Wild=Stone Mountain World
+generator.Stone Just Test=Stone World
 generator.Ocean=Ocean World
 generator.Desert=Desert World

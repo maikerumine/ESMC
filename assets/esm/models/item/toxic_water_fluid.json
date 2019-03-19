@@ -1,3 +1,7 @@
 {
-    "parent": "esm:block/toxic_water_fluid"
+    "parent": "item/generated",
+    "textures":
+    {
+        "layer0": "esm:items/toxic_water_fluid"
+    }
 }

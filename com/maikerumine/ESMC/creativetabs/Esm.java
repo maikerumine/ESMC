@@ -11,7 +11,7 @@ public class Esm extends CreativeTabs
 {
 	public Esm() 
 	{
-		super("Extreme Survival");
+		super("Esm");
 	}
 
 	@Override
