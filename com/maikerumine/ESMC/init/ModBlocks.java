@@ -18,9 +18,15 @@ import net.minecraftforge.common.util.EnumHelper;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.maikerumine.ESMC.Main;
+import com.maikerumine.ESMC.blocks.Block3DModelBase;
 import com.maikerumine.ESMC.blocks.BlockBase;
+import com.maikerumine.ESMC.blocks.BlockDirtBase;
 import com.maikerumine.ESMC.blocks.BlockEsmChest;
 import com.maikerumine.ESMC.blocks.BlockFluid;
+import com.maikerumine.ESMC.blocks.BlockLeavesBase;
+import com.maikerumine.ESMC.blocks.BlockLogBase;
+import com.maikerumine.ESMC.blocks.BlockSaplingBase;
 import com.maikerumine.ESMC.blocks.block_esm.AikerumBlock;
 import com.maikerumine.ESMC.blocks.block_esm.AikerumOreBlock;
 import com.maikerumine.ESMC.blocks.block_esm.DepletedUraniumOreBlock;
@@ -50,6 +56,9 @@ import com.maikerumine.ESMC.blocks.block_mt.ObsidianBrickBlock;
 import com.maikerumine.ESMC.blocks.block_mt.ObsidianGlassBlock;
 import com.maikerumine.ESMC.blocks.block_mt.RainbowBlock;
 import com.maikerumine.ESMC.blocks.block_mt.SmoothstoneBlock;
+import com.maikerumine.ESMC.blocks.machines.BlockSinteringFurnace;
+import com.maikerumine.ESMC.blocks.slabs.BlockSlabDoubleBase;
+import com.maikerumine.ESMC.blocks.slabs.BlockSlabHalfBase;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
@@ -109,16 +118,42 @@ public class ModBlocks
 	
 	
 	
-	/*
+	/**
 	 * From Harry's Tutorial:  
 	 * https://github.com/HarryTechRevs/Minecraft-Modding-1.12
 	 * 
 	 */
-	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.field_151587_i);
-	//public static final BlockSlab COPPER_SLAB_DOUBLE = new BlockSlabDoubleBase("copper_slab_double", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF);
-	//public static final BlockSlab COPPER_SLAB_HALF = new BlockSlabHalfBase("copper_slab_half", Material.IRON, Main.TUTORIAL, BlockInit.COPPER_SLAB_HALF, BlockInit.COPPER_SLAB_DOUBLE);
+	//Copper
+//	public static final Block COPPER_BLOCK = new BlockBase("copper_block", Material.IRON, Main.TUT);
+	public static final Block COPPER_DIRT = new BlockDirtBase("copper_dirt", Main.TUT);
+	public static final Block COPPER_LEAVES = new BlockLeavesBase("copper_leaves");
+	public static final Block COPPER_LOG = new BlockLogBase("copper_log");
+//	public static final Block COPPER_ORE = new BlockBase("copper_ore", Material.ROCK, Main.TUT);
+	public static final Block COPPER_PLANKS = new BlockBase("copper_planks", Material.field_151575_d, Main.TUT);
+	public static final Block COPPER_SAPLING = new BlockSaplingBase("copper_sapling");
+//	public static final Block COPPER_DOOR = new BlockDoorBase("copper_door", Material.ANVIL, null);
+	public static final BlockSlab COPPER_SLAB_DOUBLE = new BlockSlabDoubleBase("copper_slab_double", Material.field_151573_f, Main.TUT, ModBlocks.COPPER_SLAB_HALF);
+	public static final BlockSlab COPPER_SLAB_HALF = new BlockSlabHalfBase("copper_slab_half", Material.field_151573_f, Main.TUT, ModBlocks.COPPER_SLAB_HALF, ModBlocks.COPPER_SLAB_DOUBLE);
 	
+	//Aluminium
+	public static final Block ALUMINIUM_LEAVES = new BlockLeavesBase("aluminium_leaves");
+	public static final Block ALUMINIUM_LOG = new BlockLogBase("aluminium_log");
+	public static final Block ALUMINIUM_SAPLING = new BlockSaplingBase("aluminium_sapling");
+	
+	//Custom Models
+//	public static final Block COPPER_CHEST = new BlockCopperChest("copper_chest");
 	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
+	public static final Block SANTA_HAT = new Block3DModelBase("santa_hat", Material.field_151580_n, Main.TUT, 0.1875D, 0, 0.1875D, 0.8125D, 0.8125D, 0.8125D);
+	
+	//Machines
+	public static final Block SINTERING_FURNACE = new BlockSinteringFurnace("sintering_furnace");
+//	public static final Block ELECTRIC_SINTERING_FURNACE = new BlockElectricSinteringFurnace("electric_sintering_furnace");
+//	public static final Block GLOWSTONE_GENERATOR = new BlockGlowstoneGenerator("glowstone_generator");
+//	public static final Block ENERGY_STORAGE = new BlockEnergyStorage("energy_storage");
+
+	//Fluids
+//	public static final Block MOLTEN_COPPER_BLOCK = new BlockFluid("molten_copper", FluidInit.MOLTEN_COPPER_FLUID, Material.LAVA);
+	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.field_151587_i);
 	
 	
 

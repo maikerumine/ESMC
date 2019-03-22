@@ -1,0 +1,9 @@
+{
+    "variants":
+    {
+        "axis=y":  { "model": "esm:aluminium_log" },
+        "axis=z":   { "model": "esm:aluminium_log", "x": 90 },
+        "axis=x":   { "model": "esm:aluminium_log", "x": 90, "y": 90 },
+        "axis=none": { "model": "esm:aluminium_bark" }
+    }
+}

@@ -37,7 +37,9 @@ public class ModEventHandler {
 		if(event.getType()==Decorate.EventType.SAND){event.setResult(Event.Result.DENY);}
 		if(event.getType()==Decorate.EventType.SAND_PASS2){event.setResult(Event.Result.DENY);}
 		if(event.getType()==Decorate.EventType.SHROOM){event.setResult(Event.Result.DENY);}
-		if(event.getType()==Decorate.EventType.TREE){event.setResult(Event.Result.DENY);}
+		if(event.getType()==Decorate.EventType.TREE){event.setResult(Event.Result.DENY);
+		
+		}
 	}
 /*
 	@SubscribeEvent()

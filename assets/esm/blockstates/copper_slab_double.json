@@ -1,0 +1,6 @@
+{
+    "variants":
+    {
+        "variant=default": { "model": "esm:copper_slab_double" }
+    }
+}

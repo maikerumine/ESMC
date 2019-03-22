@@ -5,6 +5,7 @@ import java.io.File;
 import com.maikerumine.ESMC.creativetabs.Esm;
 import com.maikerumine.ESMC.creativetabs.Jt;
 import com.maikerumine.ESMC.creativetabs.Minetest;
+import com.maikerumine.ESMC.creativetabs.Tut;
 import com.maikerumine.ESMC.init.ModRecipes;
 import com.maikerumine.ESMC.proxy.CommonProxy;
 import com.maikerumine.ESMC.proxy.IProxy;
@@ -32,6 +33,7 @@ public class Main {
 	public static final CreativeTabs ESM = new Esm();
 	public static final CreativeTabs JT = new Jt();
 	public static final CreativeTabs MINETEST = new Minetest();
+	public static final CreativeTabs TUT = new Tut();
 	//From Jabelar
     public static final String MOD_ID = "esm";
     public static final String MODNAME = "Extreme Survival Minecraft";
@@ -42,13 +44,8 @@ public class Main {
     public static final String MODURL = "www.esmine.net";
     public static final String MODLOGO = "/assets/esm/textures/gui/logo.png";
     
-    
-	
-	
-//	MinecraftForge.TERRAIN_GEN_BUS.register(new)ModEventHandler());  //from forge forum
-	
-	
-	
+
+
 	@Instance
 	public static Main instance;
 	
@@ -58,13 +55,11 @@ public class Main {
 //	@SidedProxy(serverSide = Reference.SERVER_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 //	public static CommonProxy proxy;
 	
-    // Says where the client and server 'proxy' code is loaded.
-
-    @SidedProxy(clientSide = "com.maikerumine.ESMC.proxy.ClientProxy",
-            serverSide = "com.maikerumine.ESMC.proxy.ServerProxy")
+//  Says where the client and server 'proxy' code is loaded.
+    @SidedProxy
+    (clientSide = "com.maikerumine.ESMC.proxy.ClientProxy",
+     serverSide = "com.maikerumine.ESMC.proxy.ServerProxy")
     public static IProxy proxy;
-    
-    
 	public static File config;
 
 	
@@ -76,6 +71,14 @@ public class Main {
 		RegistryHandler.preInitRegistries(event);
 		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
 		MinecraftForge.ORE_GEN_BUS.register(new ModEventHandler());  		//from forge forum
+		
+		System.out.println("Extreme");
+		System.out.println("Survival");
+		System.out.println("Minecraft");
+		System.out.println("By: maikerumine");
+		System.out.println("Enjoy The Struggle!!!!");
+		
+		
 	}
 	
 	@EventHandler
@@ -83,18 +86,18 @@ public class Main {
 	{
 		ModRecipes.init();														//Loremaster's
 		RegistryHandler.initRegistries(event);  								//Harry's
-//		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
 		/**
 		 * This removes decorations.
 		 * http://www.minecraftforge.net/forum/topic/53576-1112-remove-overwrite-vanilla-tree-generation/
 		 * 
 		 */
+//		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
 	}
 	
 	@EventHandler
 	public static void Postinit(FMLPostInitializationEvent event)
 	{
-		//RegistryHandler.postRegistries();										//Loremaster's
+//		RegistryHandler.postRegistries();										//Loremaster's
 		RegistryHandler.postInitRegistries(event);								//Harry's
 	}
 	

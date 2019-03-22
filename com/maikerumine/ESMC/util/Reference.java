@@ -4,7 +4,6 @@ package com.maikerumine.ESMC.util;
 import com.maikerumine.ESMC.init.FluidInit;
 import com.maikerumine.ESMC.proxy.IProxy;
 import com.maikerumine.ESMC.util.handlers.TileEntityHandler;
-import com.maikerumine.ESMC.utilities.Utilities;
 
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -15,9 +14,10 @@ public class Reference
 	public static final String MOD_ID = "esm";
 	public static final String NAME = "Extreme Survival Minecraft";
 	public static final String VERSION = "1.12.2";
-	public static final String ACCEPTED_VERSIONS = "[1.12.,1.12.1,1.12.2]";
+	public static final String ACCEPTED_VERSIONS = "[1.12.2]";
 	public static final int ENTITY_STONEMONSTER = 222;			//SHUT OFF TO FIX.  ALSO ENTITY INIT
-	public static final int GUI_ESM_CHEST = 2;	
+	public static final int GUI_ESM_CHEST = 2;
+	public static final int GUI_SINTERING_FURNACE = 4;
 	
 //	public static final String CLIENT_PROXY_CLASS = "com.maikerumine.ESMC.proxy.ClientProxy";		//Loremaster's
 //	public static final String COMMON_PROXY_CLASS = "com.maikerumine.ESMC.proxy.CommonProxy";		//Loremaster's
@@ -48,14 +48,10 @@ public class Reference
         // DEBUG
         System.out.println("preInit() " + event.getModMetadata().name);
 
-         Utilities.setModInfo(event);
          ModConfiguration.registerConfig(event); // load configuration before doing anything else that may be controlled by it.
         // register stuff
          TileEntityHandler.registerTileEntities();
          FluidInit.registerFluids();
-        // ModNetworking.registerSimpleNetworking();
-        // ModWorldGen.registerDimensions();
-
 
         proxy.preInit(event);
     }

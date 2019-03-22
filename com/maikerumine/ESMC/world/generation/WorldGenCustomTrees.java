@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import com.maikerumine.ESMC.init.ModBlocks;
+import com.maikerumine.ESMC.world.biomes.BiomeDesert;
 import com.maikerumine.ESMC.world.biomes.BiomeStone;
 import com.maikerumine.ESMC.world.generation.generators.WorldGenAluminiumTree;
 import com.maikerumine.ESMC.world.generation.generators.WorldGenCopperTree;
@@ -35,8 +36,8 @@ public class WorldGenCustomTrees implements IWorldGenerator
 			
 		case 0:
 			
-			//runGenerator(COPPER, world, random, chunkX, chunkZ, 5, BlockInit.COPPER_DIRT, BiomeCopper.class);
-			//runGenerator(ALUMINIUM, world, random, chunkX, chunkZ, 5, Blocks.GRASS, BiomePlains.class);
+			runGenerator(COPPER, world, random, chunkX, chunkZ, 5, Blocks.field_150349_c, BiomePlains.class);
+			runGenerator(ALUMINIUM, world, random, chunkX, chunkZ, 5, Blocks.field_150349_c, BiomePlains.class);
 			
 			break;
 			

@@ -1,6 +1,7 @@
 {
     "parent": "block/cube_all",
-    "textures": {
+    "textures":
+    {
         "all": "esm:blocks/toxic_water_fluid"
     }
 }

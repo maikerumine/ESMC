@@ -1,0 +1,9 @@
+{
+    "variants":
+    {
+        "axis=y":  { "model": "esm:copper_log" },
+        "axis=z":   { "model": "esm:copper_log", "x": 90 },
+        "axis=x":   { "model": "esm:copper_log", "x": 90, "y": 90 },
+        "axis=none": { "model": "esm:copper_bark" }
+    }
+}

@@ -3,14 +3,16 @@ package com.maikerumine.ESMC.init;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.items.ItemBase;
-import com.maikerumine.ESMC.items.arnor.ArmorBase;
+import com.maikerumine.ESMC.items.armor.ArmorBase;
 import com.maikerumine.ESMC.items.tools.ToolPickaxe;
 import com.maikerumine.ESMC.items.tools.ToolSpade;
 import com.maikerumine.ESMC.items.tools.ToolSword;
 import com.maikerumine.ESMC.items.tools.Toolaxe;
 import com.maikerumine.ESMC.util.Reference;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -144,6 +146,12 @@ public class ModItems
 	public static final Item RUBY_CRYSTAL_LEGGINGS = new ArmorBase("ruby_crystal_leggings", ARMOR_RUBY_CRYSTAL, 2, EntityEquipmentSlot.LEGS);
 	public static final Item RUBY_CRYSTAL_BOOTS = new ArmorBase("ruby_crystal_boots", ARMOR_RUBY_CRYSTAL, 1, EntityEquipmentSlot.FEET);
 	
+	//Harry's armour sample
+	//Armour Materials
+	public static final ArmorMaterial CUSTOM_MODEL_MATERIAL = EnumHelper.addArmorMaterial("custom_model", Main.MOD_ID + ":custom_model", 20, new int[] {7, 8, 8, 9}, 0, SoundEvents.field_187719_p, 2.0f);
+
+	
+	public static Block ALUMINIUM_SAPLING;
 	
 	
 	

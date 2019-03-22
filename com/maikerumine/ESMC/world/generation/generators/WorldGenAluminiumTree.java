@@ -15,15 +15,15 @@ import net.minecraftforge.common.IPlantable;
 
 public class WorldGenAluminiumTree extends WorldGenAbstractTree 
 {
-	//public static final IBlockState LOG = ModBlocks.ALUMINIUM_LOG.getDefaultState();
-	//public static final IBlockState LEAF = ModBlocks.ALUMINIUM_LEAVES.getDefaultState();
+	public static final IBlockState LOG = ModBlocks.ALUMINIUM_LOG.func_176223_P();
+	public static final IBlockState LEAF = ModBlocks.ALUMINIUM_LEAVES.func_176223_P();
 	
 	private final int minHeight;
 	
 	public WorldGenAluminiumTree() 
 	{
 		super(false);
-		this.minHeight = 12;
+		this.minHeight = 22;
 	}
 
 	@Override
@@ -94,9 +94,9 @@ public class WorldGenAluminiumTree extends WorldGenAbstractTree
 								IBlockState treeState = world.func_180495_p(treePos);
 								if(treeState.func_177230_c().isAir(treeState, world, treePos) || treeState.func_177230_c().isAir(treeState, world, treePos))
 								{
-//									this.setBlockAndNotifyAdequately(world, treePos, LEAF);
-//									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.25 * height, 0), LEAF);
-//									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.5 * height, 0), LEAF);
+									this.func_175903_a(world, treePos, LEAF);
+									this.func_175903_a(world, treePos.func_177963_a(0, -0.25 * height, 0), LEAF);
+									this.func_175903_a(world, treePos.func_177963_a(0, -0.5 * height, 0), LEAF);
 								}
 							}
 						}
@@ -110,7 +110,7 @@ public class WorldGenAluminiumTree extends WorldGenAbstractTree
 					
 					if(logState.func_177230_c().isAir(logState, world, up) || logState.func_177230_c().isLeaves(logState, world, up))
 					{
-//						this.setBlockAndNotifyAdequately(world, pos.up(logHeight), LOG);
+						this.func_175903_a(world, pos.func_177981_b(logHeight), LOG);
 					}
 				}
 				

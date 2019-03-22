@@ -50,11 +50,46 @@ tile.ruby_block.name=Ruby Block
 tile.ruby_ore_block.name=Ruby Ore
 tile.smoothstone_block.name=Stone Block
 tile.teleport_block.name=Teleport Block [NOVELTY]
+
+
+//Chests and Storage
 tile.vendor_depositor_block.name=Vendor Depositor Block [NOVELTY]
 tile.vendor_vendor_block.name=Vendor Vendor Block [NOVELTY]
-
-
 tile.esm_chest.name=Extreme Survival Chest [NOVELTY]
+
+
+
+
+
+//      harry's mod:
+//      https://github.com/HarryTechRevs/Minecraft-Modding-1.12
+
+//Blocks
+tile.aluminium_leaves.name=Aluminium Leaves
+tile.aluminium_log.name=Aluminium Log
+tile.aluminium_sapling.name=Aluminium Sapling
+tile.copper_block.name=Copper Block
+tile.copper_dirt.name=Copper Dirt
+tile.copper_leaves.name=Copper Leaves
+tile.copper_log.name=Copper Log
+tile.copper_ore.name=Copper Ore
+tile.copper_planks.name=Copper Planks
+tile.copper_sapling.name=Copper Sapling
+tile.copper_chest.name=Copper Chest
+tile.santa_hat.name=Santa Hat
+tile.copper_door.name=Copper Door
+tile.copper_slab_half.name=Copper Slab
+tile.copper_slab_double.name=Double Copper Slab
+
+//Machines
+tile.sintering_furnace.name=Sinterer
+tile.crushing_furnace.name=Crushing Furnace
+
+
+//Fluids
+fluid.molten_copper=Molten Copper
+
+
 
 //T O O L S
 //aikerum
@@ -122,9 +157,6 @@ item.ruby_crystal_leggings.name=Ruby Crystal Leggings
 item.ruby_crystal_boots.name=Ruby Crystal Boots
 
 
-//R E F E R E N C E S 
-//TODO:
-
 //a d v a c e m e n t s 
 advancements.achieveruby.descr=You are the master of your own destiny!
 advancements.achievepistol.title=Wild wild west!
@@ -147,24 +179,6 @@ advancements.achieveruby.title=Ruby's are for Slippers!
 advancements.aikachievement.title=OP!
 advancements.achieveshotgun.descr=You wield the most powerful shotgun and brave the wild beasts for more ammo.
 
-//i t e m s
-item.jtstonedust.name=JT Stone Dust
-item.gunauto.name=mk19 Grenade Launcher
-item.rifleround.name=10mm Round
-item.spas12round.name=40mm Shell
-item.fortymmround.name=40mm Round
-item.gunrifle.name=Rifle
-item.aiklandz_trigger.name=Aiklandz Igniter
-item.gunmk12.name=MK19 Automatic Grenade Launcher
-item.gunshotgun.name=SPAS 12 Shotgun
-item.gunhandgun.name=Beretta 9mm
-item.aikland_trigger.name=Aikland Igniter
-item.a_trigger.name=aikland
-item.handgunround.name=9mm Round
-item.vaer_trigger.name=Vaer Ignighter
-item.jungleland_trigger.name=Jungle Igniter
-item.gunsingle.name=Hand Gun Beretta
-item.shotgunround.name=12ga Round
 
 //e n t i t i e s 
 entity.stonemonster.name=stonemonster
@@ -172,20 +186,18 @@ entity.badplayer1.name=Soldier Grunt
 
 //f l u i d s
 tile.toxic_water_fluid.name=Toxic Water
+//fluid.toxic_water_fluid.name=Toxic Water
 
-//t i l e s 
-tile.jtstone.name=jtstone
+
+
 
 //i t e m g r o u p s 
-itemGroup.tabfirearms=Firearms
-itemGroup.tabaikerumtab=Extreme Survival Items
-
 itemGroup.Esm=Extreme Survival
 itemGroup.Jt=Just Test Stuff
 itemGroup.Minetest=Minetest Default
+itemGroup.Tut=Harry's Tutorial
 
 // w o r l d   g e n e r a t i o n
-generator.Stone Wild=Stone Mountain World
 generator.Stone Just Test=Stone World
 generator.Ocean=Ocean World
 generator.Desert=Desert World

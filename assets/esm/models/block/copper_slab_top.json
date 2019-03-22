@@ -1,0 +1,9 @@
+{
+    "parent": "block/upper_slab",
+    "textures":
+    {
+        "bottom": "esm:blocks/copper_block",
+        "top": "esm:blocks/copper_block",
+        "side": "esm:blocks/copper_block"
+    }
+}

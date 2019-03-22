@@ -2,8 +2,10 @@ package com.maikerumine.ESMC.util.handlers;
 
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
+import com.maikerumine.ESMC.commands.CommandTeleportDimension;
 import com.maikerumine.ESMC.enchantments.EnchantmentSuperBoots;
 import com.maikerumine.ESMC.init.BiomeInit;
+import com.maikerumine.ESMC.init.DimensionInit;
 import com.maikerumine.ESMC.init.EnchantmentInit;
 import com.maikerumine.ESMC.init.EntityInit;
 import com.maikerumine.ESMC.init.FluidInit;
@@ -17,7 +19,6 @@ import com.maikerumine.ESMC.world.generation.WorldGenCustomStructures;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomTrees;
 import com.maikerumine.ESMC.world.type.WorldTypeDesert;
 import com.maikerumine.ESMC.world.type.WorldTypeOcean;
-import com.maikerumine.ESMC.world.type.WorldTypeStone;
 import com.maikerumine.ESMC.world.type.WorldTypeStoneJustTest;
 
 import net.minecraft.block.Block;
@@ -50,8 +51,8 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-//				TileEntityHandler.registerTileEntities();
-//				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+				TileEntityHandler.registerTileEntities();
+				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 	}
 	
 	@SubscribeEvent
@@ -85,19 +86,18 @@ public class RegistryHandler
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
-		// TODO
-//		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
-//		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
-//		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
-//		DimensionInit.registerDimensions();
 		
-		BiomeInit.registerBiomes();
 		FluidInit.registerFluids();
+		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);				//CRASHING SERVER
+		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
+		BiomeInit.registerBiomes();
+		DimensionInit.registerDimensions();
 		//=======================================================================================================================
 		//=======================================================================================================================		
-//		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
-//		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
-//		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
+		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
+		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
 		//=======================================================================================================================
 		//=======================================================================================================================
 		ModConfiguration.registerConfig(event);
@@ -112,7 +112,6 @@ public class RegistryHandler
 	
 	public static void postInitRegistries(FMLPostInitializationEvent event)
 	{
-		WorldType STONE = new WorldTypeStone();
 		WorldType STONEJUSTTEST = new WorldTypeStoneJustTest();
 		WorldType OCEAN = new WorldTypeOcean();
 		WorldType DESERT = new WorldTypeDesert();
@@ -120,7 +119,7 @@ public class RegistryHandler
 	
 	public static void serverRegistries(FMLServerStartingEvent event)
 	{
-//		event.registerServerCommand(new CommandTeleportDimension());
+		event.registerServerCommand(new CommandTeleportDimension());
 	}
 	
 }

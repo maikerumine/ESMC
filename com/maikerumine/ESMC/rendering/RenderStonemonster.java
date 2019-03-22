@@ -2,7 +2,7 @@ package com.maikerumine.ESMC.rendering;
 
 import com.maikerumine.ESMC.util.Reference;
 import com.maikerumine.ESMC.entity.EntityStonemonster;
-import com.maikerumine.ESMC.entity.model.ModelStonemonster;
+import com.maikerumine.ESMC.rendering.models.entities.ModelStonemonster;
 
 import net.minecraft.client.renderer.entity.RenderLiving;   //needs to be sided?
 import net.minecraft.client.renderer.entity.RenderManager;	//needs to be sided?

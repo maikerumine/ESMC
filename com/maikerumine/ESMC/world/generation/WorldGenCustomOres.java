@@ -15,14 +15,14 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class WorldGenCustomOres implements IWorldGenerator
 {
-	private WorldGenerator copper_ore;
-	//private WorldGenerator copper_ore_nether, copper_ore_end;
+	private WorldGenerator lag_block;
+	private WorldGenerator nyancat_block, mese_block;
 	
 	public WorldGenCustomOres() 
 	{
-		//copper_ore_nether = new WorldGenMinable(BlockInit.COPPER_ORE_NETHER.getDefaultState(), 9, BlockMatcher.forBlock(Blocks.NETHERRACK));
-		//copper_ore = new WorldGenMinable(BlockInit.COPPER_ORE.getDefaultState(), 9, BlockMatcher.forBlock(Blocks.STONE));
-		//copper_ore_end = new WorldGenMinable(BlockInit.COPPER_ORE_END.getDefaultState(), 9, BlockMatcher.forBlock(Blocks.END_STONE));
+		nyancat_block = new WorldGenMinable(ModBlocks.NYANCAT_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150424_aL));
+		lag_block = new WorldGenMinable(ModBlocks.TOXIC_WATER_FLUID.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150348_b));
+		mese_block = new WorldGenMinable(ModBlocks.MESE_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150377_bs));
 	}
 	
 	@Override
@@ -32,19 +32,19 @@ public class WorldGenCustomOres implements IWorldGenerator
 		{
 		case -1:
 			
-			//runGenerator(copper_ore_nether, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(nyancat_block, world, random, chunkX, chunkZ, 50, 0, 100);
 			
 			break;
 			
 		case 0:
 			
-			runGenerator(copper_ore, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(lag_block, world, random, chunkX, chunkZ, 50, 0, 100);
 			
 			break;
 			
 		case 1:
 			
-			//runGenerator(copper_ore_end, world, random, chunkX, chunkZ, 50, 0, 256);
+			runGenerator(mese_block, world, random, chunkX, chunkZ, 50, 0, 256);
 		}
 	}
 	
