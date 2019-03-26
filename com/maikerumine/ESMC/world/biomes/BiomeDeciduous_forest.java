@@ -92,7 +92,7 @@ public class BiomeDeciduous_forest extends Biome
 {
 	public BiomeDeciduous_forest() 
 	{
-		super(new BiomeProperties("Deciduous_forest").func_185410_a(0.6F).func_185395_b(0.6F));
+		super(new BiomeProperties("MT Deciduous_forest").func_185410_a(0.6F).func_185395_b(0.6F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

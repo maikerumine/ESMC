@@ -92,7 +92,7 @@ public class BiomeDeciduous_forest_shore extends Biome
 {
 	public BiomeDeciduous_forest_shore() 
 	{
-		super(new BiomeProperties("Deciduous_forest_shore").func_185398_c(0.45F).func_185400_d(0.3F).func_185410_a(0.6F).func_185395_b(0.6F));
+		super(new BiomeProperties("MT Deciduous_forest_shore").func_185398_c(0.45F).func_185400_d(0.3F).func_185410_a(0.6F).func_185395_b(0.6F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

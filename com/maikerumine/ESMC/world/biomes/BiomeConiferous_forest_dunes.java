@@ -92,7 +92,7 @@ public class BiomeConiferous_forest_dunes extends Biome
 {
 	public BiomeConiferous_forest_dunes() 
 	{
-		super(new BiomeProperties("Coniferous_forest_dunes").func_185398_c(0.45F).func_185400_d(0.3F).func_185410_a(0.7F).func_185395_b(0.8F));
+		super(new BiomeProperties("MT Coniferous_forest_dunes").func_185398_c(0.45F).func_185400_d(0.3F).func_185410_a(0.7F).func_185395_b(0.8F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

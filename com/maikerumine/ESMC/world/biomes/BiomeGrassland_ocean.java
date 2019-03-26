@@ -92,7 +92,7 @@ public class BiomeGrassland_ocean extends Biome
 {
 	public BiomeGrassland_ocean() 
 	{
-		super(new BiomeProperties("Grassland_ocean").func_185398_c(-1.0F).func_185400_d(0.1F));
+		super(new BiomeProperties("MT Grassland Ocean").func_185398_c(-1.0F).func_185400_d(0.1F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

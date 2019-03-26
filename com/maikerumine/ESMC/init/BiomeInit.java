@@ -17,6 +17,7 @@ import com.maikerumine.ESMC.world.biomes.BiomeGrassland_dunes;
 import com.maikerumine.ESMC.world.biomes.BiomeGrassland_ocean;
 import com.maikerumine.ESMC.world.biomes.BiomeIcesheet;
 import com.maikerumine.ESMC.world.biomes.BiomeIcesheet_ocean;
+import com.maikerumine.ESMC.world.biomes.BiomeMinetest;
 import com.maikerumine.ESMC.world.biomes.BiomeOcean;
 import com.maikerumine.ESMC.world.biomes.BiomeRainforest;
 import com.maikerumine.ESMC.world.biomes.BiomeRainforest_ocean;
@@ -62,7 +63,7 @@ public class BiomeInit
 	public static final Biome RIVER = new BiomeRiver();
 
 	//Minetest Biomes:
-	
+	public static final Biome MINETEST = new BiomeMinetest();  //Placeholder for root spawn
 	public static final Biome ICESHEET = new BiomeIcesheet();
 	public static final Biome ICESHEET_OCEAN = new BiomeIcesheet_ocean();
 	public static final Biome TUNDRA_HIGHLAND = new BiomeTundra_highland();
@@ -110,38 +111,39 @@ public class BiomeInit
 		initBiome(BEACH, "Esm Beach", BiomeType.WARM, Type.BEACH, Type.RIVER, Type.WET);
 		initBiome(RIVER, "Esm River", BiomeType.COOL, Type.HILLS, Type.RIVER, Type.WET);
 	//MINETEST BIOMES W.I.P.
-		initBiome(ICESHEET, "BiomeIcesheet", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(ICESHEET_OCEAN, "ICESHEET_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TUNDRA_HIGHLAND, "TUNDRA_HIGHLAND", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TUNDRA, "TUNDRA", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TUNDRA_BEACH, "TUNDRA_BEACH", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TUNDRA_OCEAN, "TUNDRA_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TAIGA, "TAIGA", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(TAIGA_OCEAN, "TAIGA_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(SNOWY_GRASSLAND, "SNOWY_GRASSLAND", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(SNOWY_GRASSLAND_OCEAN, "SNOWY_GRASSLAND_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(GRASSLAND, "GRASSLAND", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
+		initBiome(ICESHEET, "BiomeIcesheet", BiomeType.ICY, Type.SPARSE, Type.COLD, Type.DRY);
+		initBiome(ICESHEET_OCEAN, "ICESHEET_OCEAN", BiomeType.ICY, Type.OCEAN, Type.COLD, Type.DRY);
+		initBiome(TUNDRA_HIGHLAND, "TUNDRA_HIGHLAND", BiomeType.COOL, Type.SNOWY, Type.COLD, Type.HILLS);
+		initBiome(TUNDRA, "TUNDRA", BiomeType.COOL, Type.SPARSE, Type.COLD, Type.DRY);
+		initBiome(TUNDRA_BEACH, "TUNDRA_BEACH", BiomeType.COOL, Type.BEACH, Type.COLD, Type.DRY);
+		initBiome(TUNDRA_OCEAN, "TUNDRA_OCEAN", BiomeType.COOL, Type.OCEAN, Type.COLD, Type.DRY);
+		initBiome(TAIGA, "TAIGA", BiomeType.COOL, Type.HILLS, Type.CONIFEROUS, Type.DENSE);
+		initBiome(TAIGA_OCEAN, "TAIGA_OCEAN", BiomeType.COOL, Type.OCEAN, Type.COLD, Type.WATER);
+		initBiome(SNOWY_GRASSLAND, "SNOWY_GRASSLAND", BiomeType.ICY, Type.SNOWY, Type.PLAINS, Type.DRY);
+		initBiome(SNOWY_GRASSLAND_OCEAN, "SNOWY_GRASSLAND_OCEAN", BiomeType.ICY, Type.OCEAN, Type.COLD, Type.WATER);
+		initBiome(GRASSLAND, "GRASSLAND", BiomeType.WARM, Type.PLAINS, Type.SPARSE, Type.DRY);
 		initBiome(GRASSLAND_DUNES, "GRASSLAND_DUNES", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(GRASSLAND_OCEAN, "GRASSLAND_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(CONIFEROUS_FOREST, "CONIFEROUS_FOREST", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(CONIFEROUS_FOREST_DUNES, "CONIFEROUS_FOREST_DUNES", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(CONIFEROUS_FOREST_OCEAN, "CONIFEROUS_FOREST_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(DECIDUOUS_FOREST, "DECIDUOUS_FOREST", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(DECIDUOUS_FOREST_SHORE, "DECIDUOUS_FOREST_SHORE", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(DECIDUOUS_FOREST_OCEAN, "DECIDUOUS_FOREST_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(DESERT, "Esm Desert", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(DESERT_OCEAN, "DESERT_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(SANDSTONE_DESERT, "SANDSTONE_DESERT", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(SANDSTONE_DESERT_OCEAN, "ANDSTONE_DESERT_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
+		initBiome(GRASSLAND_OCEAN, "GRASSLAND_OCEAN", BiomeType.WARM, Type.OCEAN, Type.BEACH, Type.SPARSE);
+		initBiome(CONIFEROUS_FOREST, "CONIFEROUS_FOREST", BiomeType.COOL, Type.CONIFEROUS, Type.DENSE, Type.DRY);
+		initBiome(CONIFEROUS_FOREST_DUNES, "CONIFEROUS_FOREST_DUNES", BiomeType.COOL, Type.BEACH, Type.FOREST, Type.SANDY);
+		initBiome(CONIFEROUS_FOREST_OCEAN, "CONIFEROUS_FOREST_OCEAN", BiomeType.COOL, Type.OCEAN, Type.CONIFEROUS, Type.RIVER);
+		initBiome(DECIDUOUS_FOREST, "DECIDUOUS_FOREST", BiomeType.WARM, Type.FOREST, Type.DENSE, Type.PLAINS);
+		initBiome(DECIDUOUS_FOREST_SHORE, "DECIDUOUS_FOREST_SHORE", BiomeType.WARM, Type.BEACH, Type.FOREST, Type.SANDY);
+		initBiome(DECIDUOUS_FOREST_OCEAN, "DECIDUOUS_FOREST_OCEAN", BiomeType.WARM, Type.OCEAN, Type.FOREST, Type.SANDY);
+		initBiome(DESERT, "ESM Desert", BiomeType.DESERT, Type.DEAD, Type.HOT, Type.DRY);
+		initBiome(DESERT_OCEAN, "DESERT_OCEAN", BiomeType.DESERT, Type.OCEAN, Type.HOT, Type.DRY);
+		initBiome(SANDSTONE_DESERT, "SANDSTONE_DESERT", BiomeType.DESERT, Type.SANDY, Type.HOT, Type.DRY);
+		initBiome(SANDSTONE_DESERT_OCEAN, "ANDSTONE_DESERT_OCEAN", BiomeType.DESERT, Type.HILLS, Type.HOT, Type.DRY);
 		initBiome(COLD_DESERT, "COLD_DESERT", BiomeType.DESERT, Type.SANDY, Type.COLD, Type.DRY);
 		initBiome(COLD_DESERT_OCEAN, "COLD_DESERT_OCEAN", BiomeType.ICY, Type.OCEAN, Type.COLD, Type.BEACH);
 		initBiome(SAVANNA, "SAVANNA", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
 		initBiome(SAVANNA_SHORE, "SAVANNA_SHORE", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
 		initBiome(SAVANNA_OCEAN, "SAVANNA_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(RAINFOREST, "RAINFOREST", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(RAINFOREST_SWAMP, "RAINFOREST_SWAMP", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(RAINFOREST_OCEAN, "RAINFOREST_OCEAN", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
-		initBiome(UNDERGROUND, "UNDERGROUND", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
+		initBiome(RAINFOREST, "RAINFOREST", BiomeType.WARM, Type.JUNGLE, Type.HOT, Type.WET);
+		initBiome(RAINFOREST_SWAMP, "RAINFOREST_SWAMP", BiomeType.WARM, Type.JUNGLE, Type.LUSH, Type.SWAMP);
+		initBiome(RAINFOREST_OCEAN, "RAINFOREST_OCEAN", BiomeType.WARM, Type.JUNGLE, Type.HOT, Type.WATER);
+		initBiome(UNDERGROUND, "UNDERGROUND", BiomeType.DESERT, Type.SPARSE, Type.SPOOKY, Type.MAGICAL);
+		initBiome(MINETEST, "MINETEST", BiomeType.DESERT, Type.SPARSE, Type.SPOOKY, Type.MAGICAL);
 		
 		
 	}

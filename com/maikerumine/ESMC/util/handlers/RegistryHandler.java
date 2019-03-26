@@ -1,8 +1,11 @@
 package com.maikerumine.ESMC.util.handlers;
 
+import java.lang.reflect.Field;
+
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
 import com.maikerumine.ESMC.commands.CommandTeleportDimension;
+import com.maikerumine.ESMC.crafting.RecipeRemover;
 import com.maikerumine.ESMC.enchantments.EnchantmentSuperBoots;
 import com.maikerumine.ESMC.init.BiomeInit;
 import com.maikerumine.ESMC.init.DimensionInit;
@@ -11,6 +14,8 @@ import com.maikerumine.ESMC.init.EntityInit;
 import com.maikerumine.ESMC.init.FluidInit;
 import com.maikerumine.ESMC.init.ModBlocks;
 import com.maikerumine.ESMC.init.ModItems;
+import com.maikerumine.ESMC.init.ModTriggers;
+import com.maikerumine.ESMC.recipes.RecipeBookServerCustom;
 import com.maikerumine.ESMC.rendering.RenderEsmChest;
 import com.maikerumine.ESMC.util.ModConfiguration;
 import com.maikerumine.ESMC.util.interfaces.IHasModel;
@@ -18,24 +23,35 @@ import com.maikerumine.ESMC.world.generation.WorldGenCustomOres;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomStructures;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomTrees;
 import com.maikerumine.ESMC.world.type.WorldTypeDesert;
+import com.maikerumine.ESMC.world.type.WorldTypeMinetest;
 import com.maikerumine.ESMC.world.type.WorldTypeOcean;
 import com.maikerumine.ESMC.world.type.WorldTypeStoneJustTest;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.stats.RecipeBookServer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import net.minecraftforge.registries.IForgeRegistryModifiable;
 
 @EventBusSubscriber
 public class RegistryHandler 
@@ -82,6 +98,26 @@ public class RegistryHandler
 			}
 		}
 	}
+	
+/**
+ * BY: kreezxil
+ * http://www.minecraftforge.net/forum/topic/59711-112-override-vanilla-recipe/
+ * Posted July 25, 2017
+ * 	
+ * @param event
+*/
+	//Recipe remover
+    @SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event)
+    {
+    	ResourceLocation Stick = new ResourceLocation("minecraft:stick");
+    	ResourceLocation Book = new ResourceLocation("minecraft:book");
+    	ResourceLocation Button = new ResourceLocation("minecraft:wooden_button");
+        IForgeRegistryModifiable modRegistry = (IForgeRegistryModifiable) event.getRegistry();
+        modRegistry.remove(Stick);
+        modRegistry.remove(Book);
+        modRegistry.remove(Button);
+    }
 
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
@@ -106,6 +142,8 @@ public class RegistryHandler
 	public static void initRegistries(FMLInitializationEvent event)
 	{
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
+//		RecipeRemover.removeRecipe();
+//		RecipeRemover.removeRecipes();
 		SoundsHandler.registerSounds();		
 	}
 
@@ -115,11 +153,88 @@ public class RegistryHandler
 		WorldType STONEJUSTTEST = new WorldTypeStoneJustTest();
 		WorldType OCEAN = new WorldTypeOcean();
 		WorldType DESERT = new WorldTypeDesert();
+		WorldType MINETEST = new WorldTypeMinetest();
 	}
 	
 	public static void serverRegistries(FMLServerStartingEvent event)
 	{
 		event.registerServerCommand(new CommandTeleportDimension());
 	}
+	
+	
+	
+	
+	
+	/**
+    Copyright (C) 2017 by jabelar
+
+    This file is part of jabelar's Minecraft Forge modding examples; as such,
+    you can redistribute it and/or modify it under the terms of the GNU
+    General Public License as published by the Free Software Foundation,
+    either version 3 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    For a copy of the GNU General Public License see <http://www.gnu.org/licenses/>.
+*/	
+    public static Field recipeBook = ReflectionHelper.findField(EntityPlayerMP.class, "recipeBook", "field_192036_cb");
+    
+    /**
+     * On event.
+     *
+     * @param event the event
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+    public static void onEvent(PlayerTickEvent event)
+    {
+        if (event.player instanceof EntityPlayerMP)
+        {
+            EntityPlayerMP playerMP = (EntityPlayerMP) event.player;
+            RecipeBookServer recipeBookCurrent = playerMP.func_192037_E();
+            if (!(recipeBookCurrent instanceof RecipeBookServerCustom))
+            {
+                // DEBUG
+                System.out.println("Replacing recipe book with custom book");
+                
+                RecipeBookServerCustom recipeBookNew = new RecipeBookServerCustom();
+                recipeBookNew.func_193824_a(recipeBookCurrent);
+                try
+                {
+                    recipeBook.set(playerMP, recipeBookNew);
+                }
+                catch (IllegalArgumentException | IllegalAccessException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    
+    /**
+     * This method is part of my simple custom advancement triggering tutorial.
+     * See: http://jabelarminecraft.blogspot.com/p/minecraft-modding-custom-triggers-aka.html
+     *
+     * @param event the event
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+    public static void onEvent(RightClickBlock event)
+    {
+        EntityPlayer thePlayer = event.getEntityPlayer();
+        if (thePlayer instanceof EntityPlayerMP)
+        {
+            EntityPlayerMP thePlayerMP = (EntityPlayerMP)thePlayer;
+            
+            // DEBUG
+            System.out.println("Right clicking block with "+thePlayer.func_184586_b(event.getHand()));
+   
+            if (thePlayer.func_184586_b(event.getHand()).func_77973_b() == ModItems.AIKERUM_CRYSTAL)
+            {
+                ModTriggers.MINE_AIKERUM.trigger(thePlayerMP);
+            }
+        }
+    }
 	
 }

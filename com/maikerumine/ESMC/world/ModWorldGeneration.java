@@ -26,11 +26,11 @@ public class ModWorldGeneration implements IWorldGenerator {
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{
 		generateOre(ModBlocks.AIKERUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 2);
-		generateOre(ModBlocks.COPPER_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 6);
+		generateOre(ModBlocks.COPPER_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
 		generateOre(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 2);
 		generateOre(ModBlocks.INFINIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.MESE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.MESE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
+		generateOre(ModBlocks.MESE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(2) + 2, 2);
+		generateOre(ModBlocks.MESE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(2) + 3, 2);
 		generateOre(ModBlocks.PURPELLIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
 		generateOre(ModBlocks.RUBY_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
 		generateOre(ModBlocks.NYANCAT_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(2) + 1, 1);
@@ -38,17 +38,17 @@ public class ModWorldGeneration implements IWorldGenerator {
 		generateOre(ModBlocks.TOXIC_WATER_FLUID.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 2);
 		
 		//Default esque
-		generateOre(Blocks.field_150366_p.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 6);
-		generateOre(Blocks.field_150365_q.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(5) + 4, 6);
+		generateOre(Blocks.field_150366_p.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
+		generateOre(Blocks.field_150365_q.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
 		generateOre(Blocks.field_150482_ag.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 4);
 		generateOre(Blocks.field_150450_ax.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(5) + 4, 6);
 		generateOre(Blocks.field_150412_bA.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
 		generateOre(Blocks.field_150369_x.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
 		generateOre(Blocks.field_150352_o.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 5);
 		
-		generateOre(Blocks.field_150418_aU.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
-		generateOre(Blocks.field_150355_j.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
-		generateOre(Blocks.field_150353_l.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
+		generateOre(Blocks.field_150418_aU.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(3) + 2, 2);
+//		generateOre(Blocks.WATER.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
+//		generateOre(Blocks.LAVA.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) 

@@ -21,7 +21,7 @@ public class WorldGenCustomOres implements IWorldGenerator
 	public WorldGenCustomOres() 
 	{
 		nyancat_block = new WorldGenMinable(ModBlocks.NYANCAT_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150424_aL));
-		lag_block = new WorldGenMinable(ModBlocks.TOXIC_WATER_FLUID.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150348_b));
+		lag_block = new WorldGenMinable(Blocks.field_150336_V.func_176223_P(), 1, BlockMatcher.func_177642_a(Blocks.field_150348_b));
 		mese_block = new WorldGenMinable(ModBlocks.MESE_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150377_bs));
 	}
 	
@@ -38,7 +38,7 @@ public class WorldGenCustomOres implements IWorldGenerator
 			
 		case 0:
 			
-			runGenerator(lag_block, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(lag_block, world, random, chunkX, chunkZ, 2, 0, 100);
 			
 			break;
 			

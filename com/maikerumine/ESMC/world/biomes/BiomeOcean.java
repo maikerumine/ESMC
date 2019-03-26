@@ -14,7 +14,7 @@ public class BiomeOcean extends Biome
 {
 	public BiomeOcean() 
 	{
-		super(new BiomeProperties("Esm Ocean").func_185398_c(-1.0F).func_185400_d(0.1F));
+		super(new BiomeProperties("ESM Ocean").func_185398_c(-1.7F).func_185400_d(0.3F));
 //		registerBiome(0, "ocean", new BiomeOcean((new Biome.BiomeProperties("Ocean")).setBaseHeight(-1.0F).setHeightVariation(0.1F)));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();

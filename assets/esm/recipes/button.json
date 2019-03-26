@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:stick",
+            "data": 0
+        }
+    ],
+    "result": {
+        "item": "minecraft:wooden_button",
+        "data": 0,
+        "count": 1
+    }
+}

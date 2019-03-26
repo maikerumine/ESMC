@@ -92,7 +92,7 @@ public class BiomeIcesheet_ocean extends Biome
 {
 	public BiomeIcesheet_ocean() 
 	{
-		super(new BiomeProperties("Icesheet_ocean").func_185398_c(-1.0F).func_185400_d(0.1F).func_185410_a(0.0F).func_185395_b(0.5F).func_185411_b());
+		super(new BiomeProperties("MT Icesheet Ocean").func_185398_c(-1.0F).func_185400_d(0.1F).func_185410_a(0.0F).func_185395_b(0.5F).func_185411_b());
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

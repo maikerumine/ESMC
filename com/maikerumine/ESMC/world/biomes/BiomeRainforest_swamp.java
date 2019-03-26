@@ -15,7 +15,7 @@ public class BiomeRainforest_swamp extends Biome
 	public BiomeRainforest_swamp() 
 	{
 		//registerBiome(16, "beaches", new BiomeBeach((new Biome.BiomeProperties("Beach")).setBaseHeight(0.0F).setHeightVariation(0.025F).setTemperature(0.8F).setRainfall(0.4F)));
-		super(new BiomeProperties("Rainforest_swamp").func_185410_a(0.95F).func_185395_b(0.9F));
+		super(new BiomeProperties("MT Rainforest Swamp").func_185410_a(0.95F).func_185395_b(0.9F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();
