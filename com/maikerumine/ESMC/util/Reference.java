@@ -48,10 +48,10 @@ public class Reference
         // DEBUG
         System.out.println("preInit() " + event.getModMetadata().name);
 
-         ModConfiguration.registerConfig(event); // load configuration before doing anything else that may be controlled by it.
+//         ModConfiguration.registerConfig(event); // load configuration before doing anything else that may be controlled by it.
         // register stuff
-         TileEntityHandler.registerTileEntities();
-         FluidInit.registerFluids();
+//         TileEntityHandler.registerTileEntities();
+//         FluidInit.registerFluids();
 
         proxy.preInit(event);
     }

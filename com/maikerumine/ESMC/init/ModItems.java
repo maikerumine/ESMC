@@ -56,19 +56,26 @@ public class ModItems
 	//Items
 	public static final Item AIKERUM_CRYSTAL = new ItemBase("aikerum_crystal", null);
 	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot", null);
-	public static final Item COPPER_LUMP = new ItemBase("copper_lump", null);
 	public static final Item COPPER_INGOT = new ItemBase("copper_ingot", null);
-	public static final Item DEPLETED_URANIUM_LUMP = new ItemBase("depleted_uranium_lump", null);
+	public static final Item COPPER_LUMP = new ItemBase("copper_lump", null);
+	public static final Item COAL_LUMP = new ItemBase("coal_lump", null);
 	public static final Item DEPLETED_URANIUM_INGOT = new ItemBase("depleted_uranium_ingot", null);
-	public static final Item EMERALD_CRYSTAL = new ItemBase("emerald_crystal", null);
+	public static final Item DEPLETED_URANIUM_LUMP = new ItemBase("depleted_uranium_lump", null);
+	//public static final Item DIAMOND_CRYSTAL = new ItemBase("diamond_crystal", null);
+	//public static final Item EMERALD_CRYSTAL = new ItemBase("emerald_crystal", null);
+	public static final Item GOLD_LUMP = new ItemBase("gold_lump", null);
 	public static final Item INFINIUM_GOO = new ItemBase("infinium_goo", null);
 	public static final Item INFINIUM_INGOT = new ItemBase("infinium_ingot", null);
+	//public static final Item IRON_INGOT = new ItemBase("iron_ingot", null);
+	public static final Item IRON_LUMP = new ItemBase("iron_lump", null);
 	public static final Item MESE_CRYSTAL = new ItemBase("mese_crystal", null);
 	public static final Item MESE_CRYSTAL_FRAGMENT = new ItemBase("mese_crystal_fragment", null);
 	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard", null);
-	public static final Item PURPELLIUM_LUMP = new ItemBase("purpellium_lump", null);
 	public static final Item PURPELLIUM_INGOT = new ItemBase("purpellium_ingot", null);
+	public static final Item PURPELLIUM_LUMP = new ItemBase("purpellium_lump", null);
 	public static final Item RUBY_CRYSTAL = new ItemBase("ruby_crystal", null);
+	public static final Item TIN_INGOT = new ItemBase("tin_ingot", null);
+	public static final Item TIN_LUMP = new ItemBase("tin_lump", null);
 
 	
 	//T O O L S 
@@ -151,6 +158,7 @@ public class ModItems
 	public static final ArmorMaterial CUSTOM_MODEL_MATERIAL = EnumHelper.addArmorMaterial("custom_model", Main.MOD_ID + ":custom_model", 20, new int[] {7, 8, 8, 9}, 0, SoundEvents.field_187719_p, 2.0f);
 
 	
+	//??wtf-->
 	public static Block ALUMINIUM_SAPLING;
 	
 	

@@ -17,6 +17,6 @@ public class Tut extends CreativeTabs
 	@Override
 	public ItemStack func_78016_d() 
 	{
-		return new ItemStack(ModBlocks.COPPER_LOG);
+		return new ItemStack(ModBlocks.TIN_BLOCK);
 	}
 }

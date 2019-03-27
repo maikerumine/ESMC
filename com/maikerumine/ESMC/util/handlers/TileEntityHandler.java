@@ -11,7 +11,7 @@ public class TileEntityHandler
 {
 		public static void registerTileEntities()
 	{
-					GameRegistry.registerTileEntity(TileEntityEsmChest.class, new ResourceLocation(Reference.MOD_ID + ":esm_chest"));
-					GameRegistry.registerTileEntity(TileEntitySinteringFurnace.class, new ResourceLocation(Reference.MOD_ID + ":sintering_furnace"));
+//					GameRegistry.registerTileEntity(TileEntityEsmChest.class, new ResourceLocation(Reference.MOD_ID + ":esm_chest"));
+//					GameRegistry.registerTileEntity(TileEntitySinteringFurnace.class, new ResourceLocation(Reference.MOD_ID + ":sintering_furnace"));
 	}
 }

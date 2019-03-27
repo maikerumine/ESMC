@@ -2,9 +2,6 @@ package com.maikerumine.ESMC.world.generation.generators;
 
 import java.util.Random;
 
-import com.maikerumine.ESMC.init.ModBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
@@ -27,8 +24,8 @@ import net.minecraftforge.common.IPlantable;
 
 public class WorldGenCopperTree extends WorldGenAbstractTree 
 {
-	public static final IBlockState LOG = ModBlocks.COPPER_LOG.func_176223_P();
-	public static final IBlockState LEAF = ModBlocks.COPPER_LEAVES.func_176223_P();
+//	public static final IBlockState LOG = ModBlocks.COPPER_LOG.getDefaultState();
+//	public static final IBlockState LEAF = ModBlocks.COPPER_LEAVES.getDefaultState();
 	
 	private final int minHeight;
 	
@@ -106,9 +103,9 @@ public class WorldGenCopperTree extends WorldGenAbstractTree
 								IBlockState treeState = world.func_180495_p(treePos);
 								if(treeState.func_177230_c().isAir(treeState, world, treePos) || treeState.func_177230_c().isAir(treeState, world, treePos))
 								{
-									this.func_175903_a(world, treePos, LEAF);
-									this.func_175903_a(world, treePos.func_177963_a(0, -0.25 * height, 0), LEAF);
-									this.func_175903_a(world, treePos.func_177963_a(0, -0.5 * height, 0), LEAF);
+//									this.setBlockAndNotifyAdequately(world, treePos, LEAF);
+//									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.25 * height, 0), LEAF);
+//									this.setBlockAndNotifyAdequately(world, treePos.add(0, -0.5 * height, 0), LEAF);
 								}
 							}
 						}
@@ -122,7 +119,7 @@ public class WorldGenCopperTree extends WorldGenAbstractTree
 					
 					if(logState.func_177230_c().isAir(logState, world, up) || logState.func_177230_c().isLeaves(logState, world, up))
 					{
-						this.func_175903_a(world, pos.func_177981_b(logHeight), LOG);
+//						this.setBlockAndNotifyAdequately(world, pos.up(logHeight), LOG);
 					}
 				}
 				
@@ -133,11 +130,11 @@ public class WorldGenCopperTree extends WorldGenAbstractTree
 		return true;
 	}	
 	
-	@Override
-	protected boolean func_150523_a(Block blockType)
-	{
-		Material material = blockType.func_176223_P().func_185904_a();
-        return material == Material.field_151579_a || material == Material.field_151584_j || material == Material.field_151578_c || blockType == ModBlocks.COPPER_DIRT || blockType == Blocks.field_150349_c || blockType == Blocks.field_150346_d || blockType == Blocks.field_150364_r || blockType == Blocks.field_150363_s || blockType == Blocks.field_150345_g || blockType == Blocks.field_150395_bd;
+//	@Override
+//	protected boolean canGrowInto(Block blockType)
+//	{
+//		Material material = blockType.getDefaultState().getMaterial();
+//        return material == Material.AIR || material == Material.LEAVES || material == Material.GROUND || blockType == ModBlocks.COPPER_DIRT || blockType == Blocks.GRASS || blockType == Blocks.DIRT || blockType == Blocks.LOG || blockType == Blocks.LOG2 || blockType == Blocks.SAPLING || blockType == Blocks.VINE;
   
-	}
+//	}
 }

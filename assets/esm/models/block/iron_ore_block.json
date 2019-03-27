@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "esm:blocks/iron_ore_block"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DDD",
+        "DDD",
+        "DDD"
+    ],
+    "key": {
+        "D": {
+            "item": "esm:desert_stone"
+        }
+    },
+    "result": {
+        "item": "esm:desert_stone_block",
+        "count": 9
+    }
+}

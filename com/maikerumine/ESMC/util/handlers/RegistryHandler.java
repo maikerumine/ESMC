@@ -67,20 +67,20 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-				TileEntityHandler.registerTileEntities();
-				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+//				TileEntityHandler.registerTileEntities();
+//				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 	}
 	
 	@SubscribeEvent
 	public static void registerEnchantment(RegistryEvent.Register<Enchantment> event)
 	{
-		event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
+//		event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
 	}
 
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event)
 	{		
-		Main.proxy.registerModel(Item.func_150898_a(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
+//		Main.proxy.registerModel(Item.getItemFromBlock(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
 		
 		for(Item item : ModItems.ITEMS)
 		{
@@ -123,20 +123,20 @@ public class RegistryHandler
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		
-		FluidInit.registerFluids();
+//		FluidInit.registerFluids();
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);				//CRASHING SERVER
-		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
-		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
+//		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
+//		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 		BiomeInit.registerBiomes();
-		DimensionInit.registerDimensions();
+//		DimensionInit.registerDimensions();
 		//=======================================================================================================================
 		//=======================================================================================================================		
-		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
-		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
-		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+//		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
+//		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
+//		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
 		//=======================================================================================================================
 		//=======================================================================================================================
-		ModConfiguration.registerConfig(event);
+//		ModConfiguration.registerConfig(event);
 	}
 
 	public static void initRegistries(FMLInitializationEvent event)
@@ -179,28 +179,30 @@ public class RegistryHandler
     GNU General Public License for more details.
 
     For a copy of the GNU General Public License see <http://www.gnu.org/licenses/>.
-*/	
-    public static Field recipeBook = ReflectionHelper.findField(EntityPlayerMP.class, "recipeBook", "field_192036_cb");
+//*/	
+//    public static Field recipeBook = ReflectionHelper.findField(EntityPlayerMP.class, "recipeBook", "field_192036_cb");
     
     /**
      * On event.
      *
      * @param event the event
      */
+    
+    /**
     @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
     public static void onEvent(PlayerTickEvent event)
     {
         if (event.player instanceof EntityPlayerMP)
         {
             EntityPlayerMP playerMP = (EntityPlayerMP) event.player;
-            RecipeBookServer recipeBookCurrent = playerMP.func_192037_E();
+            RecipeBookServer recipeBookCurrent = playerMP.getRecipeBook();
             if (!(recipeBookCurrent instanceof RecipeBookServerCustom))
             {
                 // DEBUG
                 System.out.println("Replacing recipe book with custom book");
                 
                 RecipeBookServerCustom recipeBookNew = new RecipeBookServerCustom();
-                recipeBookNew.func_193824_a(recipeBookCurrent);
+                recipeBookNew.copyFrom(recipeBookCurrent);
                 try
                 {
                     recipeBook.set(playerMP, recipeBookNew);
@@ -212,13 +214,15 @@ public class RegistryHandler
             }
         }
     }
-    
+ */   
     /**
      * This method is part of my simple custom advancement triggering tutorial.
      * See: http://jabelarminecraft.blogspot.com/p/minecraft-modding-custom-triggers-aka.html
      *
      * @param event the event
      */
+    
+    /**
     @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
     public static void onEvent(RightClickBlock event)
     {
@@ -228,13 +232,13 @@ public class RegistryHandler
             EntityPlayerMP thePlayerMP = (EntityPlayerMP)thePlayer;
             
             // DEBUG
-            System.out.println("Right clicking block with "+thePlayer.func_184586_b(event.getHand()));
+            System.out.println("Right clicking block with "+thePlayer.getHeldItem(event.getHand()));
    
-            if (thePlayer.func_184586_b(event.getHand()).func_77973_b() == ModItems.AIKERUM_CRYSTAL)
+            if (thePlayer.getHeldItem(event.getHand()).getItem() == ModItems.AIKERUM_CRYSTAL)
             {
                 ModTriggers.MINE_AIKERUM.trigger(thePlayerMP);
             }
         }
     }
-	
+*/	
 }

@@ -40,19 +40,19 @@ public class BlockSinteringFurnace extends BlockBase
 		func_149672_a(SoundType.field_185852_e);
 		this.func_180632_j(this.field_176227_L.func_177621_b().func_177226_a(FACING, EnumFacing.NORTH).func_177226_a(BURNING, false));
 	}
-	
+/**	
 	@Override
-	public Item func_180660_a(IBlockState state, Random rand, int fortune) 
+	public Item getItemDropped(IBlockState state, Random rand, int fortune) 
 	{
-		return Item.func_150898_a(ModBlocks.SINTERING_FURNACE);
+		return Item.getItemFromBlock(ModBlocks.SINTERING_FURNACE);
 	}
 	
 	@Override
-	public ItemStack func_185473_a(World worldIn, BlockPos pos, IBlockState state)
+	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
 	{
 		return new ItemStack(ModBlocks.SINTERING_FURNACE);
 	}
-	
+*/	
 	@Override
 	public boolean func_180639_a(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) 
 	{

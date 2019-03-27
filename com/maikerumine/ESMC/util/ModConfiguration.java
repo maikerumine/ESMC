@@ -14,8 +14,8 @@ public class ModConfiguration
 	public static int GUI_SINTERING_FURNACE_ID = 1;
 	public static int GUI_ESM_CHEST_ID = 2;
 	public static int DIMENSION_DESERT_ID = 2;
-	public static boolean spawnCustomBiomesInOverworld = false;
-	
+	public static boolean spawnCustomBiomesInOverworld = true;
+/**	
 	public static void init(File file)
 	{
 		config = new Configuration(file);
@@ -50,5 +50,5 @@ public class ModConfiguration
 		// TODO Auto-generated method stub
 		
 	}
-	
+*/	
 } 

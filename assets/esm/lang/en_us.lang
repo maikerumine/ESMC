@@ -7,19 +7,26 @@
 //I T E M S
 item.aikerum_crystal.name=Aikerum Crystal
 item.bronze_ingot.name=Bronze Ingot
+item.coal_lump.name=Coal Lump
 item.copper_lump.name=Copper Lump
 item.copper_ingot.name=Copper Ingot
 item.depleted_uranium_lump.name=Depleted Uranium Lump
 item.depleted_uranium_ingot.name=Depleted Uranium Ingot
+item.diamond_crystal.name=Diamond Crystal
 item.emerald_crystal.name=Emerald Crystal
+item.gold_lump.name=Gold Lump
 item.infinium_goo.name=Infinium Goo
 item.infinium_ingot.name=Infinium Ingot
+item.iron_lump.name=Iron Lump
+//item.iron_ingot.name=Iron Ingot
 item.mese_crystal.name=Mese Crystal
 item.mese_crystal_fragment.name=Mese Crystal Fragment
 item.obsidian_shard.name=Obsidian Shard
 item.purpellium_lump.name=Purpellium Lump
 item.purpellium_ingot.name=Purpellium Ingot
 item.ruby_crystal.name=Ruby Crystal
+item.tin_lump.name=Tin Lump
+item.tin_ingot.name=Tin Ingot
 
 
 //B L O C K S 
@@ -28,28 +35,49 @@ tile.aikerum_block.name=Aikerum Block
 tile.aikerum_ore_block.name=Aikerum Ore
 tile.bones_block.name=Bones Block [NOVELTY]
 tile.bronze_block.name=Bronze Block
+tile.city_block.name=City Block  [NOVELTY]
+tile.coal_ore_block.name=Coal Ore Block
 tile.copper_block.name=Copper Block
 tile.copper_ore_block.name=Copper Ore
 tile.cursed_stone_block.name=Cursed Stone [NOVELTY]
 tile.depleted_uranium_ore_block.name=Depleted Uranium Ore
+tile.desert_cobble_block.name=Desert Cobble Block
+tile.desert_stone.name=Desert Stone
+tile.desert_stone_block.name=Desert Stone Block
+tile.diamond_block.name=Diamond Block
+tile.diamond_ore_block.name=Diamond Ore
+tile.emerald_block.name=Emerald Block
+tile.emerald_ore_block.name=Emerald Ore
+tile.gold_block.name=Gold Block
+tile.gold_ore_block.name=Gold Ore
 tile.infinium_block.name=Infinium Block
 tile.infinium_ore_block.name=Infinium Ore
+tile.iron_block.name=Iron Block
+tile.iron_ore_block.name=Iron Ore
 tile.kick_voting_block.name=Kick Voting Block [NOVELTY]
 tile.lag_block.name=Lag Block [NOVELTY]
+tile.lapis_block.name=Lapis Block
+tile.lapis_ore_block.name=Lapis Ore
 tile.mese_block.name=Mese Block
 tile.meselamp_block.name=Meselamp Block
 tile.mese_ore_block.name=Mese Ore
 tile.nyancat_block.name=Nyancat Block
+tile.obsidian_block.name=Obsidian Block
 tile.obsidian_brick_block.name=Obsidian Brick Block
 tile.obsidian_glass_block.name=Obsidian Glass Block
 tile.protector_block.name=Protector Block
 tile.purpellium_block.name=Purpellium Block
 tile.purpellium_ore_block.name=Purpellium Ore
+tile.redstone_block.name=Redstone Block
+tile.redstone_ore_block.name=Redstone Ore
 tile.rainbow_block.name=Rainbow Block
 tile.ruby_block.name=Ruby Block
 tile.ruby_ore_block.name=Ruby Ore
 tile.smoothstone_block.name=Stone Block
+tile.stone_block.name=Stone Block
 tile.teleport_block.name=Teleport Block [NOVELTY]
+tile.tin_block.name=Tin Block
+tile.tin_ore_block.name=Tin Ore
 
 
 //Chests and Storage

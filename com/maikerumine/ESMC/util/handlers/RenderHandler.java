@@ -31,13 +31,13 @@ public class RenderHandler
 			}
 		});
 	}
-
+/**
 	public static void registerCustomMeshesAndStates()
 	{
-		ModelLoader.setCustomMeshDefinition(Item.func_150898_a(ModBlocks.TOXIC_WATER_FLUID), new ItemMeshDefinition() 
+		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TOXIC_WATER_FLUID), new ItemMeshDefinition() 
 		{	
 			@Override
-			public ModelResourceLocation func_178113_a(ItemStack stack) 
+			public ModelResourceLocation getModelLocation(ItemStack stack) 
 			{
 				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
@@ -46,13 +46,13 @@ public class RenderHandler
 		ModelLoader.setCustomStateMapper(ModBlocks.TOXIC_WATER_FLUID, new StateMapperBase() 
 		{	
 			@Override
-			protected ModelResourceLocation func_178132_a(IBlockState state)
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state)
 			{
 				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
 		});
 	}
-	
+*/	
 	
 	
 }

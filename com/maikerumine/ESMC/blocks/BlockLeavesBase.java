@@ -38,20 +38,20 @@ public class BlockLeavesBase extends BlockLeaves implements IHasModel
 		func_149663_c(name);
 		setRegistryName(name);
 		func_149672_a(SoundType.field_185850_c);
-		func_149647_a(Main.TUT);
+//		setCreativeTab(Main.TUT);
 		func_180632_j(this.field_176227_L.func_177621_b().func_177226_a(field_176236_b, Boolean.valueOf(true)).func_177226_a(field_176237_a, Boolean.valueOf(true)));
 				
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}
 	
-	@Override
-	public Item func_180660_a(IBlockState state, Random rand, int fortune) 
-	{
-		if(type == "copper") return Item.func_150898_a(ModBlocks.COPPER_SAPLING);
-		else if(type == "aluminium") return Item.func_150898_a(ModItems.ALUMINIUM_SAPLING);
-		else return Item.func_150898_a(Blocks.field_150345_g);
-	}
+//	@Override
+//	public Item getItemDropped(IBlockState state, Random rand, int fortune) 
+//	{
+//		if(type == "copper") return Item.getItemFromBlock(ModBlocks.COPPER_SAPLING);
+//		else if(type == "aluminium") return Item.getItemFromBlock(ModItems.ALUMINIUM_SAPLING);
+//		else return Item.getItemFromBlock(Blocks.SAPLING);
+//	}
 	
 	@Override
 	public int func_176201_c(IBlockState state) 

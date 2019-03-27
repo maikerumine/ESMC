@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:coal_ore_block"}
+    }
+}

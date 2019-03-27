@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:tin_ore_block"}
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:gold_ore_block"}
+    }
+}

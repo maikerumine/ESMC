@@ -2,9 +2,9 @@ Extreme Survival Minecraft
 ===================
 author: maikerumine
 
-modid: esm-0.1.3.10_1.12.2-client
+modid: esm-0.1.4.3_1.12.2-client/server
 
-date: 20190314
+date: 20190327
 
 
 https://minecraft.curseforge.com/projects/esmc
@@ -36,6 +36,7 @@ Adds the following ores:
 
 *Ruby
 
+*Tin
 
  
 

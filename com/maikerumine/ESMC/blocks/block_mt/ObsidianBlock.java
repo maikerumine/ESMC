@@ -14,7 +14,7 @@ public class ObsidianBlock extends BlockBase {
 	public ObsidianBlock(String name, Material material, CreativeTabs tab) {
 		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
-		func_149711_c(7.0F);
+		func_149711_c(37.0F);
 		func_149752_b(25.0F);
 		setHarvestLevel("pickaxe", 4);
 		func_149715_a(0.0F);

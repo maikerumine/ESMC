@@ -19,8 +19,11 @@ public class ModRecipes
 {
 	
 	public static void init() {
-		GameRegistry.addSmelting(Items.field_151166_bC, new ItemStack(ModItems.EMERALD_CRYSTAL, 1), 1.3F);
+//		GameRegistry.addSmelting(Items.EMERALD, new ItemStack(ModItems.EMERALD_CRYSTAL, 1), 1.3F);
 		GameRegistry.addSmelting(ModItems.COPPER_LUMP, new ItemStack(ModItems.COPPER_INGOT, 1), 2.3F);
+		GameRegistry.addSmelting(ModItems.GOLD_LUMP, new ItemStack(Items.field_151043_k, 1), 2.3F);
+		GameRegistry.addSmelting(ModItems.IRON_LUMP, new ItemStack(Items.field_151042_j, 1), 2.3F);
+		GameRegistry.addSmelting(ModItems.TIN_LUMP, new ItemStack(ModItems.TIN_INGOT, 1), 2.3F);
 		GameRegistry.addSmelting(ModItems.OBSIDIAN_SHARD, new ItemStack(ModBlocks.OBSIDIAN_GLASS_BLOCK, 1), 2.3F);
 		GameRegistry.addSmelting(ModItems.PURPELLIUM_LUMP, new ItemStack(ModItems.PURPELLIUM_INGOT, 1), 1.3F);
 		GameRegistry.addSmelting(Items.field_151069_bo, new ItemStack(Blocks.field_150410_aZ, 1), 0.3F);
