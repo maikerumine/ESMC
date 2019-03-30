@@ -13,6 +13,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.client.model.ModelLoader;
 
 
@@ -20,6 +22,7 @@ import net.minecraftforge.client.model.ModelLoader;
 
 public class RenderHandler 
 {
+	
 	public static void registerEntityRenders()
 	{
 		RenderingRegistry.registerEntityRenderingHandler(EntityStonemonster.class, new IRenderFactory<EntityStonemonster>()		//DAMN SERVER CRASH
@@ -31,13 +34,13 @@ public class RenderHandler
 			}
 		});
 	}
-/**
+	
 	public static void registerCustomMeshesAndStates()
 	{
-		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TOXIC_WATER_FLUID), new ItemMeshDefinition() 
+		ModelLoader.setCustomMeshDefinition(Item.func_150898_a(ModBlocks.TOXIC_WATER_FLUID), new ItemMeshDefinition() 
 		{	
 			@Override
-			public ModelResourceLocation getModelLocation(ItemStack stack) 
+			public ModelResourceLocation func_178113_a(ItemStack stack) 
 			{
 				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
@@ -46,13 +49,13 @@ public class RenderHandler
 		ModelLoader.setCustomStateMapper(ModBlocks.TOXIC_WATER_FLUID, new StateMapperBase() 
 		{	
 			@Override
-			protected ModelResourceLocation getModelResourceLocation(IBlockState state)
+			protected ModelResourceLocation func_178132_a(IBlockState state)
 			{
 				return new ModelResourceLocation("esm:toxic_water_fluid", "fluid");
 			}
 		});
 	}
-*/	
+	
 	
 	
 }

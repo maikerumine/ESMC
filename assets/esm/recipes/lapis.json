@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "   ",
+        " QD"
+    ],
+    "key": {
+        "Q": {
+            "item": "minecraft:quartz",
+            "data": 0
+        },
+
+        "D": {
+            "item": "esm:depleted_uranium_ingot",
+            "data": 0
+        }
+        
+        
+    },
+    "result": {
+        "item": "minecraft:dye",
+        "data": 4,
+        "count": 9
+    }
+}

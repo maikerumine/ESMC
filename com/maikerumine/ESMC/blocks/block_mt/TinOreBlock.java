@@ -27,7 +27,7 @@ public class TinOreBlock extends BlockBase {
 	
 	@Override
 	public Item func_180660_a(IBlockState state, Random rand, int fortune) {
-		return ModItems.COPPER_LUMP;
+		return ModItems.TIN_LUMP;
 	}
 	
 	@Override

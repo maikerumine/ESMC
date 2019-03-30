@@ -92,7 +92,7 @@ public class BiomeTaiga_grassland extends Biome
 {
 	public BiomeTaiga_grassland() 
 	{
-		super(new BiomeProperties("Taiga_grassland").func_185410_a(0.3F).func_185395_b(0.8F).func_185398_c(0.2F).func_185400_d(0.2F));
+		super(new BiomeProperties("MT Taiga_grassland").func_185410_a(0.3F).func_185395_b(0.8F).func_185398_c(0.2F).func_185400_d(0.2F));
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

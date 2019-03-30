@@ -50,8 +50,8 @@ public class Reference
 
 //         ModConfiguration.registerConfig(event); // load configuration before doing anything else that may be controlled by it.
         // register stuff
-//         TileEntityHandler.registerTileEntities();
-//         FluidInit.registerFluids();
+         TileEntityHandler.registerTileEntities();
+         FluidInit.registerFluids();
 
         proxy.preInit(event);
     }

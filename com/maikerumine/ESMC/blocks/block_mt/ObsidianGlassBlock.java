@@ -1,11 +1,15 @@
 package com.maikerumine.ESMC.blocks.block_mt;
 
+import java.util.Random;
+
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.blocks.BlockBaseGlass1;
+import com.maikerumine.ESMC.init.ModItems;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockRenderLayer;
 
 public class ObsidianGlassBlock extends BlockBaseGlass1 {
@@ -52,6 +56,20 @@ public class ObsidianGlassBlock extends BlockBaseGlass1 {
 	public BlockRenderLayer func_180664_k() 
 	{
 		return BlockRenderLayer.CUTOUT;
+	}
+	
+	@Override
+	public Item func_180660_a(IBlockState state, Random rand, int fortune) {
+		return ModItems.OBSIDIAN_SHARD;
+	}
+	
+	@Override
+	public int func_149745_a (Random rand) {
+		//return 3;
+		int max = 6;
+		int min = 3;
+		return rand.nextInt(max) + min;
+		
 	}
 	
 }

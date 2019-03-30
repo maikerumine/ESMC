@@ -33,7 +33,7 @@ public class PurpelliumOreBlock extends BlockBase {
 	@Override
 	public int func_149745_a (Random rand) {
 		//return 3;
-		int max = 3;
+		int max = 1;
 		int min = 1;
 		return rand.nextInt(max) + min;
 		

@@ -41,9 +41,11 @@ public class ModEventHandler {
 		
 		}
 	}
-/*
-	@SubscribeEvent()
-	public void onEvent(OreGenEvent event) {
+
+//	@SubscribeEvent()
+	@SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
+//	public void onEvent(OreGenEvent event) {
+	public void onEvent(OreGenEvent.GenerateMinable event) {
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.ANDESITE) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.COAL) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.CUSTOM) {event.setResult(Event.Result.DENY);}
@@ -56,13 +58,14 @@ public class ModEventHandler {
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.GRAVEL) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.IRON) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.LAPIS) {event.setResult(Event.Result.DENY);}
-		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.QUARTZ) {event.setResult(Event.Result.DENY);}
+//		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.QUARTZ) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.REDSTONE) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.SILVERFISH) {event.setResult(Event.Result.DENY);}
 	}
-*/	
 	
 	
+/**	
+ * WORKS WELL WIPING OUT ALL ORES.
 	//Code from Forge forum by; EmperorZelos
 	//  http://www.minecraftforge.net/forum/topic/24010-1710-remove-orespawning/
 	@SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
@@ -72,7 +75,7 @@ public class ModEventHandler {
 		System.out.println("deny the ore damn it");
 		event.setResult(Result.DENY);
 	}
-	
+*/	
 	
 }
 	

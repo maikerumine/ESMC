@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "esm:blocks/copper_ore_block"
+        "all": "esm:blocks/redstone_ore_block"
     }
 }

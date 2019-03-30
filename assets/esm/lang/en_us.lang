@@ -28,6 +28,8 @@ item.ruby_crystal.name=Ruby Crystal
 item.tin_lump.name=Tin Lump
 item.tin_ingot.name=Tin Ingot
 
+item.bucket_toxic_water_fluid.name=Bucket o Barf
+
 
 //B L O C K S 
 tile.admin_tnt_block.name=Admin TNT Block [NOVELTY]
@@ -213,9 +215,9 @@ entity.stonemonster.name=stonemonster
 entity.badplayer1.name=Soldier Grunt
 
 //f l u i d s
-tile.toxic_water_fluid.name=Toxic Water
+//tile.toxic_water_fluid.name=Toxic Water
 //fluid.toxic_water_fluid.name=Toxic Water
-
+_fluid.toxic_water_fluid.name=Toxic Water
 
 
 

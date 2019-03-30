@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "esm:lapis_ore_block"
+        }
+    ],
+    "result": {
+        "item": "minecraft:dye",
+        "data": 4,
+        "count": 4
+    }
+}

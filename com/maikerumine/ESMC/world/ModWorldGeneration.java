@@ -25,27 +25,27 @@ public class ModWorldGeneration implements IWorldGenerator {
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
 	{
-		generateOre(ModBlocks.AIKERUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 2);
-		generateOre(ModBlocks.COPPER_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
-		generateOre(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 4, 2);
+		generateOre(ModBlocks.AIKERUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
+		generateOre(ModBlocks.COPPER_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 16);
+		generateOre(ModBlocks.DEPLETED_URANIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 4, 3);
 		generateOre(ModBlocks.INFINIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
 		generateOre(ModBlocks.MESE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(2) + 2, 2);
 		generateOre(ModBlocks.MESE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(2) + 3, 2);
 		generateOre(ModBlocks.PURPELLIUM_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
 		generateOre(ModBlocks.RUBY_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 1, 3);
-		generateOre(ModBlocks.NYANCAT_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(2) + 1, 1);
-		generateOre(ModBlocks.RAINBOW_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(2) + 1, 1);
-//		generateOre(ModBlocks.TOXIC_WATER_FLUID.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(5) + 4, 2);
+		generateOre(ModBlocks.NYANCAT_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(2) + 1, 2);
+		generateOre(ModBlocks.RAINBOW_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(2) + 1, 2);
+		generateOre(ModBlocks.TOXIC_WATER_FLUID.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 64, random.nextInt(3) + 4, 2);
 		
 		//Default esque
-		generateOre(ModBlocks.IRON_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
-		generateOre(ModBlocks.TIN_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 6);
-		generateOre(ModBlocks.COAL_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 5, 7);
+		generateOre(ModBlocks.IRON_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 17);
+		generateOre(ModBlocks.TIN_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 4, 18);
+		generateOre(ModBlocks.COAL_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(5) + 5, 17);
 		generateOre(ModBlocks.DIAMOND_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 4);
 		generateOre(ModBlocks.REDSTONE_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(5) + 4, 6);
 		generateOre(ModBlocks.EMERALD_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
 		generateOre(ModBlocks.LAPIS_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 2);
-		generateOre(ModBlocks.GOLD_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 5);
+		generateOre(ModBlocks.GOLD_ORE_BLOCK.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 32, random.nextInt(3) + 2, 9);
 		
 		generateOre(Blocks.field_150418_aU.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(3) + 2, 2);
 //		generateOre(Blocks.WATER.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);

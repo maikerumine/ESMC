@@ -67,8 +67,8 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-//				TileEntityHandler.registerTileEntities();
-//				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+				TileEntityHandler.registerTileEntities();
+				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 	}
 	
 	@SubscribeEvent
@@ -80,7 +80,7 @@ public class RegistryHandler
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event)
 	{		
-//		Main.proxy.registerModel(Item.getItemFromBlock(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
+		Main.proxy.registerModel(Item.func_150898_a(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
 		
 		for(Item item : ModItems.ITEMS)
 		{
@@ -123,7 +123,7 @@ public class RegistryHandler
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		
-//		FluidInit.registerFluids();
+		FluidInit.registerFluids();
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);				//CRASHING SERVER
 //		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 //		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
@@ -131,12 +131,12 @@ public class RegistryHandler
 //		DimensionInit.registerDimensions();
 		//=======================================================================================================================
 		//=======================================================================================================================		
-//		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
-//		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
-//		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
+		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
+		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
 		//=======================================================================================================================
 		//=======================================================================================================================
-//		ModConfiguration.registerConfig(event);
+		ModConfiguration.registerConfig(event);
 	}
 
 	public static void initRegistries(FMLInitializationEvent event)

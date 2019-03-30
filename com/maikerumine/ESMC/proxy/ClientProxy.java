@@ -144,9 +144,11 @@ public class ClientProxy implements IProxy
 				ModelLoader.setCustomModelResourceLocation(item, metadata, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 			}
 //		}		
-		
-		
-		
+		/***
+			public static void registerRenderThings(){
+				//Put the code that you use to render your tile entity here
+				}
+		*/
 		
 		
 		

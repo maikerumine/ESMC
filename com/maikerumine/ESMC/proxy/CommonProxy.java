@@ -29,4 +29,8 @@ public class CommonProxy
 	public void registerRenderers(testenvironmentmod instance) {
 	}
 */	
-
+/**
+public static void registerRenderThings(){
+	//This dummy method is needed on the server so you don't crash.
+	}
+*/

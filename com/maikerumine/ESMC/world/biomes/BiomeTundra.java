@@ -92,7 +92,7 @@ public class BiomeTundra extends Biome
 {
 	public BiomeTundra() 
 	{
-		super(new BiomeProperties("Tundra").func_185398_c(1.5F).func_185400_d(0.025F).func_185410_a(0.2F).func_185395_b(0.2F).func_185396_a());
+		super(new BiomeProperties("MT Tundra").func_185398_c(1.5F).func_185400_d(0.025F).func_185410_a(0.2F).func_185395_b(0.2F).func_185396_a());
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

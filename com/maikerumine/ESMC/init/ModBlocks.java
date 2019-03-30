@@ -54,6 +54,7 @@ import com.maikerumine.ESMC.blocks.block_mc.EmeraldOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.GoldOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.IronOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.LapisOreBlock;
+import com.maikerumine.ESMC.blocks.block_mc.RedstoneOreBlock;
 import com.maikerumine.ESMC.blocks.block_mt.BronzeBlock;
 import com.maikerumine.ESMC.blocks.block_mt.CopperBlock;
 import com.maikerumine.ESMC.blocks.block_mt.CopperOreBlock;
@@ -68,7 +69,6 @@ import com.maikerumine.ESMC.blocks.block_mt.ObsidianBlock;
 import com.maikerumine.ESMC.blocks.block_mt.ObsidianBrickBlock;
 import com.maikerumine.ESMC.blocks.block_mt.ObsidianGlassBlock;
 import com.maikerumine.ESMC.blocks.block_mt.RainbowBlock;
-import com.maikerumine.ESMC.blocks.block_mt.RedstoneOreBlock;
 import com.maikerumine.ESMC.blocks.block_mt.SmoothstoneBlock;
 import com.maikerumine.ESMC.blocks.block_mt.StoneBlock;
 import com.maikerumine.ESMC.blocks.block_mt.TinBlock;
@@ -98,9 +98,9 @@ public class ModBlocks
 	public static final Block PURPELLIUM_BLOCK = new PurpelliumBlock("purpellium_block", Material.field_151588_w, null);
 	public static final Block PURPELLIUM_ORE_BLOCK = new PurpelliumOreBlock("purpellium_ore_block", Material.field_151576_e, null);
 		//container
-//	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
+	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
 		//fluid
-//	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.LAVA);
+	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.field_151587_i);
 	
 	// J U S T  T E S T   B L O C K S
 		//blocks

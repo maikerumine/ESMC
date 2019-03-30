@@ -21,7 +21,7 @@ public class DesertStone extends BlockBase {
 		func_149672_a(SoundType.field_185851_d);
 		func_149711_c(5.0F);
 		func_149752_b(15.0F);
-		setHarvestLevel("pickaxe", 2);
+		setHarvestLevel("pickaxe", 1);
 		func_149715_a(0.0F);
 		//setLightOpacity(1);
 		//setBlockUnbreakable();

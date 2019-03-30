@@ -76,6 +76,9 @@ public class ModItems
 	public static final Item RUBY_CRYSTAL = new ItemBase("ruby_crystal", null);
 	public static final Item TIN_INGOT = new ItemBase("tin_ingot", null);
 	public static final Item TIN_LUMP = new ItemBase("tin_lump", null);
+	
+	//BUCKET FOR TOXIC FLUID?
+	public static final Item TOXIC_WATER_FLUID_BUCKET = new ItemBase("bucket_toxic_water_fluid", null);
 
 	
 	//T O O L S 

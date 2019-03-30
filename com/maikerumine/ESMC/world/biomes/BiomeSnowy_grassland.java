@@ -92,7 +92,7 @@ public class BiomeSnowy_grassland extends Biome
 {
 	public BiomeSnowy_grassland() 
 	{
-		super(new BiomeProperties("Snowy_grassland").func_185398_c(0.2F).func_185400_d(0.2F).func_185410_a(-0.5F).func_185395_b(0.4F).func_185411_b());
+		super(new BiomeProperties("MT Snowy_grassland").func_185398_c(0.2F).func_185400_d(0.2F).func_185410_a(-0.5F).func_185395_b(0.4F).func_185411_b());
 		
 		field_76752_A = Blocks.field_150348_b.func_176223_P();
 		field_76753_B = Blocks.field_150348_b.func_176223_P();

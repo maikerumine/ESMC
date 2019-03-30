@@ -153,8 +153,8 @@ public class BiomeInit
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		BiomeDictionary.addTypes(biome, types);
-		//BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1024));
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1024));			//set to large spread
+//		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));			//set to general biome spread
 		
 		if(ModConfiguration.spawnCustomBiomesInOverworld) 
 		{

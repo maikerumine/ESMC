@@ -20,9 +20,9 @@ public class WorldGenCustomOres implements IWorldGenerator
 	
 	public WorldGenCustomOres() 
 	{
-		nyancat_block = new WorldGenMinable(ModBlocks.NYANCAT_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150424_aL));
+		nyancat_block = new WorldGenMinable(ModBlocks.NYANCAT_BLOCK.func_176223_P(), 1, BlockMatcher.func_177642_a(Blocks.field_150424_aL));
 		lag_block = new WorldGenMinable(ModBlocks.DESERT_STONE.func_176223_P(), 1, BlockMatcher.func_177642_a(Blocks.field_150348_b));
-		mese_block = new WorldGenMinable(ModBlocks.MESE_BLOCK.func_176223_P(), 9, BlockMatcher.func_177642_a(Blocks.field_150377_bs));
+		mese_block = new WorldGenMinable(ModBlocks.MESE_BLOCK.func_176223_P(), 1, BlockMatcher.func_177642_a(Blocks.field_150377_bs));
 	}
 	
 	@Override
@@ -32,19 +32,19 @@ public class WorldGenCustomOres implements IWorldGenerator
 		{
 		case -1:
 			
-			runGenerator(nyancat_block, world, random, chunkX, chunkZ, 50, 0, 100);
+			runGenerator(nyancat_block, world, random, chunkX, chunkZ, 10, 0, 100);
 			
 			break;
 			
 		case 0:
 			
-			runGenerator(lag_block, world, random, chunkX, chunkZ, 2, 0, 100);
+			runGenerator(lag_block, world, random, chunkX, chunkZ, 10, 0, 100);
 			
 			break;
 			
 		case 1:
 			
-			runGenerator(mese_block, world, random, chunkX, chunkZ, 50, 0, 256);
+			runGenerator(mese_block, world, random, chunkX, chunkZ, 10, 0, 256);
 		}
 	}
 	
