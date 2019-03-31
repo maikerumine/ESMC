@@ -42,9 +42,7 @@ public class ModEventHandler {
 		}
 	}
 
-//	@SubscribeEvent()
 	@SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
-//	public void onEvent(OreGenEvent event) {
 	public void onEvent(OreGenEvent.GenerateMinable event) {
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.ANDESITE) {event.setResult(Event.Result.DENY);}
 		if(((GenerateMinable) event).getType()== OreGenEvent.GenerateMinable.EventType.COAL) {event.setResult(Event.Result.DENY);}
@@ -69,9 +67,10 @@ public class ModEventHandler {
 	//Code from Forge forum by; EmperorZelos
 	//  http://www.minecraftforge.net/forum/topic/24010-1710-remove-orespawning/
 	@SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
+	
+	
 	public void onEvent(OreGenEvent.GenerateMinable event)
 	{
-
 		System.out.println("deny the ore damn it");
 		event.setResult(Result.DENY);
 	}

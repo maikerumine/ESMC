@@ -1,7 +1,0 @@
-{
-    "variants":
-    {
-        "stage=0": { "model": "esm:aluminium_sapling" },
-        "stage=1": { "model": "esm:aluminium_sapling" }
-    }
-}

@@ -50,6 +50,14 @@ public class ModWorldGeneration implements IWorldGenerator {
 		generateOre(Blocks.field_150418_aU.func_176223_P(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(3) + 2, 2);
 //		generateOre(Blocks.WATER.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
 //		generateOre(Blocks.LAVA.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 256, random.nextInt(3) + 2, 2);
+
+		//ADDED FROM PROTOTYPE GEN 2
+//		generateOre(Blocks.SAND.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(11) + 4, 1);
+//		generateOre(Blocks.DIRT.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 128, random.nextInt(17) + 12, 1);
+		
+
+	
+	
 	}
 	
 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) 

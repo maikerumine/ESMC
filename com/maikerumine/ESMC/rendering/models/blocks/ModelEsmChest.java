@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)				//<---This is lame.  :/
+
 public class ModelEsmChest extends ModelBase 
 {
 	public ModelRenderer chestKnob;
@@ -28,7 +28,6 @@ public class ModelEsmChest extends ModelBase
         this.chestLid.func_78793_a(1.0F, 7.0F, 15.0F);
         this.chestLid.func_78790_a(0.0F, -5.0F, -14.0F, 14, 5, 14, 0.0F);
     }
-
     public void renderAll()
     {
         this.chestKnob.field_78795_f = this.chestLid.field_78795_f;

@@ -75,7 +75,6 @@ public class BlockEsmChest extends BlockContainer
 	}
 	
 	@Override
-//	@SideOnly(Side.CLIENT)
 	public EnumBlockRenderType func_149645_b(IBlockState state) 
 	{
 		return EnumBlockRenderType.ENTITYBLOCK_ANIMATED;

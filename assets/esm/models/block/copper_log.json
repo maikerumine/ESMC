@@ -1,8 +1,0 @@
-{
-    "parent": "block/cube_column",
-    "textures":
-    {
-        "end": "esm:blocks/copper_log_top",
-        "side": "esm:blocks/copper_log_side"
-    }
-}

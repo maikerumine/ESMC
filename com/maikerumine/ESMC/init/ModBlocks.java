@@ -21,12 +21,8 @@ import java.util.ArrayList;
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.blocks.Block3DModelBase;
 import com.maikerumine.ESMC.blocks.BlockBase;
-import com.maikerumine.ESMC.blocks.BlockDirtBase;
 import com.maikerumine.ESMC.blocks.BlockEsmChest;
 import com.maikerumine.ESMC.blocks.BlockFluid;
-import com.maikerumine.ESMC.blocks.BlockLeavesBase;
-import com.maikerumine.ESMC.blocks.BlockLogBase;
-import com.maikerumine.ESMC.blocks.BlockSaplingBase;
 import com.maikerumine.ESMC.blocks.block_esm.AikerumBlock;
 import com.maikerumine.ESMC.blocks.block_esm.AikerumOreBlock;
 import com.maikerumine.ESMC.blocks.block_esm.DepletedUraniumOreBlock;
@@ -73,7 +69,6 @@ import com.maikerumine.ESMC.blocks.block_mt.SmoothstoneBlock;
 import com.maikerumine.ESMC.blocks.block_mt.StoneBlock;
 import com.maikerumine.ESMC.blocks.block_mt.TinBlock;
 import com.maikerumine.ESMC.blocks.block_mt.TinOreBlock;
-import com.maikerumine.ESMC.blocks.machines.BlockSinteringFurnace;
 import com.maikerumine.ESMC.blocks.slabs.BlockSlabDoubleBase;
 import com.maikerumine.ESMC.blocks.slabs.BlockSlabHalfBase;
 
@@ -98,7 +93,7 @@ public class ModBlocks
 	public static final Block PURPELLIUM_BLOCK = new PurpelliumBlock("purpellium_block", Material.field_151588_w, null);
 	public static final Block PURPELLIUM_ORE_BLOCK = new PurpelliumOreBlock("purpellium_ore_block", Material.field_151576_e, null);
 		//container
-	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
+//	public static final Block ESM_CHEST = new BlockEsmChest("esm_chest");		//BROKEN  ALSO TILE ENTITY HANDLER
 		//fluid
 	public static final Block TOXIC_WATER_FLUID = new BlockFluid("toxic_water_fluid", FluidInit.TOXIC_WATER_FLUID, Material.field_151587_i);
 	
@@ -131,7 +126,6 @@ public class ModBlocks
 	public static final Block OBSIDIAN_GLASS_BLOCK = new ObsidianGlassBlock("obsidian_glass_block", Material.field_151592_s);
 	public static final Block OBSIDIAN_BLOCK = new ObsidianBlock("obsidian_block", Material.field_151576_e, null);
 	public static final Block OBSIDIAN_BRICK_BLOCK = new ObsidianBrickBlock("obsidian_brick_block", Material.field_151576_e, null);
-	public static final Block SMOOTHSTONE_BLOCK = new SmoothstoneBlock("smoothstone_block", Material.field_151576_e, null);//CHANGE TO STONEBLOCK
 	public static final Block STONE_BLOCK = new StoneBlock("stone_block", Material.field_151576_e, null);
 	
 	//M I N E T E S T   M I S C.
@@ -143,52 +137,11 @@ public class ModBlocks
 	//M I N E C R A F T  B L O C K   R E P L A C E M E N T
 		//blocks
 	public static final Block COAL_ORE_BLOCK = new CoalOreBlock("coal_ore_block", Material.field_151576_e, null);
-//	public static final Block EMERALD_BLOCK = new EmeraldBlock("emerald_block", Material.ICE, null);
 	public static final Block EMERALD_ORE_BLOCK = new EmeraldOreBlock("emerald_ore_block", Material.field_151576_e, null);
-//	public static final Block DIAMOND_BLOCK = new DiamondBlock("diamond_block", Material.ROCK, null);
 	public static final Block DIAMOND_ORE_BLOCK = new DiamondOreBlock("diamond_ore_block", Material.field_151576_e, null);
 	public static final Block GOLD_ORE_BLOCK = new GoldOreBlock("gold_ore_block", Material.field_151573_f, null);
-//	public static final Block IRON_BLOCK = new IronBlock("iron_block", Material.IRON, null);
 	public static final Block IRON_ORE_BLOCK = new IronOreBlock("iron_ore_block", Material.field_151573_f, null);
 	public static final Block LAPIS_ORE_BLOCK = new LapisOreBlock("lapis_ore_block", Material.field_151573_f, null);
 	public static final Block REDSTONE_ORE_BLOCK = new RedstoneOreBlock("redstone_ore_block", Material.field_151573_f, null);
-	
-	
-	// H A R R Y S   T U T O R I A L   B L O C K S
-	/**
-	 * From Harry's Tutorial:  
-	 * https://github.com/HarryTechRevs/Minecraft-Modding-1.12
-	 * 
-	 */
-	//Copper
-//	public static final Block COPPER_BLOCK = new BlockBase("copper_block", Material.IRON, Main.TUT);
-//	public static final Block COPPER_DIRT = new BlockDirtBase("copper_dirt", Main.TUT);
-//	public static final Block COPPER_LEAVES = new BlockLeavesBase("copper_leaves");
-//	public static final Block COPPER_LOG = new BlockLogBase("copper_log");
-//	public static final Block COPPER_ORE = new BlockBase("copper_ore", Material.ROCK, Main.TUT);
-//	public static final Block COPPER_PLANKS = new BlockBase("copper_planks", Material.WOOD, Main.TUT);
-//	public static final Block COPPER_SAPLING = new BlockSaplingBase("copper_sapling");
-//	public static final Block COPPER_DOOR = new BlockDoorBase("copper_door", Material.ANVIL, null);
-//	public static final BlockSlab COPPER_SLAB_DOUBLE = new BlockSlabDoubleBase("copper_slab_double", Material.IRON, Main.TUT, ModBlocks.COPPER_SLAB_HALF);
-//	public static final BlockSlab COPPER_SLAB_HALF = new BlockSlabHalfBase("copper_slab_half", Material.IRON, Main.TUT, ModBlocks.COPPER_SLAB_HALF, ModBlocks.COPPER_SLAB_DOUBLE);
-	
-	//Aluminium
-//	public static final Block ALUMINIUM_LEAVES = new BlockLeavesBase("aluminium_leaves");
-//	public static final Block ALUMINIUM_LOG = new BlockLogBase("aluminium_log");
-//	public static final Block ALUMINIUM_SAPLING = new BlockSaplingBase("aluminium_sapling");
-	
-	//Custom Models
-//	public static final Block COPPER_CHEST = new BlockCopperChest("copper_chest");
-	
-//	public static final Block SANTA_HAT = new Block3DModelBase("santa_hat", Material.CLOTH, Main.TUT, 0.1875D, 0, 0.1875D, 0.8125D, 0.8125D, 0.8125D);
-	
-	//Machines
-//	public static final Block SINTERING_FURNACE = new BlockSinteringFurnace("sintering_furnace");
-//	public static final Block ELECTRIC_SINTERING_FURNACE = new BlockElectricSinteringFurnace("electric_sintering_furnace");
-//	public static final Block GLOWSTONE_GENERATOR = new BlockGlowstoneGenerator("glowstone_generator");
-//	public static final Block ENERGY_STORAGE = new BlockEnergyStorage("energy_storage");
-
-	//Fluids
-//	public static final Block MOLTEN_COPPER_BLOCK = new BlockFluid("molten_copper", FluidInit.MOLTEN_COPPER_FLUID, Material.LAVA);
-	
+		
 }

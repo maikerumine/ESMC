@@ -21,9 +21,9 @@ public class BiomeMinetest extends Biome
 		field_76753_B = Blocks.field_150348_b.func_176223_P();
 		
 		
-		this.field_82914_M.clear();
+//		this.spawnableCaveCreatureList.clear();
 		this.field_76762_K.clear();
-		this.field_76761_J.clear();
+//		this.spawnableMonsterList.clear();
 		this.field_76755_L.clear();
 		
 		this.field_76762_K.add(new SpawnListEntry(EntityStonemonster.class, 5, 1, 5));

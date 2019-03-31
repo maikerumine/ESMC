@@ -7,6 +7,8 @@ import com.maikerumine.ESMC.rendering.models.entities.ModelStonemonster;
 import net.minecraft.client.renderer.entity.RenderLiving;   //needs to be sided?
 import net.minecraft.client.renderer.entity.RenderManager;	//needs to be sided?
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -14,7 +16,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 public class RenderStonemonster extends RenderLiving<EntityStonemonster>
 {
 	public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":textures/entity/stonemonster.png");
-	
+
 	public RenderStonemonster(RenderManager manager) 
 	{
 		super(manager, new ModelStonemonster(), 0.5F);

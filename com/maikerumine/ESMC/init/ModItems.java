@@ -61,12 +61,9 @@ public class ModItems
 	public static final Item COAL_LUMP = new ItemBase("coal_lump", null);
 	public static final Item DEPLETED_URANIUM_INGOT = new ItemBase("depleted_uranium_ingot", null);
 	public static final Item DEPLETED_URANIUM_LUMP = new ItemBase("depleted_uranium_lump", null);
-	//public static final Item DIAMOND_CRYSTAL = new ItemBase("diamond_crystal", null);
-	//public static final Item EMERALD_CRYSTAL = new ItemBase("emerald_crystal", null);
 	public static final Item GOLD_LUMP = new ItemBase("gold_lump", null);
 	public static final Item INFINIUM_GOO = new ItemBase("infinium_goo", null);
 	public static final Item INFINIUM_INGOT = new ItemBase("infinium_ingot", null);
-	//public static final Item IRON_INGOT = new ItemBase("iron_ingot", null);
 	public static final Item IRON_LUMP = new ItemBase("iron_lump", null);
 	public static final Item MESE_CRYSTAL = new ItemBase("mese_crystal", null);
 	public static final Item MESE_CRYSTAL_FRAGMENT = new ItemBase("mese_crystal_fragment", null);
@@ -118,7 +115,6 @@ public class ModItems
 	public static final ItemAxe RUBY_CRYSTAL_AXE = new Toolaxe("ruby_crystal_axe", MATERIAL_RUBY_CRYSTAL);
 	
 	
-	
 	//A R M O R 
 	//aikerum
 	public static final Item AIKERUM_CRYSTAL_HELMET = new ArmorBase("aikerum_crystal_helmet", ARMOR_AIKERUM_CRYSTAL, 1, EntityEquipmentSlot.HEAD);
@@ -155,21 +151,6 @@ public class ModItems
 	public static final Item RUBY_CRYSTAL_CHESTPLATE = new ArmorBase("ruby_crystal_chestplate", ARMOR_RUBY_CRYSTAL, 1, EntityEquipmentSlot.CHEST);
 	public static final Item RUBY_CRYSTAL_LEGGINGS = new ArmorBase("ruby_crystal_leggings", ARMOR_RUBY_CRYSTAL, 2, EntityEquipmentSlot.LEGS);
 	public static final Item RUBY_CRYSTAL_BOOTS = new ArmorBase("ruby_crystal_boots", ARMOR_RUBY_CRYSTAL, 1, EntityEquipmentSlot.FEET);
-	
-	//Harry's armour sample
-	//Armour Materials
-	public static final ArmorMaterial CUSTOM_MODEL_MATERIAL = EnumHelper.addArmorMaterial("custom_model", Main.MOD_ID + ":custom_model", 20, new int[] {7, 8, 8, 9}, 0, SoundEvents.field_187719_p, 2.0f);
-
-	
-	//??wtf-->
-	public static Block ALUMINIUM_SAPLING;
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

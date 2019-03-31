@@ -4,24 +4,17 @@ import java.lang.reflect.Field;
 
 import com.maikerumine.ESMC.Main;
 import com.maikerumine.ESMC.blocks.tileentities.TileEntityEsmChest;
-import com.maikerumine.ESMC.commands.CommandTeleportDimension;
-import com.maikerumine.ESMC.crafting.RecipeRemover;
-import com.maikerumine.ESMC.enchantments.EnchantmentSuperBoots;
 import com.maikerumine.ESMC.init.BiomeInit;
-import com.maikerumine.ESMC.init.DimensionInit;
-import com.maikerumine.ESMC.init.EnchantmentInit;
 import com.maikerumine.ESMC.init.EntityInit;
 import com.maikerumine.ESMC.init.FluidInit;
 import com.maikerumine.ESMC.init.ModBlocks;
 import com.maikerumine.ESMC.init.ModItems;
-import com.maikerumine.ESMC.init.ModTriggers;
-import com.maikerumine.ESMC.recipes.RecipeBookServerCustom;
 import com.maikerumine.ESMC.rendering.RenderEsmChest;
 import com.maikerumine.ESMC.util.ModConfiguration;
 import com.maikerumine.ESMC.util.interfaces.IHasModel;
+import com.maikerumine.ESMC.world.ModEventHandler;
+import com.maikerumine.ESMC.world.ModWorldGeneration;
 import com.maikerumine.ESMC.world.generation.WorldGenCustomOres;
-import com.maikerumine.ESMC.world.generation.WorldGenCustomStructures;
-import com.maikerumine.ESMC.world.generation.WorldGenCustomTrees;
 import com.maikerumine.ESMC.world.type.WorldTypeDesert;
 import com.maikerumine.ESMC.world.type.WorldTypeMinetest;
 import com.maikerumine.ESMC.world.type.WorldTypeOcean;
@@ -37,6 +30,7 @@ import net.minecraft.stats.RecipeBookServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -67,20 +61,14 @@ public class RegistryHandler
 	{
 		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 		//THESE CAUSE CRASH
-				TileEntityHandler.registerTileEntities();
-				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
+//		TileEntityHandler.registerTileEntities();  MOVED TO RENDERER		
+//		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());	//This renders on client?
 	}
 	
 	@SubscribeEvent
-	public static void registerEnchantment(RegistryEvent.Register<Enchantment> event)
-	{
-//		event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
-	}
-
-	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event)
 	{		
-		Main.proxy.registerModel(Item.func_150898_a(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
+//		Main.proxy.registerModel(Item.getItemFromBlock(ModBlocks.ESM_CHEST), 0);		//BUGGED AS WELL AS ENTITY STONE
 		
 		for(Item item : ModItems.ITEMS)
 		{
@@ -98,7 +86,7 @@ public class RegistryHandler
 			}
 		}
 	}
-	
+
 /**
  * BY: kreezxil
  * http://www.minecraftforge.net/forum/topic/59711-112-override-vanilla-recipe/
@@ -119,31 +107,35 @@ public class RegistryHandler
         modRegistry.remove(Button);
     }
 
-	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
-		
-		FluidInit.registerFluids();
+		FluidInit.registerFluids();	
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);				//CRASHING SERVER
-//		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
-//		GameRegistry.registerWorldGenerator(new WorldGenCustomTrees(), 0);
 		BiomeInit.registerBiomes();
-//		DimensionInit.registerDimensions();
+		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
 		//=======================================================================================================================
 		//=======================================================================================================================		
-		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
-		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders Tile and mob:  Chest?
-		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+//		EntityInit.registerEntities();						//CRASHING SERVER  THESE THREE NEED TO WORK.  Renders Mobs
+//		RenderHandler.registerEntityRenders();				//CRASHING SERVER		Renders mobs:
+//		RenderHandler.registerCustomMeshesAndStates();		//CRASHING SERVER		Renders liquid flow
+//		RenderHandler.registerTileEntities();				//CRASHING SERVER		Renders Tile entities: chest
+//		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEsmChest.class, new RenderEsmChest());
 		//=======================================================================================================================
 		//=======================================================================================================================
 		ModConfiguration.registerConfig(event);
+		MinecraftForge.TERRAIN_GEN_BUS.register(new ModEventHandler());  		//from forge forum
+		MinecraftForge.ORE_GEN_BUS.register(new ModEventHandler());  		//from forge forum
+		
+		System.out.println("Extreme");
+		System.out.println("Survival");
+		System.out.println("Minecraft");
+		System.out.println("By: maikerumine");
+		System.out.println("Enjoy The Struggle!!!!");
 	}
 
 	public static void initRegistries(FMLInitializationEvent event)
 	{
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
-//		RecipeRemover.removeRecipe();
-//		RecipeRemover.removeRecipes();
 		SoundsHandler.registerSounds();		
 	}
 
@@ -154,91 +146,12 @@ public class RegistryHandler
 		WorldType OCEAN = new WorldTypeOcean();
 		WorldType DESERT = new WorldTypeDesert();
 		WorldType MINETEST = new WorldTypeMinetest();
+
 	}
 	
 	public static void serverRegistries(FMLServerStartingEvent event)
 	{
-		event.registerServerCommand(new CommandTeleportDimension());
+		//TODO  register "spawn" command.
 	}
-	
-	
-	
-	
-	
-	/**
-    Copyright (C) 2017 by jabelar
-
-    This file is part of jabelar's Minecraft Forge modding examples; as such,
-    you can redistribute it and/or modify it under the terms of the GNU
-    General Public License as published by the Free Software Foundation,
-    either version 3 of the License, or (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-
-    For a copy of the GNU General Public License see <http://www.gnu.org/licenses/>.
-//*/	
-//    public static Field recipeBook = ReflectionHelper.findField(EntityPlayerMP.class, "recipeBook", "field_192036_cb");
-    
-    /**
-     * On event.
-     *
-     * @param event the event
-     */
-    
-    /**
-    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
-    public static void onEvent(PlayerTickEvent event)
-    {
-        if (event.player instanceof EntityPlayerMP)
-        {
-            EntityPlayerMP playerMP = (EntityPlayerMP) event.player;
-            RecipeBookServer recipeBookCurrent = playerMP.getRecipeBook();
-            if (!(recipeBookCurrent instanceof RecipeBookServerCustom))
-            {
-                // DEBUG
-                System.out.println("Replacing recipe book with custom book");
-                
-                RecipeBookServerCustom recipeBookNew = new RecipeBookServerCustom();
-                recipeBookNew.copyFrom(recipeBookCurrent);
-                try
-                {
-                    recipeBook.set(playerMP, recipeBookNew);
-                }
-                catch (IllegalArgumentException | IllegalAccessException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
- */   
-    /**
-     * This method is part of my simple custom advancement triggering tutorial.
-     * See: http://jabelarminecraft.blogspot.com/p/minecraft-modding-custom-triggers-aka.html
-     *
-     * @param event the event
-     */
-    
-    /**
-    @SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
-    public static void onEvent(RightClickBlock event)
-    {
-        EntityPlayer thePlayer = event.getEntityPlayer();
-        if (thePlayer instanceof EntityPlayerMP)
-        {
-            EntityPlayerMP thePlayerMP = (EntityPlayerMP)thePlayer;
-            
-            // DEBUG
-            System.out.println("Right clicking block with "+thePlayer.getHeldItem(event.getHand()));
-   
-            if (thePlayer.getHeldItem(event.getHand()).getItem() == ModItems.AIKERUM_CRYSTAL)
-            {
-                ModTriggers.MINE_AIKERUM.trigger(thePlayerMP);
-            }
-        }
-    }
-*/	
+		
 }

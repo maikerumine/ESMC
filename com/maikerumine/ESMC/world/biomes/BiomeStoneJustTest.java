@@ -37,8 +37,8 @@ public class BiomeStoneJustTest extends Biome
 		
 		
 		//this.spawnableCaveCreatureList.clear();
-		this.field_76762_K.clear();
-		this.field_76761_J.clear();
+//		this.spawnableCreatureList.clear();
+//		this.spawnableMonsterList.clear();
 		this.field_76755_L.clear();
 		
 		this.field_76762_K.add(new SpawnListEntry(EntityStonemonster.class, 5, 1, 5));

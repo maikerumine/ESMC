@@ -49,16 +49,11 @@ import net.minecraftforge.common.BiomeManager.BiomeType;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 
-
-
-	
-
 public class BiomeInit 
 {
 	public static final Biome STONE = new BiomeStone();
 	public static final Biome STONEJT = new BiomeStoneJustTest();
 	public static final Biome OCEAN = new BiomeOcean();
-//	public static final Biome DESERT = new BiomeDesert();
 	public static final Biome BEACH = new BiomeBeach();
 	public static final Biome RIVER = new BiomeRiver();
 
@@ -98,16 +93,11 @@ public class BiomeInit
 	public static final Biome UNDERGROUND = new BiomeUnderground();
 
 	
-	
-	
-	
-	
 	public static void registerBiomes()
 	{
 		initBiome(STONE, "Stone", BiomeType.WARM, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 		initBiome(STONEJT, "Stone Just Test", BiomeType.COOL, Type.HILLS, Type.MOUNTAIN, Type.DRY);
 		initBiome(OCEAN, "Esm Ocean", BiomeType.COOL, Type.WET, Type.OCEAN, Type.SPARSE);
-//		initBiome(DESERT, "Esm Desert", BiomeType.WARM, Type.HILLS, Type.HOT, Type.DRY);
 		initBiome(BEACH, "Esm Beach", BiomeType.WARM, Type.BEACH, Type.RIVER, Type.WET);
 		initBiome(RIVER, "Esm River", BiomeType.COOL, Type.HILLS, Type.RIVER, Type.WET);
 	//MINETEST BIOMES W.I.P.
@@ -162,8 +152,5 @@ public class BiomeInit
 		}
 		return biome;
 	}
-	
-	
-	
 	
 }

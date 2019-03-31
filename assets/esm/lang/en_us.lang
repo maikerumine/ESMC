@@ -2,7 +2,7 @@
 //Extreme Survival Minecraft
 // Ver 0.1.4
 //By: maikerumine
-//20190314 
+//20190330 
 
 //I T E M S
 item.aikerum_crystal.name=Aikerum Crystal
@@ -28,7 +28,7 @@ item.ruby_crystal.name=Ruby Crystal
 item.tin_lump.name=Tin Lump
 item.tin_ingot.name=Tin Ingot
 
-item.bucket_toxic_water_fluid.name=Bucket o Barf
+item.bucket_toxic_water_fluid.name=Bucket - O - Barf
 
 
 //B L O C K S 
@@ -85,41 +85,14 @@ tile.tin_ore_block.name=Tin Ore
 //Chests and Storage
 tile.vendor_depositor_block.name=Vendor Depositor Block [NOVELTY]
 tile.vendor_vendor_block.name=Vendor Vendor Block [NOVELTY]
-tile.esm_chest.name=Extreme Survival Chest [NOVELTY]
-
-
-
+tile.esm_chest.name=Extreme Survival Chest
 
 
 //      harry's mod:
 //      https://github.com/HarryTechRevs/Minecraft-Modding-1.12
-
 //Blocks
-tile.aluminium_leaves.name=Aluminium Leaves
-tile.aluminium_log.name=Aluminium Log
-tile.aluminium_sapling.name=Aluminium Sapling
-tile.copper_block.name=Copper Block
-tile.copper_dirt.name=Copper Dirt
-tile.copper_leaves.name=Copper Leaves
-tile.copper_log.name=Copper Log
-tile.copper_ore.name=Copper Ore
-tile.copper_planks.name=Copper Planks
-tile.copper_sapling.name=Copper Sapling
-tile.copper_chest.name=Copper Chest
-tile.santa_hat.name=Santa Hat
-tile.copper_door.name=Copper Door
 tile.copper_slab_half.name=Copper Slab
 tile.copper_slab_double.name=Double Copper Slab
-
-//Machines
-tile.sintering_furnace.name=Sinterer
-tile.crushing_furnace.name=Crushing Furnace
-
-
-//Fluids
-fluid.molten_copper=Molten Copper
-
-
 
 //T O O L S
 //aikerum
@@ -215,8 +188,8 @@ entity.stonemonster.name=stonemonster
 entity.badplayer1.name=Soldier Grunt
 
 //f l u i d s
-//tile.toxic_water_fluid.name=Toxic Water
-//fluid.toxic_water_fluid.name=Toxic Water
+tile.toxic_water_fluid.name=Toxic Water
+fluid.toxic_water_fluid.name=Toxic Water
 _fluid.toxic_water_fluid.name=Toxic Water
 
 
