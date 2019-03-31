@@ -21,12 +21,14 @@ item.iron_lump.name=Iron Lump
 //item.iron_ingot.name=Iron Ingot
 item.mese_crystal.name=Mese Crystal
 item.mese_crystal_fragment.name=Mese Crystal Fragment
+item.obsidian_crystal.name=Obsidian Crystal
 item.obsidian_shard.name=Obsidian Shard
 item.purpellium_lump.name=Purpellium Lump
 item.purpellium_ingot.name=Purpellium Ingot
 item.ruby_crystal.name=Ruby Crystal
 item.tin_lump.name=Tin Lump
 item.tin_ingot.name=Tin Ingot
+
 
 item.bucket_toxic_water_fluid.name=Bucket - O - Barf
 
@@ -57,7 +59,8 @@ tile.infinium_ore_block.name=Infinium Ore
 tile.iron_block.name=Iron Block
 tile.iron_ore_block.name=Iron Ore
 tile.kick_voting_block.name=Kick Voting Block [NOVELTY]
-tile.lag_block.name=Lag Block [NOVELTY]
+tile.ladder_steel.name=Steel Ladder
+tile.lag_block.name=Lag Block [My skuchayem i lyubyat vas.]
 tile.lapis_block.name=Lapis Block
 tile.lapis_ore_block.name=Lapis Ore
 tile.mese_block.name=Mese Block
@@ -72,6 +75,7 @@ tile.purpellium_block.name=Purpellium Block
 tile.purpellium_ore_block.name=Purpellium Ore
 tile.redstone_block.name=Redstone Block
 tile.redstone_ore_block.name=Redstone Ore
+tile.lit_redstone_ore_block.name=Lit Redstone Ore
 tile.rainbow_block.name=Rainbow Block
 tile.ruby_block.name=Ruby Block
 tile.ruby_ore_block.name=Ruby Ore
@@ -115,6 +119,11 @@ item.infinium_axe.name=Infinium Axe
 item.infinium_pickaxe.name=Infinium Pickaxe
 item.infinium_spade.name=Infinium Shovel
 item.infinium_sword.name=Infinium Sword
+//obsidian 
+item.obsidian_axe.name=Obsidian Axe
+item.obsidian_pickaxe.name=Obsidian Pickaxe
+item.obsidian_spade.name=Obsidian Shovel
+item.obsidian_sword.name=Obsidian Sword
 //purpellium 
 item.purpellium_axe.name=Purpellium Axe
 item.purpellium_pickaxe.name=Purpellium Pickaxe
@@ -125,6 +134,11 @@ item.ruby_crystal_axe.name=Ruby Crystal Axe
 item.ruby_crystal_pickaxe.name=Ruby Crystal Pickaxe
 item.ruby_crystal_spade.name=Ruby Crystal Shovel
 item.ruby_crystal_sword.name=Ruby Crystal Sword
+//tin 
+item.tin_axe.name=Tin Axe
+item.tin_pickaxe.name=Tin Pickaxe
+item.tin_spade.name=Tin Shovel
+item.tin_sword.name=Tin Sword
 
 
 //A R M O R
@@ -148,6 +162,11 @@ item.infinium_helmet.name=Infinium Helmet
 item.infinium_chestplate.name=Infinium Chestplate
 item.infinium_leggings.name=Infinium Leggings
 item.infinium_boots.name=Infinium Crystal Boots
+//obsidian 
+item.obsidian_helmet.name=Obsidian Helmet
+item.obsidian_chestplate.name=Obsidian Chestplate
+item.obsidian_leggings.name=Obsidian Leggings
+item.obsidian_boots.name=Obsidian Boots
 //purpellium
 item.purpellium_helmet.name=Purpellium Helmet
 item.purpellium_chestplate.name=Purpellium Chestplate
@@ -158,6 +177,11 @@ item.ruby_crystal_helmet.name=Ruby Crystal Helmet
 item.ruby_crystal_chestplate.name=Ruby Crystal Chestplate
 item.ruby_crystal_leggings.name=Ruby Crystal Leggings
 item.ruby_crystal_boots.name=Ruby Crystal Boots
+//tin 
+item.tin_helmet.name=Tin Helmet
+item.tin_chestplate.name=Tin Chestplate
+item.tin_leggings.name=Tin Leggings
+item.tin_boots.name=Tin Boots
 
 
 //a d v a c e m e n t s 

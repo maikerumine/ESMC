@@ -21,9 +21,9 @@ public class LapisOreBlock extends BlockBase {
 	public LapisOreBlock(String name, Material material, CreativeTabs tab) {
 		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
-		func_149711_c(12.0F);
-		func_149752_b(10.0F);
-		setHarvestLevel("pickaxe", 2);
+		func_149711_c(3.0F);
+		func_149752_b(5.0F);
+		setHarvestLevel("pickaxe", 1);
 		func_149715_a(0.0F);
 		//setLightOpacity(1);
 		//setBlockUnbreakable();
@@ -63,4 +63,22 @@ public class LapisOreBlock extends BlockBase {
 	}
 	
 	*/
+	
+	
+    /**
+     * Returns the quantity of items to drop on block destruction.
+    
+    public int quantityDropped(Random random)
+    {
+        return 1;
+    }
+
+    /**
+     * Get the Item that this Block should drop when harvested.
+    
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Item.getItemFromBlock(this);
+    }
+    */
 }

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "esm:obsidian_crystal"
+        }
+    ],
+    "result": {
+        "item": "esm:obsidian_shard",
+        "count": 9
+    }
+}

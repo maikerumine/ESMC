@@ -7,7 +7,10 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 
 public class LagBlock extends BlockBase {
 
@@ -55,6 +58,18 @@ public class LagBlock extends BlockBase {
 	{
 		return BlockRenderLayer.CUTOUT;
 	}
+	
+    /**
+     * Checks if a player or entity can use this block to 'climb' like a ladder.
+     *
+     * @param state The current state
+     * @param world The current world
+     * @param pos Block position in world
+     * @param entity The entity trying to use the ladder, CAN be null.
+     * @return True if the block should act like a ladder
+     */
+    public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) { return false; }
 
-	}
+
+}
 

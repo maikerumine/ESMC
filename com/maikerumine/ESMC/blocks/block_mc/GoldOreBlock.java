@@ -17,8 +17,8 @@ public class GoldOreBlock extends BlockBase {
 	public GoldOreBlock(String name, Material material, CreativeTabs tab) {
 		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
-		func_149711_c(4.0F);
-		func_149752_b(10.0F);
+		func_149711_c(3.0F);
+		func_149752_b(5.0F);
 		setHarvestLevel("pickaxe", 2);
 		func_149715_a(0.0F);
 		//setLightOpacity(1);

@@ -42,7 +42,11 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_INFINIUM = EnumHelper.addToolMaterial("material_infinium_ingot", 4, 1550, 10.5F, 6.0F, 19);
 	public static final ArmorMaterial ARMOR_INFINIUM = EnumHelper.addArmorMaterial("armor_infinium", Reference.MOD_ID + ":infinium_ingot", 15, 
 			new int [] {4, 10 ,8 ,5}, 10, SoundEvents.field_187713_n, 0.0F);
-		
+
+	public static final ToolMaterial MATERIAL_OBSIDIAN_CRYSTAL = EnumHelper.addToolMaterial("material_obsidian_crystal", 3, 980, 7.8F, 2.8F, 9);
+	public static final ArmorMaterial ARMOR_OBSIDIAN_CRYSTAL = EnumHelper.addArmorMaterial("armor_obsidian_crystal", Reference.MOD_ID + ":obsidian_crystal", 15, 
+			new int [] {3, 8 ,5 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
+
 	public static final ToolMaterial MATERIAL_PURPELLIUM = EnumHelper.addToolMaterial("material_purpellium_ingot", 4, 1480, 9.5F, 5.5F, 15);
 	public static final ArmorMaterial ARMOR_PURPELLIUM = EnumHelper.addArmorMaterial("armor_purpellium", Reference.MOD_ID + ":purpellium_ingot", 15, 
 			new int [] {4, 9 ,7 ,4}, 10, SoundEvents.field_187728_s, 0.0F);
@@ -50,7 +54,12 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_RUBY_CRYSTAL = EnumHelper.addToolMaterial("material_ruby_crystal", 3, 980, 7.8F, 2.8F, 9);
 	public static final ArmorMaterial ARMOR_RUBY_CRYSTAL = EnumHelper.addArmorMaterial("armor_ruby_crystal", Reference.MOD_ID + ":ruby_crystal", 15, 
 			new int [] {3, 8 ,5 ,3}, 10, SoundEvents.field_187716_o, 0.0F);
-			
+	
+	public static final ToolMaterial MATERIAL_TIN = EnumHelper.addToolMaterial("material_tin", 3, 390, 3.5F, 2.6F, 20);
+	public static final ArmorMaterial ARMOR_TIN = EnumHelper.addArmorMaterial("armor_tin", Reference.MOD_ID + ":tin_ingot", 15, 
+			new int [] {3, 6 ,6 ,2}, 10, SoundEvents.field_187725_r, 0.0F);
+
+	
 
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	//Items
@@ -67,6 +76,7 @@ public class ModItems
 	public static final Item IRON_LUMP = new ItemBase("iron_lump", null);
 	public static final Item MESE_CRYSTAL = new ItemBase("mese_crystal", null);
 	public static final Item MESE_CRYSTAL_FRAGMENT = new ItemBase("mese_crystal_fragment", null);
+	public static final Item OBSIDIAN_CRYSTAL = new ItemBase("obsidian_crystal", null);
 	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard", null);
 	public static final Item PURPELLIUM_INGOT = new ItemBase("purpellium_ingot", null);
 	public static final Item PURPELLIUM_LUMP = new ItemBase("purpellium_lump", null);
@@ -102,6 +112,12 @@ public class ModItems
 	public static final ItemPickaxe INFINIUM_PICKAXE = new ToolPickaxe("infinium_pickaxe", MATERIAL_INFINIUM);
 	public static final ItemAxe INFINIUM_AXE = new Toolaxe("infinium_axe", MATERIAL_INFINIUM);
 	
+	//obsidian
+	public static final ItemSword OBSIDIAN_SWORD = new ToolSword("obsidian_sword", MATERIAL_OBSIDIAN_CRYSTAL);
+	public static final ItemSpade OBSIDIAN_SPADE = new ToolSpade("obsidian_spade", MATERIAL_OBSIDIAN_CRYSTAL);
+	public static final ItemPickaxe OBSIDIAN_PICKAXE = new ToolPickaxe("obsidian_pickaxe", MATERIAL_OBSIDIAN_CRYSTAL);
+	public static final ItemAxe OBSIDIAN_AXE = new Toolaxe("obsidian_axe", MATERIAL_OBSIDIAN_CRYSTAL);
+	
 	//purpellium	
 	public static final ItemSword PURPELLIUM_SWORD = new ToolSword("purpellium_sword", MATERIAL_PURPELLIUM);
 	public static final ItemSpade PURPELLIUM_SPADE = new ToolSpade("purpellium_spade", MATERIAL_PURPELLIUM);
@@ -113,6 +129,12 @@ public class ModItems
 	public static final ItemSpade RUBY_CRYSTAL_SPADE = new ToolSpade("ruby_crystal_spade", MATERIAL_RUBY_CRYSTAL);
 	public static final ItemPickaxe RUBY_CRYSTAL_PICKAXE = new ToolPickaxe("ruby_crystal_pickaxe", MATERIAL_RUBY_CRYSTAL);
 	public static final ItemAxe RUBY_CRYSTAL_AXE = new Toolaxe("ruby_crystal_axe", MATERIAL_RUBY_CRYSTAL);
+	
+	//tin 
+	public static final ItemSword TIN_SWORD = new ToolSword("tin_sword", MATERIAL_TIN);
+	public static final ItemSpade TIN_SPADE = new ToolSpade("tin_spade", MATERIAL_TIN);
+	public static final ItemPickaxe TIN_PICKAXE = new ToolPickaxe("tin_pickaxe", MATERIAL_TIN);
+	public static final ItemAxe TIN_AXE = new Toolaxe("tin_axe", MATERIAL_TIN);
 	
 	
 	//A R M O R 
@@ -140,6 +162,12 @@ public class ModItems
 	public static final Item INFINIUM_LEGGINGS = new ArmorBase("infinium_leggings", ARMOR_INFINIUM, 2, EntityEquipmentSlot.LEGS);
 	public static final Item INFINIUM_BOOTS = new ArmorBase("infinium_boots", ARMOR_INFINIUM, 1, EntityEquipmentSlot.FEET);
 	
+	//obsidian
+	public static final Item OBSIDIAN_HELMET = new ArmorBase("obsidian_helmet", ARMOR_OBSIDIAN_CRYSTAL, 1, EntityEquipmentSlot.HEAD);
+	public static final Item OBSIDIAN_CHESTPLATE = new ArmorBase("obsidian_chestplate", ARMOR_OBSIDIAN_CRYSTAL, 1, EntityEquipmentSlot.CHEST);
+	public static final Item OBSIDIAN_LEGGINGS = new ArmorBase("obsidian_leggings", ARMOR_OBSIDIAN_CRYSTAL, 2, EntityEquipmentSlot.LEGS);
+	public static final Item OBSIDIAN_BOOTS = new ArmorBase("obsidian_boots", ARMOR_OBSIDIAN_CRYSTAL, 1, EntityEquipmentSlot.FEET);
+	
 	//purpellium 
 	public static final Item PURPELLIUM_HELMET = new ArmorBase("purpellium_helmet", ARMOR_PURPELLIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item PURPELLIUM_CHESTPLATE = new ArmorBase("purpellium_chestplate", ARMOR_PURPELLIUM, 1, EntityEquipmentSlot.CHEST);
@@ -151,6 +179,12 @@ public class ModItems
 	public static final Item RUBY_CRYSTAL_CHESTPLATE = new ArmorBase("ruby_crystal_chestplate", ARMOR_RUBY_CRYSTAL, 1, EntityEquipmentSlot.CHEST);
 	public static final Item RUBY_CRYSTAL_LEGGINGS = new ArmorBase("ruby_crystal_leggings", ARMOR_RUBY_CRYSTAL, 2, EntityEquipmentSlot.LEGS);
 	public static final Item RUBY_CRYSTAL_BOOTS = new ArmorBase("ruby_crystal_boots", ARMOR_RUBY_CRYSTAL, 1, EntityEquipmentSlot.FEET);
+	
+	//tin 
+	public static final Item TIN_HELMET = new ArmorBase("tin_helmet", ARMOR_TIN, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TIN_CHESTPLATE = new ArmorBase("tin_chestplate", ARMOR_TIN, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TIN_LEGGINGS = new ArmorBase("tin_leggings", ARMOR_TIN, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TIN_BOOTS = new ArmorBase("tin_boots", ARMOR_TIN, 1, EntityEquipmentSlot.FEET);
 	
 	
 }

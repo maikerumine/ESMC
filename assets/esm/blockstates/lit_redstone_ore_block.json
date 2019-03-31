@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": {"model": "esm:lit_redstone_ore_block"}
+    }
+}

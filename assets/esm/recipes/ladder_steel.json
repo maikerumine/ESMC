@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "I I",
+        "III",
+        "I I"
+    ],
+        "I": {
+            "item": "minecraft:iron_ingot",
+            "data": 0
+        }
+    },
+    "result": {
+        "item": "esm:ladder_steel",
+        "count": 5
+    }
+}

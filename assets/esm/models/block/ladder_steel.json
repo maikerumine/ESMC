@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "esm:blocks/ladder_steel",
+    "down": "esm:blocks/ladder_steel",
+    "up": "esm:blocks/ladder_steel",
+    "east": "esm:blocks/ladder_steel",
+    "west": "esm:blocks/ladder_steel",
+    "north": "esm:blocks/ladder_steel",
+    "south": "esm:blocks/ladder_steel"
+  }
+}

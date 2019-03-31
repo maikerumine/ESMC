@@ -50,6 +50,7 @@ import com.maikerumine.ESMC.blocks.block_mc.EmeraldOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.GoldOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.IronOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.LapisOreBlock;
+import com.maikerumine.ESMC.blocks.block_mc.LitRedstoneOreBlock;
 import com.maikerumine.ESMC.blocks.block_mc.RedstoneOreBlock;
 import com.maikerumine.ESMC.blocks.block_mt.BronzeBlock;
 import com.maikerumine.ESMC.blocks.block_mt.CopperBlock;
@@ -57,6 +58,7 @@ import com.maikerumine.ESMC.blocks.block_mt.CopperOreBlock;
 import com.maikerumine.ESMC.blocks.block_mt.DesertCobbleBlock;
 import com.maikerumine.ESMC.blocks.block_mt.DesertStone;
 import com.maikerumine.ESMC.blocks.block_mt.DesertStoneBlock;
+import com.maikerumine.ESMC.blocks.block_mt.LadderSteel;
 import com.maikerumine.ESMC.blocks.block_mt.MeseBlock;
 import com.maikerumine.ESMC.blocks.block_mt.MeseOreBlock;
 import com.maikerumine.ESMC.blocks.block_mt.MeselampBlock;
@@ -130,6 +132,7 @@ public class ModBlocks
 	
 	//M I N E T E S T   M I S C.
 		//blocks
+	public static final Block LADDER_STEEL = new LadderSteel("ladder_steel", Material.field_151573_f, null);
 	public static final Block PROTECTOR_BLOCK = new ProtectorBlock("protector_block", Material.field_151575_d, null);
 	public static final Block NYANCAT_BLOCK = new NyancatBlock("nyancat_block", Material.field_151575_d);
 	public static final Block RAINBOW_BLOCK = new RainbowBlock("rainbow_block", Material.field_151575_d);
@@ -143,5 +146,6 @@ public class ModBlocks
 	public static final Block IRON_ORE_BLOCK = new IronOreBlock("iron_ore_block", Material.field_151573_f, null);
 	public static final Block LAPIS_ORE_BLOCK = new LapisOreBlock("lapis_ore_block", Material.field_151573_f, null);
 	public static final Block REDSTONE_ORE_BLOCK = new RedstoneOreBlock("redstone_ore_block", Material.field_151573_f, null);
+	public static final Block LIT_REDSTONE_ORE_BLOCK = new LitRedstoneOreBlock("lit_redstone_ore_block", Material.field_151573_f);
 		
 }

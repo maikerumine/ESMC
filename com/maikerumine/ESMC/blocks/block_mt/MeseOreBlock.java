@@ -17,7 +17,7 @@ public class MeseOreBlock extends BlockBase {
 	public MeseOreBlock(String name, Material material, CreativeTabs tab) {
 		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185851_d);
-		func_149711_c(5.0F);
+		func_149711_c(4.0F);
 		func_149752_b(15.0F);
 		setHarvestLevel("pickaxe", 3);
 		func_149715_a (0.1F);

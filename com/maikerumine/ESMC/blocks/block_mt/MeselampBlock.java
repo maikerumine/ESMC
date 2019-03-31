@@ -12,9 +12,9 @@ public class MeselampBlock extends BlockBase {
 	public MeselampBlock(String name, Material material, CreativeTabs tab) {
 		super(name, material, Main.MINETEST);
 		func_149672_a(SoundType.field_185853_f);
-		func_149711_c(1.0F);
+		func_149711_c(0.5F);
 		func_149752_b(7.0F);
-		setHarvestLevel("pickaxe", 0);
+		setHarvestLevel("pickaxe", 1);
 		func_149715_a(1.0F);
 		//setLightOpacity(1);
 		//setBlockUnbreakable();
