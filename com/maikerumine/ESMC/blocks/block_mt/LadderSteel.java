@@ -24,8 +24,10 @@ public class LadderSteel extends BlockBase {
 		func_149715_a(0.0F);
 		//setLightOpacity(1);
 		//setBlockUnbreakable();
+//		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.4F);
 	}
 	
+
 	@Override
 	public boolean func_149662_c(IBlockState state)
 	{

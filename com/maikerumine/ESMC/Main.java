@@ -34,7 +34,7 @@ public class Main
 	//From Jabelar
     public static final String MOD_ID = "esm";
     public static final String MODNAME = "Extreme Survival Minecraft";
-    public static final String MODVERSION = "0.1.4";
+    public static final String MODVERSION = "0.1.5-Universal";
     public static final String MODDESCRIPTION = "Extreme Survival made for Minecraft!  Created by maikerumine for Minetest, then made for Minecraft!   Best used with BiomeTweaker and BiomeTweakerCore to get full effect of all stone world.  Place the BiomeTweaker folders into your config folder in your Forge installation.";
     public static final String MODAUTHOR = "maikerumine";
     public static final String MODCREDITS = "maikerumine and some Minetest community members for the ideas, textures, and gameplay.  Special thanks to Andrey for inspiring me to make stone world subgames.  :)  Special Thanks to Jabelar's modding examples, Harry's Modding examples, and Loremaster's Modding examples to help make this possible.";

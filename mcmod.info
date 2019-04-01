@@ -1,16 +1,16 @@
 [
-{
-  "modid": "esm",
-  "name": "Extreme Survival Minecraft",
-  "description": "Extreme Survival made for Minecraft!  Created by maikerumine for Minetest, then made for Minecraft!   Best used with BiomeTweaker and BiomeTweakerCore to get full effect of all stone world.  Place the BiomeTweaker folders into your config folder in your Forge installation.",
-  "version": "0.1.4-Universal",
-  "mcversion": "1.12.2",
-  "url": "www.esmine.net",
-  "updateUrl": "",
-  "authorList": ["maikerumine"],
-  "credits": "maikerumine and some Minetest community members for the ideas, textures, and gameplay.  Special thanks to Andrey for inspiring me to make stone world subgames.  :)",
-  "logoFile": "/assets/esm/textures/gui/logo.png",
-  "screenshots": [],
-  "dependencies": []
-}
+    {
+      "modid": "esm",
+      "name": "Extreme Survival Minecraft",
+      "description": "Extreme Survival made for Minecraft!  Created by: maikerumine for Minetest, then made for Minecraft!  This game / mod is a re-creation of Extreme Survival Minetest, and adds most of the Minetest specific blocks and items, as well as all the main es stuff to keep the environment as close to the original as possible.  The crafting has also been altered to match Minetest as close as possible.  When you start, you first find bones, use 9 bones to make dirt, then surround an apple with 8 dirt for sapling.  Good luck!  PROTIP:   Best used with BiomeTweaker and BiomeTweakerCore to get full effect of all stone world.  Place the BiomeTweaker folders into your config folder in your Forge installation.",
+      "version": "0.1.5-Universal",
+      "mcversion": "1.12.2",
+      "url": "http://www.esmine.net",
+      "updateUrl": "",
+      "authorList": ["maikerumine"],
+      "credits": "maikerumine and some Minetest community members for the ideas, textures, sounds and game-play techniques.  Pixel Perfection textures used in Mineclone were used in many instances.  Many es specific textures created by: maikerumine.  Many many textures and sounds used from Minetest and Minetest mods.  All credits in the attached readme's and license files.  Special Thanks to Jabelar's modding examples, Harry's Modding examples, and Loremaster's Modding examples to help make this possible.  Extra Special thanks to Andrey for inspiring me to make stone world games for Minetest.  :) More information and downloads:  https://minecraft.curseforge.com/projects/esmc  https://github.com/maikerumine/ESMC",
+      "logoFile": "/assets/esm/textures/gui/logo.png",
+      "screenshots": [],
+      "dependencies": []
+    }
 ]
